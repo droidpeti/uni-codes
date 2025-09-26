@@ -1,0 +1,14 @@
+In: count ∈ N, harvestdata ∈ R[1..count]
+Out: harvestsum ∈ R
+Ef: -
+Uf: harvestsum = SZUMMA(i=1..count,harvestdata[i])
+
+
+
+count: 4
+harvestdata:
+    - 10
+    - 13.2
+    - 5
+    - 15
+harvestsum: 43.2

@@ -1,0 +1,8 @@
+In: sz ∈ N
+Out: prim ∈ L
+Ef: sz > 1
+Uf: prim = ∀i∈[2..sz-1]:(sz % i != 0)
+
+
+sz: 2
+prim: true

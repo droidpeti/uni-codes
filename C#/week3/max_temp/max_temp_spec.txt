@@ -1,0 +1,25 @@
+In: db ∈ N, tempdata ∈ R[1..db]
+Sa: maxind ∈ N
+Out: maxtemp ∈ R
+Ef: -
+Uf: maxind ∈ [1..db] 
+    and ∀i∈[1..db]:(tempdata[maxind] >= tempdata[i]) 
+    and maxtemp = tempdata[maxind]
+
+/*
+In: db ∈ N, tempdata ∈ R[1..db]
+Sa: maxind ∈ N
+Out: maxtemp ∈ R
+Ef: -
+Uf: (maxind, maxtemp) = MAX(i=1..db, tempdata[i])
+*/
+
+
+db: 4
+tempdata: 
+    - 12.3
+    - 13.5
+    - 1.4
+    - 11.2
+maxind: 2
+maxtemp: 13.5
