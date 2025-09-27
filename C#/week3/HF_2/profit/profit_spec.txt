@@ -1,0 +1,14 @@
+In: count ∈ N, incomeData ∈ R[1..count]
+Out: negativeCount ∈ N
+Ef: -
+Uf: negativeCount = COUNT(i=1..count, incomeData[i]<0)
+
+
+count: 5
+incomeData:
+    - 10
+    - -3
+    - -4.3
+    - -9
+    - 11
+negativeCount: 3

@@ -1,0 +1,17 @@
+In: count ∈ N, tempData ∈ R[1..count]
+Sa: minTemp ∈ R
+Out: minPercent ∈ R
+Ef: -
+Uf: COUNT(i=1..count, tempData[i] = minTemp)/count * 100 = minPercent
+
+
+
+count: 5
+tempData:
+    - 1
+    - 1
+    - 1
+    - 2
+    - 3
+minTemp: 1
+minPercent: 60

@@ -1,0 +1,16 @@
+In: count ∈ N, upperLimit ∈ R, numbers ∈ R[1..count]
+Sa: count2 ∈ N
+Out: average ∈ R
+Ef: -
+Uf: average = SUM(i=1..count, numbers[i], numbers[i] < upperLimit)/count2
+
+count: 5
+upperLimit: 30
+numbers:
+    - 10
+    - 20
+    - 30
+    - 40
+    - 50
+count2: 2
+average: 15

@@ -1,0 +1,8 @@
+In: n ∈ N, m ∈ N
+Out: evenSum ∈ N
+Ef: -
+Uf: evenSum = SUM(i=n..m, i, i % 2 = 0)
+
+n: 1
+m: 7
+evenSum: 12
