@@ -46,7 +46,7 @@ int main(){
     do{
         printf("Valid operators ( ");
         for(int i = 0; i < num_operators; i++){
-            printf("%c,", valid_operators[i]);
+            printf("%c, ", valid_operators[i]);
         }
         printf("\b ): ");
         scanf(" %c", &operator);
