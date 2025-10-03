@@ -1,0 +1,4 @@
+In: v1 ∈ Vector, v2 ∈ Vector, Vector=(x:R x y:R x z:R)
+Out: res ∈ Vector
+Ef: -
+Uf: res.x = v1.x + v2.x and res.y = v1.y + v2.y and res.z = v1.z + v2.z
