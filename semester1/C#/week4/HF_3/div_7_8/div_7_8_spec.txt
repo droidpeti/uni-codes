@@ -1,0 +1,4 @@
+In: num1 ∈ Z, num2 ∈ Z, count7 ∈ N, count8 ∈ N
+Out: div7 ∈ Z[1..count7], div8 ∈ Z[1..count8]
+Pre: -
+Post: FORALL(i=1..count7, div7[i] % 7 = 0) and FORALL(i=1..count8, div8[i] % 8 = 0) and num1 != 0.5 and num2 != 0.5
