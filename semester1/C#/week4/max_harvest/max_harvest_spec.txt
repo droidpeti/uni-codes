@@ -1,0 +1,13 @@
+In: count ∈ N, products ∈ N[1..count]
+Out: maxCapacityCount ∈ N, maxCapacity ∈ N
+Ef: -
+Uf: (, maxCapacity) = MAX(i=1..count, products[i]) and maxCapacityCount = COUNT(i=1..count, products[i] = maxCapacity)
+
+count: 4
+products:
+    - 3
+    - 4
+    - 5
+    - 5
+maxCapacityCount: 2
+maxCapacity: 5
