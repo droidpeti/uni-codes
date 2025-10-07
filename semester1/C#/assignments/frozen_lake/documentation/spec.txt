@@ -1,0 +1,40 @@
+https://progalap.elte.hu/specifikacio/v1/?uuid=e627a160-b67e-41de-b996-d21e08f80c70
+
+In: count ∈ N, days ∈ R[1..count]
+Out: frozenDays ∈ N
+Pre: count >= 0 and count <= 100 and EVERY(i=1..count, days[i] >= 0) and EVERY(i=1..count, days[i] <= 20)
+Post: frozenDays = COUNT(i=1..count, days[i] > 0)
+
+count: 8
+days:
+    - 0
+    - 5
+    - 5
+    - 0
+    - 20
+    - 10
+    - 10
+    - 20
+frozenDays: 6
+
+count: 4
+days:
+    - 0
+    - 1
+    - 3
+    - 0
+frozenDays: 2
+
+count: 10
+days:
+    - 0
+    - 19
+    - 11
+    - 0
+    - 15
+    - 16
+    - 20
+    - 0
+    - 0
+    - 0
+frozenDays: 5
