@@ -12,7 +12,14 @@ class Program
             data[i] = Int32.Parse(Console.ReadLine());
         }
 
-        int frozenDaysCount = data.Where(d => d > 0).Count();
+        int frozenDaysCount = 0;
+        for (int i = 0; i < count; i++)
+        {
+            if (data[i] >= 0)
+            {
+                frozenDaysCount++;
+            }
+        }
 
         System.Console.WriteLine(frozenDaysCount);        
     }
