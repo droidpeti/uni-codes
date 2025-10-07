@@ -15,7 +15,7 @@ class Program
         int frozenDaysCount = 0;
         for (int i = 0; i < count; i++)
         {
-            if (data[i] >= 0)
+            if (data[i] > 0)
             {
                 frozenDaysCount++;
             }
