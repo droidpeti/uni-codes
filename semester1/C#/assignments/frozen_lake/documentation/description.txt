@@ -1,0 +1,32 @@
+Az 1. beadandó feladatkiírása a Bíróban található (biro.inf.elte.hu). Ide az INF-es azonosítással lehet belépni (mint a laborbeli gépekre), és témaként a "Programozás 1. beadandó" témát kell választani. A letöltések között egyetlen feladat taláható, ezt kell megoldani.
+
+A megoldás két fázisban zajlik. Az 1. fázisban a megoldási tervet kell elkészíteni. Ez a feladat specifikálásából, a visszavezetési táblázat megadásából és az algoritmus elkészítéséből áll. Ehhez egy olyan dokumentumot kell készíteni, amely tartalmazza a következőket:
+
+Személyes adatok (név, neptun kód)
+Feladat szövege
+Szövegesen vagy képként bemásolva
+Link a specifikációra
+A specifikációt a specifikációs eszközbenLinkek egy külső oldalra kell elkészíteni. A Share gombbal egy link másolódik a vágólapra. Ezzel hozzatok létre egy hivatkozást! (Ne másoljátok be a linket nyers formátumban!)
+A specifikáció szövege
+Tesztek
+A specifikációs eszközben lehetőség van több teszt megadására. Legyen legalább 3 érvényes teszteset!
+A teszteket nem kell bemásolni a dokumentumba!
+Az alkalmazott sablon képe
+A kiadott programozási mintákat tartalmazó diasorból másoljátok ide az alkalmazandó sablon diáját!
+Visszavezetési táblázat
+Az utófeltételekben felismert különbségek felsorolása
+Link az algoritmusra
+Az algoritmus készítő eszközzelLinkek egy külső oldalra kell elkészíteni az algoritmust. Itt a Share gombra kattintva a struktogramhoz egy link készül. Ezt tegyük be hivatkozásként a dokumentumba.
+ Algoritmus
+Az algoritmus készítő eszközzelLinkek egy külső oldalra megrajzolt struktogram képe. Az eszközben a Copy PNG gombbal lehet a vágólapra másolni.
+Ehhez készítettünk egy sablont, amelyben készítsétek el a megoldást.  Ezt a kitöltött állományt kell ide feltölteni PDF formátumban.  A fenti elemek megléte kötelező! Bármelyik hiányzik, a beadandó nem értékelhető! Ha minden megvan, akkor kezdjük el a feladat minőségi értékelését!
+
+A megoldási terveket a gyakorlatvezető ellenőrzi, és ad rá egy visszajelzést. Ebben kérheti a megoldási terv javítását az általa megadott szempontok szerint. Ez az oda-visszajelzés addig tart, amíg vagy jó nem lesz a megoldási terv, vagy le nem jár a gyakorlatvezető által megadott határidő.
+
+Ezután lép életbe a 2. fázis, amiről részletesebben abban a feladatban lehet olvasni.
+
+A teljes megoldásra 3 hét áll rendelkezésre. Ennek ajánlott felosztása:
+
+1. hét: megoldási terv elkészítése
+2. hét: gyakorlatvezető visszajelzések alapján a javítás
+3. hét: a megoldási terv alapján a kód elkészítése (2. fázis).
