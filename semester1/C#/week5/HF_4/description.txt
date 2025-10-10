@@ -1,0 +1,1 @@
+Készíts egy programot (+ specifikáció + stuki) amely bekér éves nyereség adat párokat (év, nyereség), majd kiírja a legelső veszteséges évet! (10p)

@@ -1,0 +1,14 @@
+In: n ∈ N, tempdata ∈ TempData[1..n], TempData=(temp:R x date:S)
+Sa: warmestindex ∈ N
+Out: warmestdate ∈ S
+Pre: ∀i∈[1..n]:(tempdata[i].temp > -273.15)
+Post: (warmestindex,) = MAX(i=1..n, tempdata[i].temp) and warmestdate = tempdata[warmestindex].date
+
+n: 2
+tempdata:
+    - temp: 13.3
+      date: "2024-01-01"
+    - temp: -13.3
+      date: "2025-01-01"
+warmestindex: 1
+warmestdate: "2024-01-01"
