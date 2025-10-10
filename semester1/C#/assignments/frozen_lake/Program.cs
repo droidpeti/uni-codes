@@ -1,26 +1,29 @@
 ﻿using System;
 
-namespace frozen_lake;
-
-class Program
+namespace frozen_lake
 {
-    static void Main(string[] args)
+
+    class Program
     {
-        int count = Int32.Parse(Console.ReadLine());
-        int[] data = new int[count];
-        for(int i = 0; i < count; i++){
-            data[i] = Int32.Parse(Console.ReadLine());
-        }
-
-        int frozenDaysCount = 0;
-        for (int i = 0; i < count; i++)
+        static void Main(string[] args)
         {
-            if (data[i] > 0)
+            int count = Int32.Parse(Console.ReadLine());
+            int[] data = new int[count];
+            for (int i = 0; i < count; i++)
             {
-                frozenDaysCount++;
+                data[i] = Int32.Parse(Console.ReadLine());
             }
-        }
 
-        System.Console.WriteLine(frozenDaysCount);        
+            int frozenDaysCount = 0;
+            for (int i = 0; i < count; i++)
+            {
+                if (data[i] > 0)
+                {
+                    frozenDaysCount++;
+                }
+            }
+
+            System.Console.WriteLine(frozenDaysCount);
+        }
     }
 }
