@@ -1,7 +1,11 @@
 Ezek a feladatok nem kötelezőek, csak a gyakorlásképp vannak itt.
 
 Rekurzív függvények
-Definiálj egy rekurzív függvényt, ami kettő bemenő számot addig közelít egymáshoz egyenletesen, amíg szomszédosak (vagy ugyanakkorák) nem lesznek. Ezeket a szomszédos számokat egy rendezett párként visszaadja. Ilyenkor, ha a a pár mindkét eleme ugyanakkora, ez a szám a kettő bemenet átlaga. Ha a két elem különbözik, ezek átlaga ugyanakkora mint a kettő bemeneté.
+Definiálj egy rekurzív függvényt, ami kettő bemenő számot addig közelít egymáshoz egyenletesen,
+amíg szomszédosak (vagy ugyanakkorák) nem lesznek.
+Ezeket a szomszédos számokat egy rendezett párként visszaadja.
+Ilyenkor, ha a a pár mindkét eleme ugyanakkora, ez a szám a kettő bemenet átlaga.
+Ha a két elem különbözik, ezek átlaga ugyanakkora mint a kettő bemeneté.
 
 closeSection :: Int -> Int -> (Int, Int)
 

@@ -1,0 +1,18 @@
+In: count ∈ N, sortedYearsData ∈ YearData[1..count], YearData=(year:Z x profit:R)
+Sa: firstNegativeYearIndex ∈ N
+Out: firstNegativeYear ∈ YearData
+Pre: -
+Post: (,firstNegativeYearIndex) = KERES(i=1..count,sortedYearsData[i].profit < 0) and firstNegativeYear = sortedYearsData[firstNegativeYearIndex]
+
+count: 3
+sortedYearsData:
+  - year: 1
+    profit: 10
+  - year: 2
+    profit: -5
+  - year: 3
+    profit: -10
+firstNegativeYear:
+  year: 2
+  profit: -5
+firstNegativeYearIndex: 2
