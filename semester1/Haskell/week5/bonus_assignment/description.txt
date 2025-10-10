@@ -9,7 +9,8 @@ Ha a két elem különbözik, ezek átlaga ugyanakkora mint a kettő bemeneté.
 
 closeSection :: Int -> Int -> (Int, Int)
 
-Definiáljuk azt a rekurzív függvényt, amely két nemnegatív szám szorzatát adja meg az összeadás művelet felhasználásával. A függvény definíciójában csak az összeadás és a különbségképzés használható.
+Definiáljuk azt a rekurzív függvényt, amely két nemnegatív szám szorzatát adja meg az összeadás művelet felhasználásával.
+A függvény definíciójában csak az összeadás és a különbségképzés használható.
 
 Segítségek:
 
