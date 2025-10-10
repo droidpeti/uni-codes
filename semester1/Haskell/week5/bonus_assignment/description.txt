@@ -1,0 +1,47 @@
+Ezek a feladatok nem kötelezőek, csak a gyakorlásképp vannak itt.
+
+Rekurzív függvények
+Definiálj egy rekurzív függvényt, ami kettő bemenő számot addig közelít egymáshoz egyenletesen, amíg szomszédosak (vagy ugyanakkorák) nem lesznek. Ezeket a szomszédos számokat egy rendezett párként visszaadja. Ilyenkor, ha a a pár mindkét eleme ugyanakkora, ez a szám a kettő bemenet átlaga. Ha a két elem különbözik, ezek átlaga ugyanakkora mint a kettő bemeneté.
+
+closeSection :: Int -> Int -> (Int, Int)
+
+Definiáljuk azt a rekurzív függvényt, amely két nemnegatív szám szorzatát adja meg az összeadás művelet felhasználásával. A függvény definíciójában csak az összeadás és a különbségképzés használható.
+
+Segítségek:
+
+Egy n és egy m szám szorzata valójában az m szám n példányának az összege.
+A 0 paramétereket kezelni kell, de ne ez legyen a rekurzió megállási feltétele.
+multiply :: Integer -> Integer -> Integer
+
+Pont-pont kifejezés és listaműveletek
+Definiáljuk azt a függvényt amely egy "hegy" sorozatot állít elő. A "hegy" csúcspontja a paraméterül kapott érték. A sorozat két részsorozatból építhető össze:
+
+1-től induló, monoton növekvő sorozat a megadott csúcspontig,
+egy csúcsponttól csökkenő sorozat, amely utolsó eleme 1.
+mountain :: Integer -> [Integer]
+
+Két lista összefűzhető a (++) operátorral.
+
+closeSection 0 0 == (0,0)
+closeSection 1 10 == (5,6)
+closeSection 3 5 == (4,4)
+closeSection (-6) 6 == (0,0)
+closeSection (-5) (-4) == (-5,-4)
+
+multiply 0 0 == 0
+multiply 0 6 == 0
+multiply 5 0 == 0
+multiply 1 1 == 1
+multiply 1 3 == 3
+multiply 4 3 == 12
+multiply 4 31 == 124
+multiply 42 31 == 1302
+
+mountain 0 == []
+mountain 1 == [1]
+mountain 2 == [1,2,1]
+mountain 3 == [1,2,3,2,1]
+mountain 4 == [1,2,3,4,3,2,1]
+mountain 5 == [1,2,3,4,5,4,3,2,1]
+mountain 10 == [1,2,3,4,5,6,7,8,9,10,9,8,7,6,5,4,3,2,1]
+mountain (-4) == []
