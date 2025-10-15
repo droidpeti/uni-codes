@@ -1,0 +1,8 @@
+All Optional subjects in the university which interest me (Minimum 10 credits)
+
+Name                        |      Code     | Credits
+Zeneelméleti alapismeretek 1|  SZT-DSZ-303	|    5
+3D modellezés	            |  IKP-9301     |    2
+3D-s tervezés	            |  BBN-KEP-531	|    2
+Zongora 1.	                |  OT-ENE-311	|    2
+Játékfejlesztés alapjai	    |  IKP-9312	    |    2
