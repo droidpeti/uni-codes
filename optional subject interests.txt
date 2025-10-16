@@ -6,3 +6,5 @@ Zeneelméleti alapismeretek 1|  SZT-DSZ-303	|    5
 3D-s tervezés	            |  BBN-KEP-531	|    2
 Zongora 1.	                |  OT-ENE-311	|    2
 Játékfejlesztés alapjai	    |  IKP-9312	    |    2
+Pixelgrafika                |  BBN-KEP-L-111|	 2
+Számítógépes képszerkesztés	|  IKP-9171:2	|    2
