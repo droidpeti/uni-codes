@@ -1,0 +1,16 @@
+Feladat
+Adott az egész számok egy [e..u] intervalluma és egy f:[e..u]→H függvény.
+Rendeljük az [e..u] intervallum minden értékéhez az f függvény hozzá tartozó értékét
+
+Specifikáció
+Be: eEZ, UEZ
+Ki: y∈H[1..u-e+1]
+Ef: -
+Uf: Vie[e..u]:(y[i-e+1]=f(i))
+Rövidítve:
+Uf: y=MÁSOL(i=e..u, f(i))
+
+
+y ~ numbers
+i = e..u ~ i=1..count
+f(i) ~ numbers[i] * 3

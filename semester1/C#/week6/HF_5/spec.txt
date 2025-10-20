@@ -1,0 +1,18 @@
+In: count ∈ N, numbers ∈ R[1..count]
+Out: multipliedNumbers ∈ R[1..count]
+Pre: count > 0 and COUNT(i=1..count, numbers[i] > 0) = count
+Post: multipliedNumbers = COPY(i=1..count, numbers[i] * 3)
+
+count: 5
+numbers:
+  - 10
+  - 20
+  - 25
+  - 25.5
+  - 30.1
+multipliedNumbers:
+  - 30
+  - 60
+  - 75
+  - 76.5
+  - 90.3

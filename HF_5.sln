@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "semester1", "semester1", "{CF39E10F-EB80-43D3-9E98-71FE950E1638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{E6A4DDAD-B68E-4DFB-83B5-33F3178EA156}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week6", "week6", "{1D32A308-CAED-4E6E-B928-B65814BFB280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF_5", "semester1\C#\week6\HF_5\HF_5.csproj", "{19901D5B-46C9-4955-88D8-A49E358A6BF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19901D5B-46C9-4955-88D8-A49E358A6BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19901D5B-46C9-4955-88D8-A49E358A6BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19901D5B-46C9-4955-88D8-A49E358A6BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19901D5B-46C9-4955-88D8-A49E358A6BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E6A4DDAD-B68E-4DFB-83B5-33F3178EA156} = {CF39E10F-EB80-43D3-9E98-71FE950E1638}
+		{1D32A308-CAED-4E6E-B928-B65814BFB280} = {E6A4DDAD-B68E-4DFB-83B5-33F3178EA156}
+		{19901D5B-46C9-4955-88D8-A49E358A6BF8} = {1D32A308-CAED-4E6E-B928-B65814BFB280}
+	EndGlobalSection
+EndGlobal
