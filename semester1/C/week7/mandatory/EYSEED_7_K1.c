@@ -25,12 +25,12 @@ int main(){
 
     hex_values[0] = '\0';
 
-    printf("Enter hexadecimal values (0-F). Enter an invalid character to stop.\n");
+    printf("Enter hexadecimal values (0-F). Enter an EOF charachter to stop.\n");
 
     while(1){
         char input;
         printf("\nPlease input the next hexadecimal value (0-F): ");
-        if (scanf(" %c", &input) != 1) {
+        if (scanf("%c", &input) != 1) {
             break;
         }
         input = toupper(input);
@@ -46,9 +46,6 @@ int main(){
 
             hex_values[size-2] = input;
             hex_values[size-1] = '\0';
-        }
-        else{
-            break;
         }
     }
 
