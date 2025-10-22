@@ -50,7 +50,8 @@ int main(){
     }
 
     printf("\nFinished input.\n");
-    printf("Hex values: %s\n", hex_values);
+    printf("Hex values: %s\nConverted to decimal: %d\n", hex_values, (int)strtol(hex_values, NULL, 16));    
+
     free(hex_values);
 
     return 0;
