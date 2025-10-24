@@ -1,0 +1,5 @@
+chmod +x num_systems.sh 
+./num_systems.sh numbers.txt
+
+chmod +x num_systems_ai.sh 
+./num_systems_ai.sh numbers.txt
