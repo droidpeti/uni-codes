@@ -1,0 +1,47 @@
+Feladat: Második elem beszúrása (1 pont)
+
+Definiáld azt a függvényt, ami beszúr egy elemet egy listába a második elem pozíciójába. Amennyiben a lista üres, vagy egyelemű, úgy a lista maradjon változatlan.
+
+Segítség:
+
+    Használjuk ki, hogy mintaillesztéssel egyszerre több elemet tudunk leválasztani egy lista elejéről.
+    Ugyanúgy, ahogyan a több elemet tudunk levenni, több elemet is befűzhetünk a listába a : segítségével.
+
+insertSecond :: a -> [a] -> [a]
+
+insertSecond 1 [] == []
+insertSecond 6 [1] == [1]
+insertSecond 6 [1,2] == [1,6,2]
+insertSecond 0 [1,2,3] == [1,0,2,3]
+insertSecond 'l' "amafa" == "almafa"
+
+Feladat: Nem osztható számok elhagyása (2 pont)
+
+Definiáld azt a függvényt, amely a paraméterként kapott listából töröli a megadott értékkel nem osztható számokat.
+
+getIfDiv :: Integer -> [Integer] -> [Integer]
+
+getIfDiv 5 [] == []
+getIfDiv 5 [5] == [5]
+getIfDiv 3 [6,12] == [6,12]
+getIfDiv 3 [1..10] == [3,6,9]
+getIfDiv 5 [1..10] == [5,10]
+getIfDiv 5 [1..20] == [5,10,15,20]
+getIfDiv 2 [1..20] == [2,4,6,8,10,12,14,16,18,20]
+
+Feladat: Szomorú emotikon helyettesítése (3 pont)
+
+Definiáld azt a függvényt, amely egy szövegben a szomorú emotikonokat egy szóközre (' ') cseréli. Szomorú arc a 🙁, amely a ':' és '(' szomszédos elemekből áll.
+
+Segítség: Használjuk ki, hogy mintaillesztéssel egyszerre több elemet tudunk leválasztani egy lista elejéről.
+
+smile :: [Char] -> [Char]
+
+smile "" == ""
+smile ":" == ":"
+smile "(" == "("
+smile "🙂" == "🙂"
+smile "🙁" == " "
+smile "::(" == ": "
+smile "hello 🙁" == "hello  "
+smile "hello ::(:((" == "hello :  ("
