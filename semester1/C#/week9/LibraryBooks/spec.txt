@@ -1,0 +1,23 @@
+In: n ∈ N, books ∈ Book[1..n],
+    Book=(author:S x title:S x count:N x rentcount:N)
+Ki: outCount ∈ N, few ∈ N[1..outCount]
+Ef: ∀i∈[1..n]:(books[i].count >= books[i].rentcount)
+Uf: (outCount,few) = FILTER(i=1..n,books[i].count - books[i].rentcount <= 2, i)
+
+n: 2
+books:
+  - author: "A" 
+    title: "B"
+    count: 5
+    rentcount: 2 
+  - author: "B" 
+    title: "C"
+    count: 5
+    rentcount: 4
+outCount: 1
+few:
+  - 2
+
+https://progalap.elte.hu/specifikacio/v1/?data=H4sIAAAAAAAAA4WQT2vCQBDFv8pjTgmsQkJ7GZpCFQvS4qF%2FTm4Oqd3QRTtbzAYFEXrM5%2FSTlGSNgi30Nu8t%2B3szb0fVl1nY0i4Kb50Q01QYgkPTYKbw5tyy6sTIueU8GQ4lV1oAdEYWFbX%2FcGt%2Bxhbe%2BpXppoWrxfMMW6yN%2BKOKtTxYhqv9uDX6hNJswtjC%2B8dcy6RkHJpve2iaEMtRt8zc5sOOiNsMJ%2BeUE2t5LRlRT1Kl2cTIcD99fJk8RTZrWeqCNPgDhJsMqYKNSZE3la%2BI5zt6L3xBTMJItXSfuG1jgGMP0HSnCaGhUAg0jTQFJ1SB66DO5SDFJWb0GzP%2BF3OlpT%2BckWgpzea4X0qKpPg0xESK1qaqV5442ef7H7pTF%2BQCAgAA
+
+https://progalap.elte.hu/stuki/v1/?data=H4sIAAAAAAAAA61VXW%2FaMBT9K%2Bgi7WUeMjSFkqkvSFth1TS19GMr4sGxr0lEsFvHgZYq%2F71yICasrTa08ZLL4d5z7md4hkRACLTVDoJe9yToBr3OUbvdBQKxXqIZCQhVnqYEMkyRWxQ7RGmBGYTPcP5tOFoHlwNnl3QeIHDPDCq7C4oTIVBBKFmaIQH7dI8QQoYPOSqOQIDHSSoMqpHIIJzAXX6Xrnp6BgSOs4EQV18eYVqQHV5p1hx3mvVM3lG2zOIClQUCFh8thMB1rmwjPG1QKAisF%2BJh8JNLL%2BSBPSGf3OEl%2Flibq8FFIMq6PE8lVyM%2BpK5VnKSlllYisYlWEEJy2m61FBCItHgab%2FMZ7dVUEBC32XD9NO76DDywl4GZzc%2FG%2FeTm3QyU1veOzztWfLXIGp%2FvwuENXNLsl2nLIyCQ8q%2F84vrMlL1cdod0bC5zr%2ByBPeXb8871HYvHf6zEO1Z8tcj%2FVEmVoEvf81RyNeKaXG0f35ZL5G97EGk9zybJtLXZ9E8NDzjSDfghtZ9PGx13FSbHgWGKx3srU5tiKfeGi2%2BPm0U1Iz%2BL3dAO2ao37lVE7lhF1PjYaDspvwOVlAf%2BWWqOS8wmIpo6xQSKgkBmTc6tnhm2cCN8BsUWLvo7S9ypGbS5UVebcCCwZCZhUepenO6r0frVQWexXt3s3LZJOXSITKDZgy5r%2FG5SxdTNOtWmfDNv0p5AU0pKKQUCTfeUbiOaUnKPRfTYW7K0evSIstLiyORJD6abLgwYn8%2BMzpXYEkedyK1J0z0rYuQVhj3OKkuWlgg4xY6jc38gr%2Bg457xU5ZxXdLJTYSgFf4%2BuNolXrO6zrfmv%2BKXs9ze%2FUnrC%2B8fOQsRAdOsdKYoXdIL8SEAHAAA%3D
