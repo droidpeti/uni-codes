@@ -1,0 +1,14 @@
+In: count ∈ N, numbers ∈ R[1..count]
+Out: multiplied ∈ R[1..count]
+Pre: count <= 10000 and count >= 0
+Post: COPY(i=1..count, numbers[i]*15) = multiplied
+
+count: 3
+numbers:
+  - 1
+  - 2
+  - 3
+multiplied:
+  - 15
+  - 30
+  - 45

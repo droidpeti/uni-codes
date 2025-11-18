@@ -1,0 +1,29 @@
+1. Rész - Tervezés
+
+
+Minden feladat megoldása legyen benne a beadott zip-ben kép / szövag + link-ként is!
+
+1) Készítsd el egy program specifikációját, amely kap n db valós számot (0 <= n <= 10000), majd kiírja az 15 szorosukat!
+
+2) Készítsd el a specifikációját egy programnak, amely visszaadja az n (0 <= n < 10000) és m (n < m <= 10000) közötti páros számokat.
+
+3) Készítsd el egy program struktogramját, amely bekér egy tömbnyi valós számot, majd kiírja a négyzetét szorosát azoknak, amelyek 10 és 1000 között vannak!
+
+4) Készíts stuktogramot a megadott specifikációhoz:
+
+Be: n∈N, v∈N[1..n]
+Ki: k∈N
+Ef: -
+Uf: k∈[1..n] és ∀i∈[1..n]:(v[k] ≥ v[i])
+
+
+
+2. Rész - Kódolás
+
+
+1) Egy időjárás előrejelzésben megkaptuk a következő N nap várható minimális és maximális hőmérsékletét.
+   Írj programot, amely megadja azon napok számát, amikor fagyni fog;
+
+2) Egy pincészet egyféle boráról évente tárolja, hogy mennyit készített belőle és hány forintért árusítja. Írj programot, amely megadja 
+   a legkisebb termésű év sorszámát (ha több megoldás is van, akkor közülük a legkisebb sorszámút); A beolvasás, a feladatmegoldás, és 
+   a kiírás is legyenek külön függvényben.

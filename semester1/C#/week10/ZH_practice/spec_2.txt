@@ -1,0 +1,15 @@
+In: n ∈ N, m ∈ N
+Sa: evencount ∈ N
+Out: even ∈ N[1..evencount]
+Pre: n >= 0 and n <= 10000 and m > n and m <= 10000
+Post: (evencount,even) = FILTER(i=n..m, i%2 = 0)
+
+n: 1
+m: 10
+evencount: 5
+even:
+  - 2
+  - 4
+  - 6
+  - 8
+  - 10
