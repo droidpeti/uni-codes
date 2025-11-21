@@ -1,0 +1,15 @@
+In: n ∈ N, m ∈ N
+Sa: evencount ∈ N
+Out: evens ∈ N[1..evencount]
+Pre: n >= 100 and n < m and m <= 10000
+Post: (evencount,evens) = FILTER(i=n..m, i % 14 = 0)
+
+n: 100
+m: 150
+evencount: 3
+evens:
+  - 112
+  - 126
+  - 140
+
+Link: https://progalap.elte.hu/specifikacio/v1/?data=H4sIAAAAAAAAAz2MwWoCMRRFf%2BXyQFCIQ2JtFw%2BnOwtCsaLujIswRgg0b8Rk3Ih7v7NfUpzR2Z13uO9cKZ18FY6hcjnUQkwLYQj%2B7ncsFWIHVjaO4S9eqrqR%2FJI%2FTe5s6szOFEU%2F2ltZnf2j9VnCaA0nBwhmiC1FzFqttZVVnTJj2L%2BqtjlCia%2FF93a%2BHoZSiiIqBAxgpiihR6Qo%2B5QT8e5KB5cdMQk%2FilYiw7xrK32Q8dZdia0AYxgzecLk4wlTTYrERU9MpOjsU%2FObic1tf%2FsHps9KRCUBAAA%3D

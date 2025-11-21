@@ -1,0 +1,21 @@
+In: count ∈ N, nums ∈ R[1..count]
+Out: max ∈ R, min ∈ R
+Pre: ∀i∈[1..count]:(nums[i] >= 0) and count <= 1000 and count >= 10 
+Post: (,max) = MAX(i=1..count, nums[i]) and (,min) = MIN(i=1..count, nums[i])
+
+count: 10
+nums:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+max: 10
+min: 1
+
+Link: https://progalap.elte.hu/specifikacio/v1/?data=H4sIAAAAAAAAA22OzWrDMBCEX2XZkwNqkPrfJQ70mEPT0FPB8kE4LgiqdYhkMIRAj3pOP0mxN6U99PQtszOze8J4aBv%2F4RuXfMdIuGGCpus5wZgzbBVwH%2BI8v1VmuZxXteXXPhEEN8hGQfAso%2BXdsSUY85cfc%2F6NUDEVVb6GdQl6AY73lzurEozW%2Bo%2BynhSwvOtiIihUcMMCSnh5fi98%2BdMon1W%2Blq5CBc%2Bza7P914UKUxtTRKpOuHfJIeFsITDa8mQjywBXYATXghvBreBOcC94EDwKni5xbTm4QWqDZwKDCtmFFglR4bGN%2FWdCMuf6%2FA1CW7CwgAEAAA%3D%3D
