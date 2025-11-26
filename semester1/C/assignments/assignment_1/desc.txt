@@ -1,0 +1,33 @@
+Imperatív Programozás beadandó 2025 ősz
+Elvárások:
+Olvasható, átlátható forrás kód
+Több fájlba tagold a forrás kódodat!
+Warning-ok nélkül leforduló forrás kód
+következő kapcsolókat használd: -W -Wall -Wextra -pedantic
+A program kommunikáljon a felhasználóval!
+Jelezze, ha rossz, vagy kevés bemenetet kapott!
+Zippelve tölstd fel a megoldásod!
+Feladat
+Készíts olyan C programot, amely egy fájlból beolvasott ábécé alapján tud generálni ASCII artokat. Példa: Input: cicca Output:
+
+          .__
+  ____    |__|        ____      ____    _____
+_/ ___\   |  |      _/ ___\   _/ ___\   \__  \
+\  \___   |  |      \  \___   \  \___    / __ \_
+ \___  >  |__|       \___  >   \___  >  (____  /
+     \/                  \/        \/        \/
+Egy mintha ábécét a kurzus fájljai között találsz.
+
+Ábécé beolvasása
+Az ábécé fájl beolvasása és feldolgozása az első lépése a feladatnak. A fájl első sora tartalmazza a betűk magasságát. Minden betű ezt a magasságot fogja követni. Ezután pedig az angol ábécé betűi szerepelnek ábécé sorrendben. Nem minden betű ugyanolyan vastagságú, viszont az egyes betűk összes sora ugyanolyan vastag. A betűket dinamikus memóriában tárold el és minden sor számára pont elegendő memóriát foglalj!
+
+Tippek:
+
+fgets() használata esetén érdemes az új sor karaktert nem eltárolni a betű sztringjébe.
+Érdemes egy tömbben eltárolni az ábécé betűjeit.
+Az elmentet ábécét érdemes a betűk magasságával együtt egy struktúrában tárolni.
+Ábécé használata
+Készíts egy draw_str() függvényt, ami paraméterül egy sztringet kap és az ábécé fájl beolvasásaként elkészült struktúrát! A függvény feladata ASCII-art-ként kiírni a kapott sztringet.
+
+Main
+A program fogadja parancssori argumentumként az ábécé fájl nevét. Ezután addig olvasson be a program sorokat, ameddig EOF karaktert nem küld a felhasználó. (Linux: ctrl+D, Windows: ctrl+z+enter) Minden beolvasott sor után rajzolja ki a program az abból készült ASCII artot.
