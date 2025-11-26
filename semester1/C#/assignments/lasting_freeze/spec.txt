@@ -1,3 +1,5 @@
+Link: https://progalap.elte.hu/specifikacio/v1/?data=H4sIAAAAAAAAA41Sy2rCQBT9lcOsEsyEjNXSDo6runDTii2lxbgYTAox9SpmBEWELvOdfkmZjJFoKZjVuTn3PCaZPStW6Sz7ymbaZEtikg1JgnAsSzwHyGuQ6F1R4Se9m4gwpGlgofIWGckxtljorRz7Mb1sjERh9NrU0pQSB2MarVNr3ldoQ1MCQk9BRJEdYoJ9csuKis3%2FssfyJzuWpWsgPdtqkk3DRVY5nUe99W8T9RV4O7plWW9tQjfyYxotCyPhuUMqcNd28D4Yf3qZskKet0SAwcfw9e3Vm6soDHMuglO%2F1tzZ9RUi3%2FdPuQCW6xqfvM9fwo09hcq5elWvutirjGq%2FzunBHfBKsrJNq0X%2Bb9fVZdcLF%2Ftb1alZCzk4hM8CZtLCFExO9izRRjPJSKIbUy7RjsmaSmvAYe8N%2BKNzs5cHvN1kRIPpNIluU3LB3DcZ0WCakoeYqs4SdzGllEh0WMBIL1ImGQvYOi0234ZJcZgefgEACrloHQMAAA%3D%3D
+
 In: n ∈ N, k ∈ N, days ∈ Day[1..n], Day=(min:R x max:R)
 Out: start ∈ N, end ∈ N
 Pre: n >= 2 and n <= 100 and
