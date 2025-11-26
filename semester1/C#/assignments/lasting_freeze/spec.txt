@@ -1,4 +1,4 @@
-Link: https://progalap.elte.hu/specifikacio/v1/?data=H4sIAAAAAAAAA41Sy2rCQBT9lcOsEsyEjNXSDo6runDTii2lxbgYTAox9SpmBEWELvOdfkmZjJFoKZjVuTn3PCaZPStW6Sz7ymbaZEtikg1JgnAsSzwHyGuQ6F1R4Se9m4gwpGlgofIWGckxtljorRz7Mb1sjERh9NrU0pQSB2MarVNr3ldoQ1MCQk9BRJEdYoJ9csuKis3%2FssfyJzuWpWsgPdtqkk3DRVY5nUe99W8T9RV4O7plWW9tQjfyYxotCyPhuUMqcNd28D4Yf3qZskKet0SAwcfw9e3Vm6soDHMuglO%2F1tzZ9RUi3%2FdPuQCW6xqfvM9fwo09hcq5elWvutirjGq%2FzunBHfBKsrJNq0X%2Bb9fVZdcLF%2Ftb1alZCzk4hM8CZtLCFExO9izRRjPJSKIbUy7RjsmaSmvAYe8N%2BKNzs5cHvN1kRIPpNIluU3LB3DcZ0WCakoeYqs4SdzGllEh0WMBIL1ImGQvYOi0234ZJcZgefgEACrloHQMAAA%3D%3D
+Link: https://progalap.elte.hu/specifikacio/v1/?data=H4sIAAAAAAAAA82SwWrbQBCGX%2BVnTxLWCq0sp%2B3i9ak%2B5NIGp5QWy4clUkFRPTbWBhyCoUc9p5%2BkrFYK6xSDCzVUpxn9M%2F98I80La7blQ%2FWjetCm2hCT7JYkCMe2xacI9RAU%2Brnp4o%2F6eSnimFaRDVWwrkgusMda7%2BUizOnzk5FojN6ZobWkwoU53e1Kaz5TSKGpAGGqIJLEJjnBPrVVRafWf6rH9ld1bFtHIANLtaxW8brqnF5TvQ8va5op8DS5pFjv7YRJEuZ0t2mMROCWVOCOdv51vvgeVMo28nokIsy%2F3d5%2FuQ8eVRLHNRdRzzd6dHYzhSQMw34ugM1uiHvv1y%2Fh0qlC59y9Gkrd2DczuvphzhRuwTctW0vaFfKzrNtT1hMX%2B1tVTzZCDQ4RsoiZsjENk8sXVmijmWQkMcmplkhzsqbSGnDYuwH%2F4Nzs8YCnviI8JfOFid9yotz4ivAUv%2BV9Th2zxDinkgqJjEWM9LpkkrGI7crm6adhUhwif4Xs3AqZ533j02TnaP6WM%2B05x9fnTK6GmZ5i%2Ft8XMbl8hfG1V3j3L486PawOvwHYuvKn8gUAAA%3D%3D
 
 In: n ∈ N, k ∈ N, days ∈ Day[1..n], Day=(min:R x max:R)
 Out: start ∈ N, end ∈ N
@@ -24,6 +24,80 @@ days:
   - min: -5
     max: -4
   - min: -6
+    max: -1
+  - min: 5
+    max: 8
+start: 3
+end: 4
+
+n: 4
+k: 2
+days:
+  - min: 4
+    max: 6
+  - min: -4
+    max: -1
+  - min: -6
+    max: -1
+  - min: 5
+    max: 8
+start: 2
+end: 3
+
+n: 4
+k: 2
+days:
+  - min: 4
+    max: 6
+  - min: -4
+    max: 0
+  - min: -6
+    max: -1
+  - min: 5
+    max: 8
+start: 2
+end: 3
+
+n: 4
+k: 2
+days:
+  - min: 4
+    max: 6
+  - min: -4
+    max: 0
+  - min: -6
+    max: -1
+  - min: 5
+    max: 8
+start: 2
+end: 3
+
+n: 5
+k: 2
+days:
+  - min: -9
+    max: -2
+  - min: -1
+    max: 4
+  - min: -5
+    max: -4
+  - min: -6
+    max: -1
+  - min: 5
+    max: 8
+start: 3
+end: 5
+
+n: 5
+k: 3
+days:
+  - min: -9
+    max: -2
+  - min: -1
+    max: 4
+  - min: -5
+    max: -4
+  - min: -7
     max: -1
   - min: 5
     max: 8
