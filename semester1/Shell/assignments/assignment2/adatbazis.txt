@@ -1,0 +1,4 @@
+Kovács Péter;Budapest, Fő utca 1.;2024.12.06 10:00
+Nagy Anna;Debrecen, Kossuth tér 5.;2024.12.06 14:30
+Teszt Elek;Szeged, Dóm tér 2.;2024.12.05 18:00
+Fradi;Budapest, Újpest utca 3.;2025.12.04 12:00

@@ -1,0 +1,13 @@
+Válasszon egy feladatot a felsoroltak közül. Oldja meg ezt a kiválasztott feladatot az MI segítségével is. A két megoldó szkript fájlt (saját és az MI által adottat) a futáshoz szükséges paraméter állománnyal együtt csomagolja be egy zip fájlba, és ezt a tömörített fájlt töltse fel ezen a Canvas oldalon! 
+
+Beadási határidő: 2025 november 2.
+
+1 feladat.            Készítsen Mikulás találkozóra hívó körlevél készítő shell szkriptet! A szkript paramétere legyen két fájl, az egyik a körlevél szövege, a másik az „adatbázis”. A körlevél szövegében <> között helyezzük el a mezőneveket(<nev>,<cim>,<időpont>), amelyek aktuális értékét az adatbázis fájlból olvassuk ki. Az adatbázist tartalmazó fájl soronként három adatot tartalmaz, a címzett nevét, címét és találkozó idejét! A körlevelek a szabványos kimenetre kerüljenek kiírásra!
+
+2.feladat.            Írjunk shell script programot, ami megadja egy megadott fájlt páros és páratlan soraiban lévő páros illetve páratlan számok összegét, majd az eredményt a standard outputra elhelyezi! Minden sorban legalább 2 szám van. A fájlt a bemeneten vagy paraméterként adjuk meg.
+
+3.feladat.            Írjon shell szkriptet, ami egy paraméter fájlt fogad. A fájl minden sorában meg kell adni, hogy mely számrendszerből mely számrendszerbe kell konvertálni a sorban lévő további számokat. ( PL: 2,8,10,1011- konvertáljuk a 2-es számrendszerből 8-ba a bináris 10 és 1011-et.) Ellenőrizze le, hogy az adott számrendszerben helyesek a számok. (pl. binárisban nincs 2-es, így a korábbi példa helytelen formája 2,8,3,1011, mivel 3 nem 2-es számrendszerben van!)
+
+4.feladat.            A szavazókörökben egy fájlban gyűjtöttük össze a szavazatokat. A fájl soronként egy szavazatot tartalmaz: Polgármester neve, egyéni képviselő neve vesszővel elválasztva. A shell szkript készítse el a szavazatszámlálást, gyűjtse ki a jelöltek nevét, számolja meg jelöltenként a szavazatokat, és hirdessen győztest. Csak az a szavazat az érvényes, ahol 2 név szerepel és a nevek rajta vannak a jelölhető listákon (polgármesterek.txt, képviselők.txt). Az érvénytelen szavazatokat írja be egy külön fájlba.
+
+5.feladat.            Készítsen szkriptet, amelyik paraméterként kap egy fájlt és az ebben lévő szavakból meghatározza, hogy melyik szó szerepel a legtöbb másik szóban részszóként.

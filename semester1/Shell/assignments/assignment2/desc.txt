@@ -1,0 +1,7 @@
+PowerShell beadandó feladatok.
+
+Beadási határidő: 2025 december 7.
+
+Válasszon egy feladatot az első beadandó feladatok közül, és azt oldja meg Powershellben!
+
+A megoldást töltse fel ide.
