@@ -7,6 +7,6 @@ int main(int argc, char** argv){
         return 1;
     }
     char* file_name = argv[1];    
-    write_ascii_char('a', file_name);
+    write_ascii_word("asd", 3, file_name);
     return 0;
 }
