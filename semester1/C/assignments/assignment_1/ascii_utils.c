@@ -4,39 +4,67 @@
 #include <ctype.h>
 #include "ascii_utils.h"
 
-void write_ascii_word(char* word, int count, char* file_name){
+void free_alphabet(Alphabet* alpha) {
+    for (int i = 0; i < 26; i++) {
+        for (int row = 0; row < alpha->height; row++) {
+            free(alpha->letters[i].lines[row]);
+        }
+        free(alpha->letters[i].lines);
+    }
+}
+
+Alphabet read_file(char* file_name){
     FILE *fptr = fopen(file_name, "r");
     if(fptr == NULL){
         printf("Error! File with name: %s not found!\n", file_name);
-        return;
+        exit(1);
+    }
+    Alphabet alphabet;
+
+    char buff[128];
+    if (fgets(buff, sizeof(buff), fptr) == NULL) {
+         exit(1);
+    }
+    alphabet.height = (short)atoi(buff);
+
+    for(int i = 0; i < 26; i++){
+        alphabet.letters[i].lines = malloc(alphabet.height * sizeof(char*));
+        
+        if (alphabet.letters[i].lines == NULL) {
+            perror("Memory allocation failed!");
+            exit(1);
+        }
+
+        for(int row = 0; row < alphabet.height; row++) {
+            if(fgets(buff, sizeof(buff), fptr) == NULL) {
+                break;
+            }
+            buff[strcspn(buff, "\r\n")] = '\0';
+            int length = strlen(buff);
+            alphabet.letters[i].lines[row] = malloc(length + 1);
+
+            if(alphabet.letters[i].lines[row] == NULL) {
+                perror("Memory allocation failed!");
+                exit(1);
+            }
+            strcpy(alphabet.letters[i].lines[row], buff);
+        }
     }
 
-    //This only works for row amounts for a single ascii art smaller than 10!
-    //short row_count = (short)fgetc(fptr) - 48;
-    char buff[4];
-    fgets(buff, sizeof(buff), fptr);
-    const short row_count = (short)atoi(buff);
+    fclose(fptr);
+    return alphabet;
+}
 
-    //26 letters
-
-    for(int i = 0; i < row_count; i++){
+void draw_str(char* word, int count, Alphabet* alphabet){
+    for(int i = 0; i < alphabet->height; i++){
         for(int j = 0; j < count; j++){
-            // -96
-            short char_idx = (short)(word[j] - 96);
-            int row_to_write = char_idx * row_count + i + 1;
-            int k = 0;
-
-            while (1) {
-                char buff2[20];
-                fgets(buff2, sizeof(buff2), fptr); 
-                if(row_to_write == k++)
-                {
-                    printf("%s", buff2);
-                    break;
-                }
-            }
+            char c = tolower(word[j]);
+            if (c >= 'a' && c <= 'z') {
+                short char_idx = (short)(c - 'a');
+                printf("%s", alphabet->letters[char_idx].lines[i]);
+            }        
         }
         printf("\n");
     }
-    fclose(fptr);
+    
 }
