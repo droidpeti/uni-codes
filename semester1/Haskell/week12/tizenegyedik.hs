@@ -25,3 +25,9 @@ myGroup ls = xs : myGroup ys
 
 notNull :: [a] -> Bool
 notNull = not . null
+
+myEven :: Integral a => a -> Bool
+myEven = (==0) . (`mod` 2)
+
+myOdd :: Integral a => a -> Bool
+myOdd = (==1) . (`mod` 2)
