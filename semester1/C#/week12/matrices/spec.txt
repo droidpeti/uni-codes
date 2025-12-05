@@ -1,0 +1,21 @@
+In: n ∈ N, m ∈ R[1..n, 1..n]
+Out: min ∈ R
+Fn: size: N x N -> N,
+    size(matrixSizeX, matrixSizeY) = matrixSizeX * matrixSizeY - 1
+Fn: matrixIndexX: N x N -> R,
+    matrixIndexX(i, sizeY) = i / sizeY + 1
+Fn: matrixIndexY: N x N -> R,
+    matrixIndexY(i,sizeY) = i % sizeY + 1
+Fn: matrixXYIndex: N x N x N -> N,
+    matrixXYIndex(x,y, sizeY) = y * sizeY + x
+Pre: -
+Post: (min,) = MIN(i=1..size(n,n), m[matrixIndexX(i, n), matrixIndexY(i,n)])
+
+n: 3
+m: [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+min: 1
+
