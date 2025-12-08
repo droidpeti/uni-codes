@@ -29,4 +29,35 @@ validApples (x:xs)
  | fst x && snd x <= 3 = 1 + validApples xs
  | otherwise = validApples xs
 
+doesContain :: String -> String -> Bool
+doesContain [] _ = True
+doesContain _ [] = False
+doesContain (n:ns) (h:hs)
+  | n == h = doesContain ns hs
+  | otherwise = doesContain (n:ns) hs
 
+barbie :: [String] -> String
+barbie list = helper 1 list
+  where
+    helper :: Int -> [String] -> String
+    helper _ [] = "farmer"
+    helper index (c:cs)
+      | c == "rozsaszin" = c
+      | c /= "fekete" && index `mod` 2 == 0 = c 
+      | otherwise = helper (index + 1) cs
+
+firstValid :: [a -> Bool] -> a -> Maybe Int
+firstValid p par = helper 0 p par
+  where
+    helper :: Int -> [a -> Bool] -> a -> Maybe Int
+    helper _ [] _ = Nothing
+    helper index (p:ps) par
+     | p par = Just index
+     | otherwise = helper (index + 1) ps par
+
+combineListsIf :: (a -> b -> Bool) -> (a -> b -> c) -> [a] -> [b] -> [c]
+combineListsIf _ _ [] _ = []
+combineListsIf _ _ _ [] = []
+combineListsIf pred func (x:xs) (y:ys)
+ | pred x y = func x y : combineListsIf pred func xs ys
+ | otherwise = combineListsIf pred func xs ys
