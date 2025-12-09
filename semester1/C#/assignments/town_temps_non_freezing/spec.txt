@@ -1,4 +1,4 @@
-https://progalap.elte.hu/specifikacio/v1/?uuid=be96ec7e-4ba2-4701-b55d-e244a05b38a3
+https://progalap.elte.hu/specifikacio/v1/?uuid=1f8cb863-2623-412c-b3c9-610852050132
 
 In: n ∈ N, m ∈ N, towns ∈ R[1..n*m]
 Out: t ∈ N, ids ∈ R[1..t]
@@ -26,6 +26,36 @@ towns:
     - 16
     - 16
     - 20
+t: 2
+ids:
+  - 1
+  - 3
+
+n: 2
+m: 3
+towns:
+    - 6
+    - 7
+    - 8
+    - -1
+    - 2
+    - 4
+t: 1
+ids:
+  - 1
+
+n: 3
+m: 3
+towns:
+    - 6
+    - 7
+    - 8
+    - -1
+    - 2
+    - 4
+    - 6
+    - 7
+    - 8
 t: 2
 ids:
   - 1
