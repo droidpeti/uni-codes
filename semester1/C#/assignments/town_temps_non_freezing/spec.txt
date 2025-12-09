@@ -1,0 +1,32 @@
+https://progalap.elte.hu/specifikacio/v1/?uuid=be96ec7e-4ba2-4701-b55d-e244a05b38a3
+
+In: n ∈ N, m ∈ N, towns ∈ R[1..n*m]
+Out: t ∈ N, ids ∈ R[1..t]
+Pre: n >= 1 and n <= 1000 and 
+     m >= 1 and m <= 1000 and 
+     ∀i∈[1..n*m]:(towns[i/n + i%m] >= -50) and
+     ∀i∈[1..n*m]:(towns[i/n + i%m] <= 50)
+Post: (t,ids) = FILTER(i=1..n, ∀j∈[1..m]:(towns[(i-1)*m + j] > 0), i)
+
+n: 3
+m: 5
+towns:
+    - 10
+    - 15
+    - 12
+    - 10
+    - 10
+    - -11
+    - 11
+    - 11
+    - 11
+    - 20
+    - 12
+    - 16
+    - 16
+    - 16
+    - 20
+t: 2
+ids:
+  - 1
+  - 3
