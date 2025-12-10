@@ -1,0 +1,20 @@
+https://progalap.elte.hu/specifikacio/v1/?uuid=f84ba879-6b0c-47de-90cf-f8b48cc569c0
+
+In: n ∈ N, m ∈ N, data ∈ R[1..n*m]
+Sa: helperIndex ∈ N
+Out: k ∈ N
+Pre: -
+Post: (,helperIndex) = SEARCH(i=1..n*m, data[i] = -1) and
+      k = (helperIndex-1)/m+1
+
+n: 2
+m: 3
+helperIndex: 4
+data:
+  - 12000
+  - 23000
+  - 10000
+  - -1
+  - 10000
+  - -1
+k: 2
