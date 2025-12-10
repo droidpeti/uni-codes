@@ -1,0 +1,18 @@
+https://progalap.elte.hu/specifikacio/v1/?uuid=bf389864-318d-4288-993d-a3f6bfeb9827
+
+In: n ∈ N, m ∈ N, k ∈ N, data∈R[1..n*m]
+Out: id ∈ N
+Pre: -
+Post: (,id) = SEARCH(i=1..n, k = COUNT(j=1..m, data[(i-1)*n+j] = -1))
+
+n: 2
+m: 3
+k: 2
+data:
+  - 12000
+  - 23000
+  - -1
+  - -1
+  - 10000
+  - -1
+id: 2
