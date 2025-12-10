@@ -1,0 +1,22 @@
+https://progalap.elte.hu/specifikacio/v1/?uuid=d3f79434-07ad-4202-a570-7272a485925c
+
+In: n ∈ N, image ∈ N[1..n]
+Sa: helperIndex ∈ N
+Out: bluePixel ∈ N
+Pre: -
+Post: (,helperIndex,) = CONDMAX(i=1..n, image[i], i%3 = 0) and
+      bluePixel = helperIndex/3
+
+n: 9
+image:
+  - 243
+  - 23
+  - 134
+  - 201
+  - 188
+  - 167
+  - 233
+  - 111
+  - 124
+helperIndex: 6
+bluePixel: 2
