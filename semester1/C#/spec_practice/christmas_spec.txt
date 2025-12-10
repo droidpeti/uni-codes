@@ -16,3 +16,5 @@ data:
   - 10000
   - -1
 id: 2
+
+Minták: Keresés, Darab

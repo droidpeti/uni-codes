@@ -1,0 +1,21 @@
+https://progalap.elte.hu/specifikacio/v1/?uuid=775f74a2-9dcc-4c2e-8d32-933b008a4672
+
+In: n ∈ N, nyt ∈ Record[1..n], Record=(id:S x code:Z)
+Out: uniqeCodes ∈ Z[1..m], m ∈ N
+Pre: -
+Post: (m,uniqeCodes) = FILTER(i=1..n, ∀j∈[1..i-1]:(uniqeCodes[j] != nyt[i].code), nyt[i].code)
+
+n: 3
+m: 2
+nyt:
+  - id: "123456789"
+    code: 123
+  - id: "187654328"
+    code: 52
+  - id: "154276579"
+    code: 123
+uniqeCodes:
+  - 123
+  - 52
+
+Minták: Kiválogatás, Eldöntés

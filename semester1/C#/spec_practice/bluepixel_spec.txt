@@ -20,3 +20,5 @@ image:
   - 124
 helperIndex: 6
 bluePixel: 2
+
+Minta: Feltmax
