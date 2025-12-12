@@ -1,9 +1,9 @@
-https://progalap.elte.hu/specifikacio/v1/?uuid=bf389864-318d-4288-993d-a3f6bfeb9827
+https://progalap.elte.hu/specifikacio/v1/?uuid=f6f84498-5d44-4fb7-bd5c-3f4d32a30689
 
 In: n ∈ N, m ∈ N, k ∈ N, data∈R[1..n*m]
 Out: id ∈ N
 Pre: -
-Post: (,id) = SEARCH(i=1..n, k = COUNT(j=1..m, data[(i-1)*n+j] = -1))
+Post: (,id) = SEARCH(i=1..n, k < COUNT(j=1..m, data[(i-1)*n+j] = -1))
 
 n: 2
 m: 3
