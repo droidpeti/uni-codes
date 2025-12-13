@@ -1,0 +1,54 @@
+===================================================================
+HASKELL VIZSGA FELKÉSZÍTŐ - MEGOLDÓKULCS
+===================================================================
+
+1.  B) A függvényeknek nincsenek mellékhatásaik (side-effects)...
+2.  C) A kifejezések csak akkor értékelődnek ki, amikor az eredményükre ténylegesen szükség van.
+3.  C) Egy függvényhívás bármikor helyettesíthető a visszatérési értékével...
+4.  D) Az Int fix méretű (gyorsabb), az Integer tetszőleges pontosságú (lassabb).
+5.  A) type String = [Char]
+6.  B) :
+7.  C) ++
+8.  D) Kivétel (Exception: empty list)
+9.  B) Visszaadja a lista összes elemét az első kivételével.
+10. A) A take az elejéről tart meg n elemet, a drop az elejéről dob el n elemet.
+11. B) lista !! 4
+12. A) Igen, a két jelölés ekvivalens.
+13. C) [a] -> Int
+14. D) Eldönti egy listáról, hogy üres-e (Bool-t ad vissza).
+15. B) \x -> x + 1
+16. C) Alacsony prioritású, jobbra kötő operátor (zárójel-helyettesítő).
+17. C) Függvénykompozíció (f (g x)).
+18. B) Minden függvény valójában egyparaméteres, és újabb függvényt ad vissza...
+19. A) (a -> b) -> [a] -> [b]
+20. B) Egy feltétel alapján kiválogatja a lista elemeit (csak az igazak maradnak).
+21. B) (a -> b -> b) -> b -> [a] -> b
+22. C) Az if kifejezés (mindig kell else), az őrök függvénydefiníciónál használhatók...
+23. B) Lokális változók definiálására egy kifejezésen belül.
+24. B) Lokális definíciók megadása egy függvény törzsének végén.
+25. C) Típusmegadás (típus szignatúra).
+26. C) Típusmegszorítás (Type Constraint).
+27. B) Eq
+28. C) Ord
+29. D) Num
+30. C) Show
+31. A) Read
+32. C) Just a / Nothing
+33. C) Olyan számításokra, amelyek sikertelenek lehetnek (hiba/hiányzó érték)...
+34. B) True és False
+35. B) [1, 2, 3]
+36. C) 6
+37. D) Soha nem tér vissza (végtelenül fut), mert várja a további kisebb számokat.
+38. A) [1, 2, 3, 4]
+39. C) []
+40. B) Num a => a -> a -> a
+41. C) (Num a, Ord a) => a -> Bool
+42. B) Nem, a listák elemeinek azonos típusúnak kell lenniük.
+43. B) Igen, ez egy pár (tuple), aminek elemei lehetnek eltérő típusúak.
+44. B) Két listából párok listáját készíti (a rövidebb hosszáig).
+45. C) 5 (Lusta kiértékelés miatt az undefined nem okoz hibát).
+46. A) `div`: egész osztás, `/`: lebegőpontos osztás.
+47. B) (x:xs)
+48. B) Igen, a lista farkán hívja meg önmagát.
+49. C) Csak párokra (2 elemű tuple) működnek.
+50. B) [a] típusú listából [b] típusú listát készít.

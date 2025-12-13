@@ -1,0 +1,304 @@
+===================================================================
+HASKELL VIZSGA FELKÉSZÍTŐ - KÉRDÉSSOR (50 db)
+===================================================================
+
+1. Mit jelent az, hogy a Haskell "tiszta" (pure) funkcionális nyelv?
+   A) A kódja mentes a szintaktikai hibáktól.
+   B) A függvényeknek nincsenek mellékhatásaik (side-effects), ugyanarra a bemenetre mindig ugyanazt adják.
+   C) Csak tiszta matematikai számításokra használható, I/O műveletekre nem.
+   D) Nem használ memóriát a futás során.
+
+2. Mi a "lusta kiértékelés" (lazy evaluation) lényege?
+   A) A program futása lassabb, mint más nyelvekben.
+   B) A programozónak kevesebb kódot kell írnia.
+   C) A kifejezések csak akkor értékelődnek ki, amikor az eredményükre ténylegesen szükség van.
+   D) A függvények visszatérési értéke mindig undefined.
+
+3. Mit jelent a "referenciális átlátszóság"?
+   A) A változók értéke bárhonnan látható és módosítható.
+   B) A kód automatikusan dokumentálja önmagát.
+   C) Egy függvényhívás bármikor helyettesíthető a visszatérési értékével a program működésének változása nélkül.
+   D) A program forráskódja nyílt forráskódú.
+
+4. Mi a különbség az `Int` és az `Integer` típus között?
+   A) Nincs különbség, szinonimák.
+   B) Az Int csak pozitív lehet, az Integer negatív is.
+   C) Az Int tetszőleges pontosságú, az Integer fix méretű.
+   D) Az Int fix méretű (gyorsabb), az Integer tetszőleges pontosságú (lassabb).
+
+5. Mi a `String` típus pontos definíciója Haskellben?
+   A) type String = [Char]
+   B) data String = Text
+   C) type String = Array Char
+   D) class String
+
+6. Melyik operátorral fűzünk egy elemet egy lista elejére?
+   A) ++
+   B) :
+   C) !!
+   D) ->
+
+7. Melyik operátorral fűzünk össze két listát?
+   A) :
+   B) +
+   C) ++
+   D) .
+
+8. Mi az eredménye a `head []` kifejezésnek?
+   A) []
+   B) 0
+   C) Nothing
+   D) Kivétel (Exception: empty list)
+
+9. Mi a `tail` függvény feladata?
+   A) Visszaadja a lista utolsó elemét.
+   B) Visszaadja a lista összes elemét az első kivételével.
+   C) Megfordítja a listát.
+   D) Visszaadja a lista hosszát.
+
+10. Mi a különbség a `take n` és a `drop n` között?
+    A) A take az elejéről tart meg n elemet, a drop az elejéről dob el n elemet.
+    B) A take az utolsó n elemet adja vissza, a drop az első n-et.
+    C) A take módosítja a listát, a drop nem.
+    D) Nincs különbség.
+
+11. Hogyan éred el a `lista` 5. elemét (0-tól indexelve)?
+    A) lista[4]
+    B) lista !! 4
+    C) get lista 4
+    D) lista : 4
+
+12. Igaz-e a következő állítás: `[1, 2, 3] == 1 : 2 : 3 : []`?
+    A) Igen, a két jelölés ekvivalens.
+    B) Nem, a második forma szintaktikai hiba.
+    C) Nem, a második forma egy listákból álló listát eredményez.
+    D) Csak akkor igaz, ha importáljuk a Data.List modult.
+
+13. Mi a `length` függvény típusa?
+    A) [a] -> [a]
+    B) [a] -> Bool
+    C) [a] -> Int
+    D) Int -> [a]
+
+14. Mit csinál a `null` függvény?
+    A) Nullázza a lista elemeit.
+    B) Visszaadja a 0 értéket.
+    C) Törli a memóriát.
+    D) Eldönti egy listáról, hogy üres-e (Bool-t ad vissza).
+
+15. Hogyan jelöljük a névtelen (lambda) függvényeket?
+    A) lambda x -> x + 1
+    B) \x -> x + 1
+    C) fun x => x + 1
+    D) @x -> x + 1
+
+16. Mi a `$` operátor szerepe (pl. `f $ g x`)?
+    A) Változó deklaráció.
+    B) Magas prioritású, balra kötő operátor.
+    C) Alacsony prioritású, jobbra kötő operátor (zárójel-helyettesítő).
+    D) Sztring konvertálás.
+
+17. Mi a `.` operátor szerepe (pl. `f . g`)?
+    A) Lebegőpontos szám jelölése.
+    B) Objektum mezőjének elérése.
+    C) Függvénykompozíció (f (g x)).
+    D) Lista lezárása.
+
+18. Mit jelent a `currying`?
+    A) A függvények fűszerezése kommentekkel.
+    B) Minden függvény valójában egyparaméteres, és újabb függvényt ad vissza a többi paraméterhez.
+    C) A rekurzió egy speciális fajtája.
+    D) A típusok konvertálása.
+
+19. Mi a típusa a `map` függvénynek?
+    A) (a -> b) -> [a] -> [b]
+    B) [a] -> [b] -> [a, b]
+    C) (a -> b) -> a -> b
+    D) [a] -> b
+
+20. Mit csinál a `filter` függvény?
+    A) Megváltoztatja a lista elemeit egy függvény alapján.
+    B) Egy feltétel alapján kiválogatja a lista elemeit (csak az igazak maradnak).
+    C) Sorba rendezi a listát.
+    D) Eltávolítja a duplikátumokat.
+
+21. Mi a `foldr` típusa (nagyjából)?
+    A) (a -> a -> a) -> [a] -> a
+    B) (a -> b -> b) -> b -> [a] -> b
+    C) [a] -> [a]
+    D) (a -> b) -> [a] -> [b]
+
+22. Mi a különbség `if-then-else` és az őrök (`|`) között?
+    A) Az if csak Int-re működik, az őrök bármire.
+    B) Az if utasítás, az őrök függvények.
+    C) Az if kifejezés (mindig kell else), az őrök függvénydefiníciónál használhatók esetszétválasztásra.
+    D) Nincs különbség.
+
+23. Mire való a `let ... in ...` szerkezet?
+    A) Globális változók definiálására.
+    B) Lokális változók definiálására egy kifejezésen belül.
+    C) Ciklusok írására.
+    D) Modulok importálására.
+
+24. Mi a `where` záradék szerepe?
+    A) SQL lekérdezések írása Haskellben.
+    B) Lokális definíciók megadása egy függvény törzsének végén.
+    C) A függvény típusának megadása.
+    D) Hibaüzenetek definiálása.
+
+25. Mit jelent a `::` jelölés (pl. `x :: Int`)?
+    A) Értékadás.
+    B) Lista összefűzés.
+    C) Típusmegadás (típus szignatúra).
+    D) Modul elérési út.
+
+26. Mit jelent a típusdefinícióban a `=>` jel (pl. `Eq a => ...`)?
+    A) Lambda függvény.
+    B) Következtetés.
+    C) Típusmegszorítás (Type Constraint).
+    D) Értékadás.
+
+27. Melyik típusosztály felel az egyenlőségvizsgálatért (`==`)?
+    A) Ord
+    B) Eq
+    C) Num
+    D) Show
+
+28. Melyik típusosztály felel a rendezhetőségért (`<`, `>`)?
+    A) Eq
+    B) Enum
+    C) Ord
+    D) Read
+
+29. Melyik típusosztály felel az alapvető műveletekért (`+`, `*`)?
+    A) Math
+    B) Int
+    C) Calc
+    D) Num
+
+30. Melyik típusosztály teszi lehetővé az értékek szöveggé alakítását (`show`)?
+    A) String
+    B) Read
+    C) Show
+    D) Print
+
+31. Melyik típusosztály teszi lehetővé a szöveg értékké alakítását?
+    A) Read
+    B) Write
+    C) Parse
+    D) Show
+
+32. Mi a `Maybe` típus két konstruktora?
+    A) Yes / No
+    B) True / False
+    C) Just a / Nothing
+    D) Some / None
+
+33. Mire használjuk leggyakrabban a `Maybe` típust?
+    A) Véletlenszám generálásra.
+    B) Végtelen ciklusok jelölésére.
+    C) Olyan számításokra, amelyek sikertelenek lehetnek (hiba/hiányzó érték) a program összeomlása nélkül.
+    D) Két érték párhuzamos tárolására.
+
+34. Mi a `Bool` típus két lehetséges értéke?
+    A) 0 és 1
+    B) True és False
+    C) Yes és No
+    D) Just és Nothing
+
+35. Mit ad vissza a `take 3 [1..]` kifejezés?
+    A) Hibát, mert a lista végtelen.
+    B) [1, 2, 3]
+    C) [3, 4, 5]
+    D) Végtelen ciklusba kerül.
+
+36. Mit ad vissza: `head [x | x <- [1..], x > 5]`?
+    A) 1
+    B) 5
+    C) 6
+    D) Semmit, lefagy a végtelen lista miatt.
+
+37. Mit ad vissza: `filter (<5) [1..]`?
+    A) [1, 2, 3, 4]
+    B) [1, 2, 3, 4, 5]
+    C) Hibaüzenetet.
+    D) Soha nem tér vissza (végtelenül fut), mert várja a további kisebb számokat.
+
+38. Mit ad vissza: `takeWhile (<5) [1..]`?
+    A) [1, 2, 3, 4]
+    B) Végtelen ciklus.
+    C) [5]
+    D) Nothing
+
+39. Mi az eredménye: `map (+1) []`?
+    A) [1]
+    B) 0
+    C) []
+    D) Hiba
+
+40. Mi a típusa a `(+)` függvénynek?
+    A) Int -> Int -> Int
+    B) Num a => a -> a -> a
+    C) a -> a -> a
+    D) Num a => a -> a
+
+41. Mi a típusa a `(> 5)` kifejezésnek?
+    A) Bool
+    B) Int -> Bool
+    C) (Num a, Ord a) => a -> Bool
+    D) Ord a => Bool
+
+42. Érvényes-e Haskellben a `[1, "ketto"]` lista?
+    A) Igen.
+    B) Nem, a listák elemeinek azonos típusúnak kell lenniük.
+    C) Csak ha a `List Any` típust használjuk.
+    D) Igen, de csak tuple-ként.
+
+43. Érvényes-e Haskellben az `(1, "ketto")` kifejezés?
+    A) Nem, a típusok eltérőek.
+    B) Igen, ez egy pár (tuple), aminek elemei lehetnek eltérő típusúak.
+    C) Nem, hiányzik a lista zárójel.
+    D) Csak speciális könyvtárral.
+
+44. Mit csinál a `zip` függvény?
+    A) Tömöríti a fájlokat.
+    B) Két listából párok listáját készíti (a rövidebb hosszáig).
+    C) Összefűz két listát egy hosszú listává.
+    D) Törli a páratlan elemeket.
+
+45. Mit ad vissza a `const 5 undefined` kifejezés?
+    A) Hiba (undefined).
+    B) 0
+    C) 5
+    D) Nothing
+
+46. Mi a különbség a `div` és a `/` között?
+    A) `div`: egész osztás, `/`: lebegőpontos osztás.
+    B) `div`: lebegőpontos, `/`: egész.
+    C) Nincs különbség.
+    D) A `/` csak páros számokon működik.
+
+47. Melyik mintaillesztés helyes egy legalább egy elemű listára?
+    A) [x:xs]
+    B) (x:xs)
+    C) x -> xs
+    D) {x, xs}
+
+48. Rekurzív-e a `length` függvény (a standard definíció szerint)?
+    A) Nem, iteratív.
+    B) Igen, a lista farkán hívja meg önmagát (+1-et adva az eredményhez).
+    C) Nem, beépített processzor utasítást használ.
+    D) Csak páros hosszú listákon.
+
+49. Mi az `fst` és `snd` függvények korlátja?
+    A) Csak Int típusra működnek.
+    B) Csak listákra működnek.
+    C) Csak párokra (2 elemű tuple) működnek.
+    D) Nincs korlátjuk.
+
+50. Ha `f :: a -> b`, akkor mit csinál a `map f`?
+    A) `a` típusú értéket konvertál `b`-vé.
+    B) `[a]` típusú listából `[b]` típusú listát készít.
+    C) `[b]` típusú listából `[a]` típusút készít.
+    D) Kiszűri a nem `b` típusú elemeket.
+    
