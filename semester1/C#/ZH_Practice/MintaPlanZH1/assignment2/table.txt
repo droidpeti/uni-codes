@@ -1,0 +1,11 @@
+Mindeldöntés
+
+i=e..u ~ j=1..h
+T(i) ~ building[(i-1)*h+j].weight < 2000
+
+Kiválogatás
+i=e..u ~ i=1..e
+T(i) ~ ∀j∈[1..h]:(building[(i-1)*h+j].weight < 2000)
+f(i) ~ i
+db ~ n
+y ~ floors

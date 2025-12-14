@@ -1,0 +1,15 @@
+1. Feladat: A Moziterem Bevétele
+Egy moziterem nézőterét egy N * M-es mátrixban tároljuk. Minden székről tudjuk, hogy
+foglalt-e, és mennyibe került a jegy rá.
+A típusdefiníció:
+Típus Szék = Rekord(
+    foglalt : Logikai,
+    ar : Egész
+)
+A terem adatai: Terem: Szék[N, M]
+Feladat: Határozd meg, hogy melyik sorban volt a legnagyobb a bevétel (csak a foglalt székek ára számít)!
+Ha több ilyen van, az elsőt add meg.
+
+Alkalmazott programozási minták: ???
+
+Tipp: Soronként kell összegezni, és a sorok összegei közül maximumot keresni.

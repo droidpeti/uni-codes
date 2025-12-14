@@ -1,0 +1,18 @@
+2. Feladat: Biztonságos Parkolóház
+Egy parkolóház E emeletből áll, minden emeleten H parkolóhely van.
+A parkolóházat egy mátrix reprezentálja.
+
+Típus Auto = Rekord(
+    rendszam : Szöveg,
+    suly : Egész
+)
+
+Adatok: Parkolo: Auto[E, H] (Ahol nincs autó, ott lehet egy speciális "ÜRES" érték vagy 0 súly,
+a feladat szempontjából tegyük fel, hogy az üres hely súlya 0).
+
+Feladat: Gyűjtsd ki (válogasd ki) azoknak az emeleteknek a sorszámát,
+ahol minden parkoló autó súlya kisebb, mint 2000 kg
+(hogy ne szakadjon le az emelet). Az üres helyek nem számítanak (súlyuk 0, ami < 2000).
+
+Alkalmazott programozási minták: ???
+Tipp: Emeleteket vizsgálsz. Egy emelet akkor "jó", ha minden elemére igaz a feltétel.

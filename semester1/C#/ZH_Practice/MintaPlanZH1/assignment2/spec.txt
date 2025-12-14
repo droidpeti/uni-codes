@@ -1,0 +1,4 @@
+In: e ∈ N, h ∈ N, building ∈ Car[1..e*h], Car=(license:S x weight:N)
+Out: n ∈ N, floors∈N[1..n]
+Pre: e > 0 and h > 0
+Post: (n,floors) = FILTER(i=1..e, ∀j∈[1..h]:(building[(i-1)*h+j].weight < 2000), i)

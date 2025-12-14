@@ -1,0 +1,4 @@
+In: n ∈ N, m ∈ N, venue ∈ Chair[1..n*m], Chair = (reserved:B x price:N)
+Out: mvr ∈ N
+Pre: n > 0 and m > 0
+Post: (mvr,) = MAX(i=1..n, SUM(j=1..m, venue[(i-1)*m+j].price, venue[(i-1)*m+j].reserved))

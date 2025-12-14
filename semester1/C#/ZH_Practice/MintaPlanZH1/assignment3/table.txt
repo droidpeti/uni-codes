@@ -1,0 +1,11 @@
+Eldöntés
+
+i=e..u ~ j=1..m
+T(i) ~ grades[(i-1) * m + j] = 5
+
+Keresés
+
+i=e..u ~ i=1..n
+T(i) ~ ∃j∈[1..m]:(grades[(i-1) * m + j] = 5)
+van ~ exists
+ind ~ id

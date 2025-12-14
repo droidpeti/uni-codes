@@ -1,0 +1,11 @@
+Összegzés
+
+i=e..u ~ j=1..m
+f(i) ~ venue[(i-1)*m+j].price
+T(i) ~ venue[(i-1)*m+j].reserved
+
+Maximumkiválasztás
+
+i=e..u ~ i=1..n
+f(i) ~ SUM(j=1..m, venue[(i-1)*m+j].price, venue[(i-1)*m+j].reserved)
+maxind ~ mvr

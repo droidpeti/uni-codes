@@ -1,0 +1,4 @@
+In: n ∈ N, m ∈ N, grades ∈ N[1..n*m]
+Out: id ∈ N, exists ∈ B
+Pre: n > 0 and m > 0
+Post: (exists,id) = SEARCH(i=1..n, ∃j∈[1..m]:(grades[(i-1) * m + j] = 5))

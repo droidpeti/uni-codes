@@ -1,0 +1,10 @@
+3. Feladat: A Legszorgalmasabb Diák
+
+Egy iskolában N tanuló jár, mindenkinek M tantárgyból van év végi jegye. Az osztályzatokat
+egy Naplo nevű N * M-es egész számokat tartalmazó mátrix tárolja (ahol a sorok a diákok,
+oszlopok a tárgyak). Tudjuk, hogy az 5-ös jegy a jeles.
+
+Feladat: Add meg annak az első diáknak a sorszámát, akinek van legalább egy 5-ös osztályzata! Ha nincs ilyen diák, jelezd!
+
+Alkalmazott programozási minták: ???
+Tipp: Diákokat keresel (sorokat). Egy diák akkor felel meg, ha a jegyei között (oszlopok) van ötös.
