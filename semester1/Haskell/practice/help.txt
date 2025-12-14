@@ -1,0 +1,31 @@
+Gyorstalpaló C# Fejlesztőknek
+
+1. map LINQ .Select()
+map (+1) [1,2,3] → [2,3,4]
+
+2. filter LINQ Where()
+filter (>2) [1,2,3] [3]
+
+3. foldr / foldl LINQ Aggregate()
+
+Ez a "hajtogatás". Egy kezdőértékből és egy listából csinál egyetlen értéket.
+
+foldr (Right): Jobbról balra halad (ez a gyakoribb a rekurziv listák miatt).
+foldr (-) 0 [1, 2, 3] 1 (2 (3 0))
+
+foldl (Left): Balról jobbra halad (mint egy for ciklus akkumulátorral).
+foldl (-) 0 [1, 2, 3] ((01)2) 3
+
+4. $ (Dollárjel) = "Zárójel-helyettesítő"
+
+Azt jelenti: "Értékeld ki, ami tőlem jobbra van, és az eredményt add oda a bal oldali függvénynek."
+f (g (hx)) -> f $g$ h x
+
+Célja: Kevesebb zárójel (Clean Code).
+
+5. (Pont) = Függvénykompozíció (Pipe)
+
+Matematikai f(g(x)).
+odd (+1) jelentése: Először adj hozzá egyet, aztán vizsgáld, hogy páratlan-e.
+
+C#-ban: x => IsOdd (AddOne (x))
