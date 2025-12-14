@@ -1,0 +1,7 @@
+4. "Van-e Oscar-gyanús dráma?"
+
+El kell döntenünk, hogy létezik-e olyan film, amelyiknek a kategóriája "Dráma" ÉS az értékelése 5-ös.
+
+Minta: ??? (Pesszimista vagy Optimista?)
+
+Logika: Indulunk hamis-ról. Ha találunk ilyet -> igaz és break (vagyis ciklusfeltétel).

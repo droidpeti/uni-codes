@@ -1,0 +1,7 @@
+5. "Keresem a Titanicot"
+
+Tudjuk, hogy a "Titanic" című film biztosan benne van a listában (ez garancia!). Hányadik helyen van?
+
+Minta: ??? (Ez a trükkös kérdés!)
+
+Logika: Mivel biztosan benne van, nem kell vizsgálni a tömb végét, csak azt, hogy megtaláltuk-e.

@@ -1,0 +1,4 @@
+In: n ∈ N, t ∈ Movie[1..n], Movie = (title:S x duration:N x category:S x rating:N x views:N)
+Out: durationSum ∈ N
+Pre: n > 0
+Post: durationSum = SUM(i=1..n, t[n].duration)

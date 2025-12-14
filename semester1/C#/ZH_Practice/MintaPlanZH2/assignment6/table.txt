@@ -1,0 +1,7 @@
+Kiválogatás
+
+i=e..u ~ i=1..n
+db ~ count
+y ~ bestOf
+T(i) ~ t[i].rating = 5
+f(i) ~ i

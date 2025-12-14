@@ -1,0 +1,7 @@
+6. "Csak az 5 csillagosok"
+
+Gyűjtsük ki egy külön listába (BestOf) az összes olyan film sorszámát, aminek az értékelése 5-ös.
+
+Minta: ???
+
+Logika: Ha a feltétel igaz, betesszük az új tömbbe és növeljük az új tömb indexét.

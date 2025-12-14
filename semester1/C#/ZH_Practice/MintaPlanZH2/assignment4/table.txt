@@ -1,0 +1,5 @@
+Eldöntés
+
+i=e..u ~ i=1..n
+T(i) ~ t[i].rating = 5 and t[i].category = "Dráma"
+van ~ exists

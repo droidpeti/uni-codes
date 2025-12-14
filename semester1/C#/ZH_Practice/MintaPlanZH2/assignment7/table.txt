@@ -1,0 +1,5 @@
+Másolás
+
+i=e..u ~ i=1..n
+f(i) ~ t[i].duration / 60
+másolat ~ hours

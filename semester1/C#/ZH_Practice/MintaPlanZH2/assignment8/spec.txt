@@ -1,0 +1,4 @@
+In: n ∈ N, t ∈ Movie[1..n], Movie = (title:S x duration:N x category:S x rating:N x views:N)
+Out: longestAction ∈ N, exists ∈ B
+Pre: n > 0
+Post: (exists,,longestAction) = CONDMAX(i=1..n, t[i].category = "Akció", t[i].duration)

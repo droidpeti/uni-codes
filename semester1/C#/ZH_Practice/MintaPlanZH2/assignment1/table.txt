@@ -1,0 +1,5 @@
+Összegzés
+
+i=e..u ~ i=1..n
+f(i) ~ t[i].duration
+s ~ durationSum

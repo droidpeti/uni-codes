@@ -1,0 +1,5 @@
+Megszámolás
+
+i=e..u ~ i=1..n
+T(i) ~ t[i].views < 1000
+db ~ flopCount

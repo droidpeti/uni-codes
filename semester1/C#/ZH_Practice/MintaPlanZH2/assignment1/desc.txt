@@ -1,0 +1,6 @@
+1. "Mennyi idő az élet?"
+Ki akarjuk számolni, hogy ha valaki az összes filmet megnézné egymás után, hány percet töltene a képernyő előtt.
+
+Minta: ???
+
+Logika: Egy változóba gyűjtjük a T[i].hossz értékeket.

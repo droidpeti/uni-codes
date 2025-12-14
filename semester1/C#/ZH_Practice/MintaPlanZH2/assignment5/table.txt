@@ -1,0 +1,5 @@
+Keresés
+
+i=e..u ~ i=1..n
+ind ~ titanic
+T(i) ~ t[i].title = "Titanic"

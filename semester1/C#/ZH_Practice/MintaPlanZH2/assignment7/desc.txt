@@ -1,0 +1,7 @@
+7. "Időtartam órában"
+
+Szeretnénk egy új listát (Orak), ami ugyanannyi elemű, mint az eredeti, de nem percben, hanem órában (valós számként) tartalmazza a filmek hosszát (pl. 90 perc -> 1.5 óra).
+
+Minta: ??? (React-es aggyal: .map())
+
+Logika: Minden elemen végigmegyünk, és T[i].hossz / 60.0 kerül az új tömbbe.

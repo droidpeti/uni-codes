@@ -1,0 +1,4 @@
+In: n ∈ N, t ∈ Movie[1..n], Movie = (title:S x duration:N x category:S x rating:N x views:N)
+Out: exists ∈ B
+Pre: n > 0
+Post: exists = ∃i∈[1..n]:(t[i].rating = 5 and t[i].category = "Dráma")

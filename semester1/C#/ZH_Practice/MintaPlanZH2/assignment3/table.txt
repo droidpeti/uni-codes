@@ -1,0 +1,5 @@
+Maximum kiválasztás
+
+i=e..u ~ i=1..n
+maxind ~ maxViews
+f(i) ~ t[i].views

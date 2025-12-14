@@ -1,0 +1,11 @@
+A Szituáció: "Netklix" Adatbázis
+
+Van egy listánk a rendszerben lévő filmekről. Bemenet:
+
+In: n ∈ N, t ∈ Movie[1..n], Movie = (title:S x duration:N x category:S x rating:N x views:N)
+
+hossz: percben (pl. 120)
+kategoria: pl. "Akció", "Dráma"
+ertekeles: 1-től 5-ig
+nezettseg: hányan látták
+

@@ -1,0 +1,7 @@
+3. "A közönségkedvenc"
+
+Melyik a legmagasabb nézettségű film az adatbázisban? (Add meg a sorszámát!)
+
+Minta: ???
+
+Logika: Első elemet kinevezzük nyertesnek, aztán ha találunk nagyobbat...

@@ -1,0 +1,7 @@
+Feltételes Maximum Kiválasztás
+
+i=e..u ~ i=1..n
+T(i) ~ t[i].category = "Akció"
+f(i) ~ t[i].duration
+vanmax ~ exists
+fmaxind ~ longestAction

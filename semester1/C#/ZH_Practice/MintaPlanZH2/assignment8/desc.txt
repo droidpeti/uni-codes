@@ -1,0 +1,7 @@
+8. "A leghosszabb akciófilm" (Nehéz!)
+
+Keressük meg a leghosszabb filmet, DE csak az "Akció" kategórián belül. (Ha nincs akciófilm, jelezzük).
+
+Minta: ???
+
+Logika: Ez a Feltételes Maximumkeresés. Két dolog kell hozzá: egy maxIndex és egy vanIlyen logikai változó (vagy trükkösen inicializáljuk a maxIndexet 0-ra).

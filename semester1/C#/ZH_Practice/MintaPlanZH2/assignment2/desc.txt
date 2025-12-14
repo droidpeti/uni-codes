@@ -1,0 +1,7 @@
+2. "A bukások kiszűrése"
+
+Kíváncsiak vagyunk, hány olyan filmünk van, amit 1000 embernél kevesebben néztek meg.
+
+Minta: ???
+
+Logika: Ha T[i].nezettseg < 1000, növelünk egy számlálót.
