@@ -1,0 +1,14 @@
+1. Feladat: A Legdrágább "Okos" Termék
+Feladat: Egy webshop adatbázisában tároljuk a termékek árát és azt, hogy "okos" eszköz-e (Smart).
+A termékeket egy rekordtömbben kapjuk (T), ahol minden elemnek van egy Ar (egész) és egy Smart (logikai) mezője.
+Határozd meg a legdrágább okos eszköz sorszámát (indexét)! Ha nincs okos eszköz, jelezd!
+
+2. Feladat: A Bukottak Listája
+Feladat: Adott egy osztály tanulóinak átlaga egy tömbben (A).
+Gyűjtsük ki egy külön listába (B) azoknak a tanulóknak a sorszámát (indexét), akiknek az átlaga nem éri el a 2.0-t (tehát megbuktak).
+Add meg azt is, hány ilyen tanuló van!
+
+3. Feladat: Az Első Hibás Mérés (Keresés)
+Feladat: Egy meteorológiai állomás hőmérsékleti adatait tároljuk egy tömbben (H).
+Tudjuk, hogy a mérőműszer néha elromlik és irreálisan nagy számot (pl. > 100) mér.
+Keressük meg az első olyan nap sorszámát, amikor a mért adat nagyobb volt, mint 100! Ha nem volt ilyen, jelezzük.
