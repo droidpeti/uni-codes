@@ -1,0 +1,15 @@
+(Adatszerkezet: Modellnév; Gyártó; Ár)
+
+Feladatok (ugyanaz a pontozás és logika):
+
+Beolvasás (15 pont): Olvassa be az állományt és tárolja el egy Laptop nevű struktúrát használó dinamikus tömbben. (Figyelj: a modellnév és gyártó legyen dinamikus string, az ár egész szám).
+
+Gyártó statisztika (6 pont): Írja ki, hogy gyártónként hány darab laptop szerepel a listában! (Itt kell a unique gyártókat kigyűjtened, majd megszámolnod őket).
+
+Átlagár számítás (8 pont): Határozza meg és írja ki a laptopok átlagárát gyártónként és összesen is!
+
+Legdrágábbak keresése (7 pont): Határozza meg és írja ki a legdrágább laptopot minden egyes gyártónál! (Tehát: Mi a legdrágább Dell? Mi a legdrágább Apple? stb.)
+
+Árszűrés (6 pont): Kérjen be egy számot (árplafont) a felhasználótól. Listázza ki azokat a laptopokat, amelyek olcsóbbak ennél az összegnél!
+
+Rendezett lista (8 pont): Válassza ki az utolsóként beolvasott gyártót (a fájl végéről, vagy a unique lista végéről). Listázza ki ennek a gyártónak a laptopjait ár szerint csökkenő (legdrágábbtól a legolcsóbbig) sorrendben! (Tipp: qsort használata, de figyelj a compare függvényre, most fordítva kell a < és >!)

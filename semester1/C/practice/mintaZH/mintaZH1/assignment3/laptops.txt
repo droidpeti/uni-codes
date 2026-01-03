@@ -1,0 +1,9 @@
+Dell XPS 13;Dell;450000
+MacBook Air M1;Apple;380000
+ThinkPad X1 Carbon;Lenovo;520000
+Inspiron 15;Dell;210000
+MacBook Pro 14;Apple;890000
+IdeaPad 3;Lenovo;180000
+ZenBook 14;Asus;340000
+Thinkpad X270;Lenovo;35000
+Lifebook E736;Fujitsu;30000
