@@ -1,0 +1,9 @@
+Max Verstappen;Red Bull Racing;575
+Sergio Perez;Red Bull Racing;285
+Lewis Hamilton;Mercedes;234
+George Russell;Mercedes;175
+Fernando Alonso;Aston Martin;206
+Charles Leclerc;Ferrari;206
+Carlos Sainz;Ferrari;200
+Lando Norris;McLaren;205
+Oscar Piastri;McLaren;97

@@ -1,0 +1,19 @@
+Feladatok:
+
+Beolvasás (15 pont): Olvassa be az állományt és tárolja el egy Driver (vagy Pilota) nevű struktúrát használó dinamikus tömbben.
+
+A név és csapatnév legyen dinamikus string (char*).
+
+A pontszám egész szám (int).
+
+Csapatlétszám (6 pont): Írja ki, hogy csapatonként hány pilóta szerepel a listában! (Itt is a unique csapatokat kell kigyűjtened struct-ba).
+
+Konstruktőrök Versenye (8 pont): Számolja ki és írja ki a csapatok összpontszámát! (Melyik csapat hány pontot szerzett összesen a pilótái által).
+
+Házon belüli párbaj (7 pont): Határozza meg és írja ki csapatonként a legsikeresebb pilótát (aki a legtöbb pontot szerezte az adott csapaton belül)!
+
+Dobogós kereső (6 pont): Kérjen be egy pontszámot a felhasználótól. Listázza ki azokat a pilótákat, akik több pontot szereztek ennél!
+
+Rendezett rajtlista (8 pont): Válassza ki az utolsóként beolvasott csapatot (a fájl alapján a "McLaren"-t). Listázza ki ennek a csapatnak a pilótáit NÉV szerint ábécé sorrendben! (Vigyázz: itt stringet kell rendezni strcmp-vel a qsort-ban!)
+
+Összesen: 50 pont
