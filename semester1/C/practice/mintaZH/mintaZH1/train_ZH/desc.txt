@@ -1,0 +1,19 @@
+(Formátum: Város;Dátum;Hőmérséklet;Páratartalom)
+
+Specifikáció (Ezeket valósítsd meg):
+
+Struktúra: Hozz létre egy Measurement nevű struktúrát, ami tárolja a várost (string), a dátumot (string), a hőmérsékletet (double) és a páratartalmat (int).
+
+Beolvasás: Olvasd be a sorokat, és tárold el őket egy dinamikusan foglalt tömbben (Measurement*). A tömb mérete pont akkora legyen, ahány sor van a fájlban. Használj strtok-ot a pontosvessző mentén.
+
+Leghidegebb mérés: Keresd meg és írd ki, melyik városban, mikor mérték a legalacsonyabb hőmérsékletet. (Pl: "Coldest: Miskolc on 2024-01-05 with -2.5 C").
+
+Átlag páratartalom: Számold ki az összes mérés átlagos páratartalmát.
+
+Keresés (Interaktív): Kérj be a felhasználótól egy városnevet (stdin). Listázd ki az összes mérést, ami ahhoz a városhoz tartozik. Ha nincs találat, jelezd. (Figyelj a \n levágására a bemenetnél!).
+
+Takarítás: Szabadíts fel minden lefoglalt memóriát (a stringeket a struktúrán belül, és magát a tömböt is). Futtasd valgrind-dal!
+
+Nehezítés (Ha nagyon megy):
+
+Írd ki egy output.txt fájlba azokat a méréseket, ahol a hőmérséklet fagypont (0.0) alatt volt.
