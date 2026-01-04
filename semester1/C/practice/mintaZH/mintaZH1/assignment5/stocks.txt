@@ -1,0 +1,10 @@
+Nvidia;Tech;480;520
+JP Morgan;Bank;170;168
+Exxon;Energy;102;105
+Apple;Tech;190;185
+Chevron;Energy;140;142
+Goldman Sachs;Bank;340;355
+Microsoft;Tech;370;375
+Alphabet;Tech;310;315
+ASML;Tech;1100;1120
+Amazon;Tech;210;220

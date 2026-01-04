@@ -1,0 +1,21 @@
+(Adatszerkezet: Név; Szektor; Nyitó ár; Záró ár) Figyelem: Van fejléc!
+
+Feladatok:
+
+Beolvasás (15 pont): Olvassa be az állományt és tárolja el egy összetett adatszerkezetet használó dinamikus tömbben.
+
+Figyeljen a fejléc sor átugrására!
+
+A nyitó és záró árak legyenek int típusúak.
+
+Szektor statisztika (8 pont): Írja ki, hogy szektoronként hány cég szerepel a listában! (Ez a szokásos unique gyűjtés + számlálás).
+
+A legnagyobb nyertes (8 pont): Keresse meg és írja ki azt a céget, amelyik a legnagyobbat növekedett (Záró ár - Nyitó ár különbsége a legnagyobb pozitív szám). Írja ki a növekedés mértékét is!
+
+Szűrés (5 pont): Kérjen be egy karaktersorozatot a felhasználótól. Listázza ki azokat a cégeket, amelyek nevében szerepel ez a részlet (pl. beírom: "on" -> kiírja: Exxon, Chevron). (Tipp: strstr függvény, mint a FIFA 'un' feladatánál).
+
+Átlagár szektoronként (8 pont): Határozza meg a cégek záró árainak átlagát, szektoronként bontva!
+
+Rendezés (6 pont): Listázza ki a "Tech" szektor cégeit, záró ár szerint csökkenő sorrendben!
+
+Összesen: 50 pont
