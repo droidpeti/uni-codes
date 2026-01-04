@@ -1,0 +1,18 @@
+During the exam we will have to use WSL and Ubuntu
+
+first, run apt update
+sudo apt update
+
+install the packages, these are my choices:
+build-essential
+micro
+valgrind
+man-db
+manpages-dev
+
+sudo apt install build-essential micro valgrind man-db manpages-dev
+
+try if everything works we installed.
+If prompted to run unminimize run it.
+
+sudo unminimize
