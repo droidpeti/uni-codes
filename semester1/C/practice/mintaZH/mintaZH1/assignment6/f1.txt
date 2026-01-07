@@ -1,0 +1,11 @@
+Pilota;Csapat;MegtettKorok;LeggyorsabbKorIdo
+Max Verstappen;Red Bull;70;78.45
+Lewis Hamilton;Mercedes;70;79.12
+Charles Leclerc;Ferrari;69;79.05
+Lando Norris;McLaren;70;78.90
+Sergio Perez;Red Bull;70;79.30
+George Russell;Mercedes;68;79.50
+Carlos Sainz;Ferrari;70;78.80
+Oscar Piastri;McLaren;30;80.10
+Fernando Alonso;Aston Martin;69;79.80
+Lance Stroll;Aston Martin;70;80.05

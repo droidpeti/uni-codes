@@ -1,0 +1,13 @@
+Feladatok:
+
+1. Beolvasás (15 pont): Olvassa be az állományt egy dinamikusan növekvő tömbbe. Figyeljen a fejléc átugrására! A tizedesjegyeket tartalmazó időket double típusban tárolja.
+
+2. Versenyben maradtak (5 pont): A futam 70 körös volt. Írja ki azon pilóták nevét, akik teljesítették a teljes versenytávot (tehát MegtettKorok == 70).
+
+3. Pole pozíció (Minimum keresés) (8 pont): Keresse meg, ki futotta a leggyorsabb kört (a legkisebb időt)! Írja ki a nevét és az idejét.
+
+4. Csapat statisztika (8 pont): Írja ki, hogy csapatonként hány pilóta szerepel a listában! (Unique keresés + számlálás).
+
+5. Csapat átlagidő (8 pont): Számolja ki csapatonként a pilóták leggyorsabb köreinek átlagát! (Pl. Red Bull átlag = (Verstappen ideje + Perez ideje) / 2).
+
+6. Rendezés (6 pont): Rendezze a tömböt a LeggyorsabbKorIdo szerint növekvő sorrendbe, majd írja ki a teljes listát!
