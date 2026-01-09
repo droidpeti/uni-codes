@@ -45,6 +45,7 @@ namespace town_temps_non_freezing
             {
                 Console.Write($"{goodTowns[i]} ");
             }
+            System.Console.WriteLine();
         }
     }
 }
