@@ -19,9 +19,9 @@ a.out
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 
-semester2/Unity/*.csproj
-semester2/Unity/*.sln
-semester2/Unity/*.slnx
+semester2/Unity/**/*.csproj
+semester2/Unity/**/*.sln
+semester2/Unity/**/*.slnx
 
 # MemoryCaptures can get excessive
 [Mm]emoryCaptures/
