@@ -1,0 +1,30 @@
+# Semester 1
+
+# C
+gcc
+C/C++ VSCode Extension by Microsoft
+
+# Haskell
+ghci
+Haskell VSCode Extension
+
+# C#
+dotnet SDK
+C# Dev Kit VSCode Extension by Microsoft
+
+# Powershell
+Powershell
+
+# Semester 2
+
+# C#
+Same as Semester 1
+
+# Java
+openjdk
+Extension Pack for Java VSCode Extension by Microsoft
+
+# Unity
+Unity Hub
+Unity 6.3 LTS
+Unity VSCode Extension by Microsoft
