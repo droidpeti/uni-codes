@@ -21,7 +21,7 @@ Powershell
 Same as Semester 1
 
 # Java
-openjdk
+openjdk-devel
 Extension Pack for Java VSCode Extension by Microsoft
 
 # Unity
