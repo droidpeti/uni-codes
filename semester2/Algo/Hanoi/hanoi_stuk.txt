@@ -1,0 +1,9 @@
+Hanoi(n, A, B)
+{
+    if(n == 0){
+        return;
+    }
+    Hanoi(n-1, A, C);
+    Move(A, B);
+    Hanoi(n-1, C, B);    
+}
