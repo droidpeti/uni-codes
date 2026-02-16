@@ -1,0 +1,17 @@
+Algorithm complexity:
+
+Space complexity
+
+Memory usage
+
+Time complexity
+
+Minimum time complexity (mT(n))
+Maximum time complexity (MT(n))
+Average time complexity (AT(n))
+
+O(g) complexity ceiling
+Omega(g) complexity floor
+Theta(g)
+
+n*log n best sorting algorithm
