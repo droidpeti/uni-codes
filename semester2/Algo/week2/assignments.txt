@@ -1,0 +1,22 @@
+factorial
+
+recursively:
+
+fact(n){
+    if(n == 1){
+        return 1;
+    }
+
+    return n * fact(n - 1);
+}
+
+iteratavely:
+
+fact(n){
+    s = 1;
+    for(i = 2; i <= n; i++){
+        s *= i;
+    }
+    return s;
+}
+

@@ -15,3 +15,82 @@ Omega(g) complexity floor
 Theta(g)
 
 n*log n best sorting algorithm
+
+Lab:
+
+Recursive algorithm properties
+
+ - All branches has to end with a return statement
+ - There is a branch which doesn't use a recursive function call
+ - Recursive function calls usually happen with more simple inputs
+ - Contains a recrusive function call
+
+1.ZH assignment example
+ Row sum
+
+f(n) = 1 + 1/2 + 1/4 + ... + 1/2^n
+lim n -> inf f(n) = 2
+
+calculate f(n) with a recrusive algorithm
+
+2. Assignment
+Make an efficient algorithm for calculating the nth power of a real number.
+
+Input: x E R, n E N
+Output: x^n
+
+Solution:
+ 0. <math.h> -> pow(double, double) complex due to handling doubles too
+ 1. naive algorithm:
+    s = 1;
+    for(int i = 0; i < n; i++){
+        s *= x;
+    }
+    return x;
+    
+    - O(n) times multiplication
+ 2. if n is even -> you can spare a lot of multiplication operations
+    x^2k = x^k * x^k
+    so with a single multiplication we get the end result, we need to do half as many multiplication operations
+
+    if n is power of 2
+    x^(2^k) = (...((x)^2)^2...)^2
+    you can get the result with only k multiplication operations
+    x^n -> log2(n) multiplication operations needed
+
+    but where n isn't the power of 2, we don't spare multiplication operations
+
+3. What to do if n isn't the power of 2?
+    x^17 = x^((2^4)+(2^0)) = (x^2^4) * (x^2^0)
+    x^31 = x^8 * x^4 * x^2 * x^1
+    31 <= x^5 less than 2*5 multiplication operations needed
+    if the exponent of x is 2^n, then only 2*log2(n) mount of multiplication operations needed
+
+    x^13 = x * x^4 * x^8
+    13d = 1101b
+
+    Legendre algorithm ( x : R, n : N) : R
+    s = 1;
+    a = x;
+    k = n;
+    while(k > 0){
+        if(k % 2 == 0){
+            k /= 2;
+            a *= a;
+        }
+        else{
+            k = k-1;
+            s *= a;
+        }
+    }
+    return s;
+
+    by halving it log2(n) times we get 1 or a smaller number.
+    O(log2(n)) amount of multiplication operations.
+
+2. HF 
+ Make an efficient algorithm
+ for calculating the value of polynomial
+
+ Input: a0, a1, a2, ..., an E R
+ Output: Sum(i=0..n)
