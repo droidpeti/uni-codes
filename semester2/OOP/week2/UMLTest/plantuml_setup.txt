@@ -1,0 +1,11 @@
+download the .jar
+place it into: /opt/plantuml/
+
+make an alias:
+
+echo "alias plantuml='java -jar /opt/plantuml/plantuml-1.2026.1.jar'" >> ~/.bashrc
+
+reload it
+source ~/.bashrc
+
+now you can use plantuml uml.txt to generate an image!

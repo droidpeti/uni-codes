@@ -1,0 +1,32 @@
+@startuml
+title User Authentication Process
+
+autonumber
+
+actor User
+participant "Frontend Application" as Frontend
+database "Auth Database" as Database
+
+User -> Frontend: Submit Login Form
+activate Frontend
+
+Frontend -> Database: Validate Credentials
+activate Database
+
+alt Successful Login
+    Database --> Frontend: Return Auth Token
+    Frontend --> User: Redirect to Dashboard
+else Failed Login
+    Database --> Frontend: Return Error (401)
+    Frontend --> User: Show Error Message
+end
+
+deactivate Database
+deactivate Frontend
+
+note right of User
+  User account is locked
+  after 3 failed attempts.
+end note
+
+@enduml
