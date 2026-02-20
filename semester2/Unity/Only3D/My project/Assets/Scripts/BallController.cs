@@ -9,6 +9,9 @@ public class BallController : MonoBehaviour
     // 1. Spawn Ball on key hit
     public GameObject ball;
     public Color color;
+
+    Queue<GameObject> ballContainer = new Queue<GameObject>();
+    int limit = 10;
     void Start()
     {
         Debug.Log("Ball");
@@ -19,7 +22,20 @@ public class BallController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject newBall = Instantiate(ball);
+            GameObject newBall = null;
+            if(ballContainer.Count < limit)
+            {
+                newBall = Instantiate(ball);
+                ballContainer.Enqueue(newBall);
+                Debug.Log("Spawn");
+            }
+            else
+            {
+                newBall = ballContainer.Dequeue();
+                ballContainer.Enqueue(newBall);
+                Debug.Log("Respawn");
+            }
+
             newBall.GetComponent<Transform>().position = new Vector3(
                 Random.Range(-5.0f, 5.0f),
                 Random.Range(2.0f, 5.0f),
@@ -31,6 +47,11 @@ public class BallController : MonoBehaviour
                 Random.Range(0f, 1f),
                 Random.Range(0f, 1f)
             );
-        }
+
+            if (!newBall.GetComponent<Ball>())
+            {
+                newBall.AddComponent<Ball>();
+            }
+        }  
     }
 }
