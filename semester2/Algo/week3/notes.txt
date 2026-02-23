@@ -1,0 +1,13 @@
+Primitive data structurces, the CPU knows these by default:
+    bool
+    int/whole numbers
+    float/decimal numbers
+
+Non Primitive data structurces:
+    everything else
+
+Linear data structurces:
+    Each element has a single simple next element, like arrays
+
+Non Linear data structurces:
+    We can't always tell the next element, like with trees
