@@ -11,3 +11,12 @@ Linear data structurces:
 
 Non Linear data structurces:
     We can't always tell the next element, like with trees
+
+log(a*b) = log(a) + log(b)
+
+log_a(b) = log_c(b)/log_c(a)
+
+log2(n) ~= log10(n)
+
+log2(n) = log10(n)/log10(2)
+log2(n) = 1/log10(2) * log10(n)
