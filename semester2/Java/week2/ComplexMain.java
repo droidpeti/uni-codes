@@ -1,4 +1,4 @@
-package semester2.Java.week2;
+package week2;
 
 class Complex{
     double re;
