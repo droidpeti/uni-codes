@@ -3,12 +3,12 @@
 ## 0. Summary
 The Legend of Zelda was originally released in 1986 for the NES by Nintendo, on this website I will cover my favorite part about the game
 Those being the dungeons! In order to beat the game you have to visit 9 dungeons in the overworld an defeat the big bad Ganon.
-
+Each dungeon has items you can obtain, some of them are mandatory to beat the game.
+Each dungeon has a different layout, enemies a different boss, a different color scheme and either lava or water, or neither.
+Every dungeon has a name, they were named after the shape their map layout has.
 
 ![Zelda Logo](images/0_logo.png)
 ![Link](images/0_link.png)
-
----
 
 ## 1. Level 1: The Eagle
 
