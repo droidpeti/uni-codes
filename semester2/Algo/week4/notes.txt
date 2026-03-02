@@ -1,0 +1,111 @@
+Stack
+
+  - LIFO, last in first out
+
+  + top()
+  + pop()
+  + push()
+  + isFull()
+  + isEmpty()
+  + setEmpty()
+
+Queue
+
+  - FIFO, first in first out
+
+  + peek()
+  + enqueue()
+  + dequeue()
+  + isFull()
+  + isEmpty()
+  + setEmpty()
+
+Linked List
+
+  - S1L Simple 1-way List
+
+  - Each element contains a value and a memory address pointing to the next element.
+  - The last element doesn't point anywhere.
+  - We have to know the memory address of the first element.
+
+  - You can't see the memory addresses of the elements before the current one, only the ones after.
+
+  struct node{
+    int data;
+    struct node *next;
+  }
+
+  node n1, n2, n3;
+  node* l = &n1;
+  n1.next = &n2;
+  n2.next = &n3;
+  n3.next = NULL;
+
+  n3.data == l->next->next->data
+
+  - S2L Simple 2-way List
+
+  struct node{
+    struct node *prev;
+    int data;
+    struct node *next;
+  }
+
+  node n1, n2, n3;
+  node* l = &n1;
+  n1.prev = NULL;
+  n1.next = &n2;
+  n2.prev = &n1
+  n2.next = &n3;
+  n3.prev = &n2;
+  n3.next = NULL;
+
+  C2L = Cyclic 2-way List with header
+
+  struct node{
+    struct node *prev;
+    int data;
+    struct node *next;
+  }
+
+  node n1, n2, n3;
+  node* l = &n1;
+  n1.prev = &n3;
+  n1.next = &n2;
+  n2.prev = &n1
+  n2.next = &n3;
+  n3.prev = &n2;
+  n3.next = &n1;
+
+Dictionary
+  
+  Has a key and a data attribute
+
+  + Search(S, k)
+  + Insert(S, x)
+  + Delete(S, x)
+  + Min(S)
+  + Max(S)
+  + Predecessor(S, x)
+  + Successor(S, x)
+
+  Dictionary representation: Unordered Array
+
+  + Search(S, k) - linear search O(n)
+  + Insert(S, x) - O(1)
+  + Delete(S, x) - O(1)
+  + Min(S) - O(n)
+  + Max(S) - O(n)
+  + Predecessor(S, x) - O(n)
+  + Successor(S, x) - O(n)
+
+  Dictionary representation: Ordered Array
+
+  + Search(S, k) - binary search O(lg n)
+  + Insert(S, x) - O(n)
+  + Delete(S, x) - O(n)
+  + Min(S) - O(1)
+  + Max(S) - O(1)
+  + Predecessor(S, x) - O(1)
+  + Successor(S, x) - O(1)
+
