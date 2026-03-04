@@ -1,0 +1,18 @@
+bool paranth(int n){
+    Stack stack = new Stack(n);
+    for(int i = 0; i < n; i++){
+        char x = read();
+        if(x == '('){
+            stack.push(x);
+        }
+        else{
+            if(stack.isEmpty()){
+                return false;
+            }
+            else{
+                stack.pop();
+            }
+        }
+    }
+    return stack.isEmpty();
+}

@@ -109,3 +109,21 @@ Dictionary
   + Predecessor(S, x) - O(1)
   + Successor(S, x) - O(1)
 
+Lab
+
+  2. Adjunk aszimptotikusan éles becslést az alábbi növekedési viszonyokhoz
+
+  f(n)
+
+  4
+  3n+12
+  2n^2 + 7
+  1/2 n ^ 3 + 5n 
+  ...
+
+  1 < log log n < log n < n ^ (epsilon > 0 (example: 0.001)) < sqrt(n) < n < n * log n < n^2 < n^3 < 2 ^ n < n!
+
+
+  3. Adott egy zárójelekből álló (nyitó és csukó) legfeljebb n hosszúságú karakterlánc. Olvassuk be és döntsük el róla, hogy helyes zárójelezést tartalmaz-e!
+  Stack.
+
