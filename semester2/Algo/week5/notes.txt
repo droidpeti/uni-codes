@@ -1,0 +1,39 @@
+Dictionary
+
+Key and value pairs
+
+Tree
+
+typedeff struct tree {
+    item_type item;
+    struct tree *parent;
+    struct tree *left;
+    struct tree *right;
+}
+
+the parent of the top element is NULL.
+the right and left elements, where there are no elements to them left or right, the value of them is NULL;
+
+Binary search tree
+
+If for every element in the tree the element left from the parent is smaller, the element right from the parent is larger.
+When we allow for elements to be equal, that is a binary sort tree, not a search tree
+
+tree *search_tree(tree *l, item_type x){
+    if(l == NULL){
+        return NULL;
+    }
+
+    if(l->item == x){
+        return l;
+    }
+    if(x < l->item){
+        return search_tree(l->left, x);
+    }
+    else{
+        return search_tree(l->right, x);
+    }
+}
+
+O(height) 
+
