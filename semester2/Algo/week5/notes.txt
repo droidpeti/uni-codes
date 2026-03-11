@@ -37,3 +37,96 @@ tree *search_tree(tree *l, item_type x){
 
 O(height) 
 
+Lab
+
+1.
+One way linked list implement follow mehtod, insert q after p
+
+void follow(node *p, node *q){
+    q->next = p->next;
+    p->next = q;
+}
+
+2.
+One way linked list remove p element from list, and return it's memory address
+
+node* out_next(node *p){
+    node q = p->next;
+    p->next = p->next->next;
+    q->next = NULL;
+    return q;
+}
+
+3.
+
+One way linked list cut list in at element number n, the first half will stay in L, return the second half
+
+node* out(node *L; unsigned int n){
+    node *p = L;
+    unsigned int i = 1;
+
+    while(i < n){
+        i++;
+        p = p->next;
+    }
+
+    node *q = p->next;
+    p->next = NULL;
+    return q;
+}
+
+4.
+
+Two way linked list insert element on memory address q into L simple two way linked list after the element on p memory address
+
+void follow(node *p, node *q){
+    q->next = p->next;
+    q->prev = p;
+    p->next = q;
+    q->next->prev = q;
+}
+
+5.
+
+Iterate a Binary tree, with pre, in and post order iteration
+
+
+//pre
+void iter(tree* t){
+    if(t == NULL){
+        return;
+    }
+
+    print(root(t));
+    iter(t->left);
+    iter(t->right);
+}
+
+//in
+void iter(tree* t){
+    if(t == NULL){
+        return;
+    }
+
+    iter(t->left);
+    print(root(t));
+    iter(t->right);
+}
+
+//post
+void iter(tree* t){
+    if(t == NULL){
+        return;
+    }
+
+    print(root(t));
+    iter(t->right);
+    iter(t->left);
+}
+
+Homework: reverse L one way Linked List in place, without creating any new elements
+
+void reverse(node *L){
+    node *p = L;
+
+}
