@@ -1,0 +1,18 @@
+MySolutionFolder/
+├── MySolutionFolder.sln            <-- Ties everything together for VS Code
+├── MyApp/                          <-- Your main Console Application
+│   ├── MyApp.csproj
+│   └── Program.cs
+└── MyApp.Tests/                    <-- Your Test Project
+    ├── MyApp.Tests.csproj
+    └── UnitTest1.cs
+
+dotnet new sln -n MySolutionFolder
+
+dotnet new console -n MyApp
+dotnet sln add MyApp/MyApp.csproj
+
+dotnet new mstest -n MyApp.Tests
+dotnet sln add MyApp.Tests/MyApp.Tests.csproj
+
+dotnet add MyApp.Tests/MyApp.Tests.csproj reference MyApp/MyApp.csproj

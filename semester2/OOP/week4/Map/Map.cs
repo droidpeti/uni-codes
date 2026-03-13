@@ -9,9 +9,14 @@ internal class Item
         key = k;
         data = d;
     }
+
+    public override string ToString()
+    {
+        return $"({key}:{data})";
+    }
 }
 
-internal class Map
+public class MyMap
 {
     public class ExistingKeyException : Exception
     {
@@ -55,6 +60,11 @@ internal class Map
             }
         }
 
+        if (!ok)
+        {
+            ind = l;
+        }
+
         return ok;
     }
 
@@ -95,5 +105,10 @@ internal class Map
             }
             throw new NotExistingKeyException();
         }
+    }
+
+    public override string ToString()
+    {
+        return $"[{string.Join(", ", seq)}]";
     }
 }

@@ -22,7 +22,22 @@ internal class Program
 
         foreach(var item in count)
         {
-            Console.WriteLine($"{item.Key}:{item.Value}");
+            //Console.WriteLine($"{item.Key}:{item.Value}");
+            Console.WriteLine(item);
         }
+
+        // Map
+
+        MyMap map = new MyMap();
+        map.Insert(1, "one");
+        Console.WriteLine(map);
+        Console.WriteLine(map[1]);
+        map.Remove(1);
+        Console.WriteLine(map.Count());
+
+        // Unit test
+
+
+
     }
 }

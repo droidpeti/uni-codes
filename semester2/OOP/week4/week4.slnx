@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/MapTests/">
+    <Project Path="MapTests/TestProject1/TestProject1.csproj" />
+  </Folder>
+  <Project Path="Map/Map.csproj" />
+</Solution>
