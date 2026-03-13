@@ -10,10 +10,14 @@ public class StagMovement : MonoBehaviour
     // If Space is pressed Jump
 
     Animator anim;
+    AudioSource sound;
     bool isRunning, isJumping = false;
+    readonly float speed = 7.5f;
+    public AudioClip jumpSound;
     void Start()
     {
         anim = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,13 +26,28 @@ public class StagMovement : MonoBehaviour
         if (!isRunning && Input.GetKeyDown(KeyCode.Return))
         {
             isRunning = true;
-            anim.SetBool("startRun", true);
+            //anim.SetBool("startRun", true);
+            anim.Play("run");
+            sound.Play();
         }
 
-        if (!isJumping && isRunning && Input.GetKeyDown(KeyCode.Space))
+        if (isRunning)
         {
-            isJumping = true;
-            anim.SetTrigger("jump");
+            if (!isJumping&& Input.GetKeyDown(KeyCode.Space))
+            {
+                isJumping = true;
+                sound.PlayOneShot(jumpSound);
+                anim.SetTrigger("jump");
+                isJumping = false;
+            }
+        }
+    }
+
+    void FixedUpdate() 
+    {
+        if (isRunning)
+        {
+            transform.position += Vector3.right * Time.fixedDeltaTime * speed;
         }
     }
 }
