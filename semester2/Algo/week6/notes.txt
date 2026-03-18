@@ -1,0 +1,119 @@
+Heap, priority queue
+    `   
+reverse Simple one way linked list
+
+reverse(node* L){
+    node* p = NULL;
+    while(L != NULL){
+        q = L->next;
+        L->next = p;
+        p = L;
+        L = q;
+    }
+    L = p;
+}
+
+Binary tree stored as an array, itarte it through pre in post order.
+
+ABCD##EFG####H#I#...
+
+preorder: A B D F I G C E H
+inorder: I F D G B A C H E
+postorder: I F G D B H E C A
+
+Heap stored as an array
+
+8 6 5 2 1 4 # ...
+
+a) draw the heap
+b) insert keys 7 and 3
+c) delete the largest element in the heap, then fix the structure of the heap
+
+a)
+    |----8----|
+|---6---| |---5
+2       1 4
+
+b)
+    |----8----|
+|---6---| |---5---|
+2       1 4       7
+
+        |
+        |
+        V
+
+    |----8----|
+|---6---| |---7---|
+2       1 4       5
+
+        |
+        |
+        V
+
+        |----8----|
+    |---6---| |---7---|
+|---2       1 4       5
+3
+        |
+        |
+        V
+
+        |----8----|
+    |---6---| |---7---|
+|---3       1 4       5
+2
+
+c)
+
+        |----8----|
+    |---6---| |---7---|
+|---3       1 4       5
+2
+
+            |
+            |
+            V
+
+    |----2----|
+|---6---| |---7---|
+3       1 4       5
+
+        |
+        |
+        V
+
+    |----7----|
+|---6---| |---2---|
+3       1 4       5
+
+        |
+        |
+        V
+
+    |----7----|
+|---6---| |---5---|
+3       1 4       2
+
+Heap sort these numbers
+
+12,23,54,11,10,24,55,60
+
+              12
+        23          54
+    11      10  24      55
+60
+
+              60
+        23          55
+    12      10  24      54
+11
+
+60,23,55,12,10,24,54,11
+
+Sort heap
+
+11 23 55 12 10 24 54
+55 23 11 12 10 24 54
+55 23 54 12 10 24 11
+

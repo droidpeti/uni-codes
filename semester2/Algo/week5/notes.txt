@@ -119,9 +119,9 @@ void iter(tree* t){
         return;
     }
 
-    print(root(t));
-    iter(t->right);
     iter(t->left);
+    iter(t->right);
+    print(root(t));
 }
 
 Homework: reverse L one way Linked List in place, without creating any new elements
