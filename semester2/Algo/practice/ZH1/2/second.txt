@@ -1,0 +1,135 @@
+1.
+
+    Alg1(n) : n * log n
+    Alg2(n) : n!
+    Alg3(n) : sqrt(n)
+
+    sqrt(n) < n * log n < n!
+
+2.
+
+    S(n){
+        if(n == 1){
+            return 2;
+        }
+        return n * (n+1) + S(n-1);
+    }
+
+3.
+
+    paranth(string, n){
+        stack s;
+
+        for(i = 0; i < n; i++){
+            if (string[i] == '(') {
+                s.push(string[i]);
+            } 
+            else {
+                if (s.isEmpty()) {
+                    return false;
+                }
+                s.pop();
+            }
+        }
+
+        return s.isEmpty();
+    }
+
+4.
+
+
+    a)
+        12
+       /  \
+      10   8
+     /  \ / \
+    5   7 2  6
+
+    b)
+
+        12
+       /  \
+      10   8
+     /  \ / \
+    5   7 2  6
+   /
+  11
+  
+        12
+       /  \
+      10   8
+     /  \ / \
+    11  7 2  6
+   /
+   5
+
+        12
+       /  \
+      11   8
+     /  \ / \
+    10  7 2  6
+   /
+   5
+
+   c)
+
+        12
+       /  \
+      11   8
+     /  \ / \
+    10  7 2  6
+   /
+   5
+
+        5
+       /  \
+      11   8
+     /  \ / \
+    10  7 2  6
+
+        11
+       /  \
+      5    8
+     /  \ / \
+    10  7 2  6
+
+        11
+       /  \
+      10   8
+     /  \ / \
+    5  7 2  6
+
+5.
+
+    delete(node* p){
+        if(p->prev != NULL){
+            p->prev->next = p->next;
+        }
+
+        if(p->next != NULL){
+            p->next->prev = p->prev;
+        }
+
+        p = NULL;
+    }
+
+6.
+
+    push(node* L, node* q){
+        if(L == NULL){
+            L = q;
+            return;
+        }
+
+        node* cur = L;
+        while(cur->next != NULL){
+            cur = cur->next;
+        }
+        cur->next = q;
+    }
+
+7.
+
+    a: 8, 3, 1, 6, 4, 7, 10, 9, 14, 12
+    b: 1, 3, 4, 6, 7, 8, 9, 10, 12, 14
+    c: 1, 4, 7, 6, 3, 9, 12, 14, 10, 8

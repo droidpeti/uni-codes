@@ -1,0 +1,57 @@
+Algoritmusok és adatszerkezetek I. - Gyakorló Zárthelyi Dolgozat
+
+1. feladat (Aszimptotikus bonyolultság)
+
+Adott három algoritmus műveletigénye:
+    Alg1(n) = 3n \log_2(n) + 5n 
+    Alg2(n) = 2^n + n!
+    Alg3(n) = 100sqrt{n} + 20
+    
+    Keress az n^2, n!, sqrt{n}$, n log n, 2^n függvények között aszimptotikusan éles 
+    Theta becslést a három algoritmus műveletigényére, majd állítsd őket növekvő sorrendbe a műveletigényük alapján!
+    
+2. feladat (Rekurzió)
+
+    Írj rekurzív algoritmust (pszeudokódot), amely adott n (ahol n >= 1) értékhez kiszámítja az alábbi S(n) sorozat összegét!
+    S(n) = 1 * 2 + 2 * 3 + 3 * 4 + ... + n * (n+1)
+    
+3. feladat (Verem alkalmazása)
+
+    A verem (Stack) adatszerkezet felhasználásával írj algoritmust, amely leellenőrzi, hogy egy kizárólag ( és ) jeleket tartalmazó,
+    n hosszúságú karakterlánc helyesen van-e zárójelezve!
+    (Például a (())() helyes,
+    de a ())(
+    vagy a ((()) helytelen.
+    
+    Feltételezheted, hogy rendelkezel egy üres veremmel, és a szokásos push, pop, isEmpty függvényekkel.)
+    
+4. feladat (Kupac műveletek)
+
+Egy maximum-kupac aritmetikai ábrázolásban a következő alakú: 12, 10, 8, 5, 7, 2, 6, #
+    a) Rajzold fel a kupacot fadiagramként!
+    b) Szúrjuk be a kupacba a 11-es elemet! Rajzold le a fát a beszúrás után, majd mutasd be a helyreállítás (felbuborékoltatás) lépéseit!
+    c) Térjünk vissza az a) pontbeli eredeti kupachoz. Töröljük a kupac maximális elemét, majd állítsuk helyre a kupacszerkezetet (lesüllyesztés)!
+    Rajzold le a lépéseket!
+    
+5. feladat (Kétirányú láncolt lista - Sarokeset)
+
+    Készíts pszeudokódot vagy struktogramot, ami egy kétirányú (fejelem nélküli) listából törli a p mutatójú elemet!
+    Figyelj a pointerek helyes átkötésére, és kezeld le azt a sarokesetet is, ha a p mutatójú elem véletlenül a lista legutolsó eleme!
+    
+6. feladat (Egyirányú láncolt lista - Sarokeset)
+
+    Legyen L egy egyirányú, egyszerű lista fejmutatója. 
+    Készíts algoritmust, ami beszúr egy új, q mutatójú egyelemű listát (csomópontot) az L lista legvégére!
+    Figyelj a sarokesetre: mi történik, ha az L lista kezdetben teljesen üres (L = NULL)?
+    
+7. feladat (Bináris fa bejárása)
+
+    Olvassuk ki az alábbi bináris fa kulcsait (a) preorder, (b) inorder, illetve (c) postorder bejárással!
+
+        8
+      /   \
+     3     10
+    / \   /  \
+   1   6 9   14
+      / \    /
+     4   7  12

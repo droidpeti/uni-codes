@@ -1,0 +1,140 @@
+1.
+
+    T alg1 (n): O(n^2)
+    T alg2 (n): O(2^n)
+    T alg3 (n): O(n^3)
+
+    O(n^2) < O(n^3) < O(2^n)
+
+2.
+
+    𝑆(n)=1+1/2^2 + 1/3^2 +⋯+ 1/n^2
+
+    lim n = pi^2/6
+
+    num S(num n){
+        if(n == 1){
+            return 1;
+        }
+
+        return 1/(n^2) + S(n-1);
+    }
+
+3.
+
+    bool symmetric(string chars, num n){
+        stack s;
+        num i = 0;
+        while(i < n){
+            while(i < n && chars[i] != '#'){
+                s.push(chars[i]);
+                i++;
+            }
+            
+            if(i < n && chars[i] == '#'){
+                i++;
+            }
+
+            while(!s.isEmpty() && i < n){
+                if(s.pop() != chars[i]){
+                    return false;
+                }
+                i++;
+            }
+
+            if(i < n && chars[i] != '#'){
+                return false;
+            }
+            
+            if(i < n && chars[i] == '#'){
+                i++;
+            }
+        }
+        return true;
+    }
+
+4.
+
+    9, 7, 5, 2, 1, 3, #
+
+    a)
+
+        |---9---|
+    |--7--|  |--5
+    2     1  3 
+
+    b)
+
+         |---9---|
+      |--7--| |--5--|
+      2     1 3     8
+
+         |---9---|
+      |--7--| |--8--|
+      2     1 3     5
+
+         |---9---|
+      |--7--| |--8--|
+      2     1 3     5
+
+           |---9---|
+        |--7--| |--8--|
+     |--2     1 3     5
+     4
+
+           |---9---|
+        |--7--| |--8--|
+     |--4     1 3     5
+     2
+
+    c)
+           |---9---|
+        |--7--| |--8--|
+     |--4     1 3     5
+     2
+
+        |---2---|
+     |--7--| |--8--|
+     4     1 3     5
+
+        |---8---|
+     |--7--| |--2--|
+     4     1 3     5
+
+        |---8---|
+     |--7--| |--5--|
+     4     1 3     2
+
+5.
+    void swap(node* i, node* j){
+        j->prev = i->prev;
+        j->next = i->next;
+
+        i->prev->next = j;
+        i->next->prev = j;
+
+        i->prev = NULL;
+        i->prev = NULL;
+    }
+
+6.
+    void insert(node* q, node* L, node* p){
+        if(L == p){
+            q->next = p;
+            L = q;
+            return;
+        }
+        node* cur = L;
+        while(cur->next != p){
+            cur = cur->next;
+        }
+        cur->next = q;
+        q->next = p;
+    }
+
+7.
+
+    pre: 1, 2, 4, 7, 10, 11, 12, 3, 5, 8, 6, 9
+    in: 4, 7, 11, 10, 12, 2, 1, 5, 8, 3, 6, 9
+    post: 11, 12, 10, 7, 4, 2, 8, 5, 9, 6, 3, 1
+
