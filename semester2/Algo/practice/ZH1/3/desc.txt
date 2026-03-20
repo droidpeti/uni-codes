@@ -1,0 +1,51 @@
+Algoritmusok es adatszerkezetek I. - Gyakorlo Zarthelyi 3.0
+
+1. feladat (Aszimptotikus bonyolultsag - Trukkos)
+    Adott harom algoritmus muveletigenye:
+
+    T_Alg1(n) = 4 * nnn + 2 * n*n * log(n) + 100
+
+    T_Alg2(n) = log(nnnnn) + 5 * n  (Tipp: gondolj a logaritmus azonossagaira!)
+
+    T_Alg3(n) = 2 az n-ediken + n a 100-adikon
+
+    Keress az alabbi fuggvenyek kozott aszimptotikusan eles (Theta) becslest a harom algoritmus muveletigenyere:
+    n,  n * log(n),  nnn,  n a 100-adikon,  2 az n-ediken.
+    Miutan megvan a becsles, allitsd oket szigoruan novekvo sorrendbe a muveletigenyuk alapjan!
+
+2. feladat (Rekurzio)
+    Irj rekurziv algoritmust (pszeudokodot), amely adott n (ahol n >= 1) ertekhez kiszamitja az alabbi S(n) mertani sorozat osszeget!
+    S(n) = 1/2 + 1/4 + 1/8 + ... + 1 / (2 az n-ediken)
+    (Figyelj a baziskriterium pontos ertekere!)
+
+3. feladat (Verem ES Sor alkalmazasa)
+    Rendelkezesedre all egy ures Verem (Stack) es egy ures Sor (Queue). Irj algoritmust,
+    amely ezen ket adatszerkezet felhasznalasaval eldonti egy n hosszusagu karakterlancrol,
+    hogy palindrom-e (azaz visszafele olvasva is ugyanaz a szo, peldaul: "rotor").
+    (Tipp: töltsd fel mindkettot egy ciklusban, majd egy ujabb ciklusban uritsd es hasonlitsd ossze oket!)
+
+4. feladat (MINIMUM-Kupac muveletek)
+    Egy MINIMUM-kupac (ahol a szulo mindig kisebb vagy egyenlo, mint a gyerekei) aritmetikai abrazolasban a kovetkezo alaku: 4, 6, 8, 10, 12, 14, 16, #
+    a) Rajzold fel a kupacot fadiagramkent!
+    b) Szurjuk be a kupacba az 5-os elemet! Rajzold le a fat a beszuras utan, majd mutasd be a felbuborekoltatas lepeseit (emlekezz, ez egy min-kupac)!
+    c) Terjunk vissza az a) pontbeli eredeti kupachoz. Toroljuk a kupac minimalis elemet (a gyokeret), majd allitsuk helyre a kupacszerkezetet! 
+    Rajzold le a lesullyesztes lepeseit!
+
+5. feladat (Egyiranyu lista - Torles az elem UTAN)
+    Keszits pszeudokodot, ami egy egyiranyu, egyszeru listaban torli a p mutatoyu csomopont KOVETKEZO elemet!
+    (Sarokeset: Mi van akkor, ha a p mutato epp a lista legutolso elemere mutat, es nincs is utana semmi? Ezt is kezeld le!)
+
+6. feladat (Ketiranyu lista - Beszuras az elem ELE)
+    Legyen L egy ketiranyu lista fejmutatoja. Keszits algoritmust, ami egy uj, q mutatoyu elemet szur be a listaba, kozvetlenul a p mutatoyu elem ELE!
+    (Sarokeset: Mi tortenik, ha a p a lista legelso eleme, azaz L egyenlo p-vel? A mutatok atkotese mellett ilyenkor a fejmutatot is frissiteni kell!)
+
+7. feladat (Binaris fa bejarasa)
+    Olvassuk ki az alabbi aszimmetrikus binaris fa kulcsait (a) preorder, (b) inorder, illetve (c) postorder bejarassal!
+
+        A
+         \
+          B
+         / \
+        C   D
+       /     \
+      E       F

@@ -1,0 +1,142 @@
+1.
+    Alg1(n) = Theta(n^3)
+    Alg2(n) = Theta(n)
+    Alg3(n) = Theta(2^n)
+
+   n < n * log n < n*n*n < n^100 < 2^n
+2.
+    num S(num n){
+        if(n == 1){
+            return (1/2);
+        }
+        return 1/(2^n) + S(n-1);
+    }
+
+3.
+    bool palindrom(string chars, num n){
+        stack s;
+        queue q;
+
+        for(int i = 0; i < n; i++){
+            s.push(chars[i]);
+            q.enqueue(chars[i]);
+        }
+
+        for(int i = 0; i < n; i++){
+            if(s.pop() != q.dequeue()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+4.
+    4, 6, 8, 10, 12, 14, 16, #
+
+    a)
+             4
+           /   \
+          6     8
+         / \   / \
+        10 12 14 16
+
+    b)
+
+             4
+           /   \
+          6     8
+         / \   / \
+        10 12 14 16
+       /
+      5
+
+             4
+           /   \
+          6     8
+         / \   / \
+        10 12 14 16
+       /
+      5
+
+             4
+           /   \
+          6     8
+         / \   / \
+        5  12 14 16
+       /
+      10
+
+             4
+           /   \
+          5     8
+         / \   / \
+        6  12 14 16
+       /
+      10
+
+    c)
+
+             4
+           /   \
+          5     8
+         / \   / \
+        6  12 14 16
+       /
+      10
+
+             10
+           /   \
+          5     8
+         / \   / \
+        6  12 14 16
+
+             5
+           /   \
+          10    8
+         / \   / \
+        6  12 14 16
+
+             5
+           /   \
+          6     8
+         / \   / \
+        10 12 14 16
+
+5.
+
+    delete_next(node* p){
+        node* q = p->next;
+        if(q == NULL){
+            return;
+        }
+        p->next = q->next;
+        q = NULL;
+    }
+
+6.
+
+    insert_prev(node* L, node* q, node* p){
+        node* r = p->prev;
+        p->prev = q;
+        q->next = p;
+        q->prev = r;
+        if(r != NULL){
+            r->next = q;
+            return;
+        }
+        L = q;
+    }
+
+7.
+
+        A
+         \
+          B
+         / \
+        C   D
+       /     \
+      E       F
+
+      pre: A, B, C, E, D, F
+      in:  A, E, C, B, D, F
+      post:E, C, F, D, B, A
