@@ -24,4 +24,21 @@ public class Fisher
     {
         this.name = name;
     }
+
+    public void AddCatch(string[] catchData)
+    {
+        fishes.Add(new Catch(catchData));
+    }
+
+    public override string ToString()
+    {
+        string output = name + "\'s catches: ";
+
+        foreach(Catch c in fishes)
+        {
+            output += $"\n\t{c.time} - {c.species} - {c.length} m - {c.weight} kg";
+        }
+
+        return output;
+    }
 }
