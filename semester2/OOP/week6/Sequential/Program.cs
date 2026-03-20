@@ -1,18 +1,18 @@
-﻿namespace FileRead;
+﻿namespace Sequential;
 
 class Program
 {
     static void Main(string[] args)
     {
-
         Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
         string filename = "data.txt";
 
-        ReadFile r = new ReadFile(filename);
-        Fisher f;
-        while((f = r.Read()) != null)
+        FishIter fi = new FishIter(filename);
+
+        foreach(FishIter fisher in fi)
         {
-            Console.WriteLine(f);
+            Console.WriteLine(fisher);
         }
+
     }
 }
