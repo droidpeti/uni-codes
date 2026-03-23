@@ -1,0 +1,17 @@
+Sorting algorithms:
+
+Slow O(n^2) algorithms:
+
+With few elements they are more efficient than O(n * log n) algorithms
+
+Bubble Sort
+
+Insertion Sort
+
+Selection Sort
+
+Faster O(n * log n) algorithms
+
+Merge sort
+
+Quick sort
