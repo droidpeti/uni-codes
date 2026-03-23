@@ -1,0 +1,77 @@
+Algoritmusok es adatszerkezetek I. - TESZTES Minta ZH
+
+1. FELADAT (Aszimptotikus korlatok)
+Adott a T(n) = 3 * n^2 + 5 * n * log(n) + 100 fuggveny. Melyik a helyes aszimptotikusan eles (Theta) becsles, es miert?
+A) Theta(n * log(n)), mert a logaritmus miatt ez a tag no a leggyorsabban.
+B) Theta(n^3), mert egy felsokorlatot mindig a legmagasabb fokszam fole kell beloni.
+C) Theta(n^2), mert a polinom legmagasabb fokszamu tagja dominal, ez no a leggyorsabban.
+D) Theta(n^2 * log(n)), mert a ket legnagyobb tagot ossze kell szorozni.
+
+2. FELADAT (Egyiranyu lista - Beszuras 'p' UTAN)
+Szeretnenk egy uj, 'q' mutatoyu elemet beszurni egy egyiranyu listaba, kozvetlenul a 'p' mutatoyu elem UTAN. A fuggveny torzsebol hianyzik a lenyeg. Melyik a helyes sorrend?
+void insert_after(node* p, node* q) {
+// ... HIANYZO KODRESZ ...
+}
+A) p->next = q;  q->next = p->next;
+B) q->next = p->next;  p->next = q;
+C) p->next = q->next;  q->next = p;
+D) q->next = p;  p->next = q;
+
+3. FELADAT (Verem - Zarojelezes ellenorzese)
+A stringben csak '(' es ')' jelek vannak. Az algoritmus a csukojeleket ellenorzi, de a hianyzik a belso logika.
+bool check(string s, int n) {
+stack st;
+for(int i = 0; i < n; i++) {
+if(s[i] == '(') {
+st.push(s[i]);
+} else if(s[i] == ')') {
+// ... HIANYZO KODRESZ ...
+}
+}
+return st.isEmpty();
+}
+A) st.pop();
+B) if(st.isEmpty()) return false;  st.pop();
+C) if(!st.isEmpty()) return false;  st.pop();
+D) if(st.isEmpty()) return true;  st.pop();
+
+4. FELADAT (Maximum-kupac - Felbuborekoltatas)
+Beszurtunk egy uj elemet a kupac (munkatomb) legvegere, az 'i'-edik indexre. Milyen feltetel eseten kell cserelni a szulojevel (i/2 index) a felbuborekoltatas soran, ha ez egy MAXIMUM-kupac?
+void upheap(int heap[], int i) {
+while(i > 1 && /* ... HIANYZO KODRESZ ... /) {
+swap(heap[i], heap[i/2]);
+i = i / 2;
+}
+}
+A) heap[i] < heap[i/2]
+B) heap[i] == heap[i/2]
+C) heap[i] > heap[i/2]
+D) heap[i] > heap[i2]
+
+5. FELADAT (Kupacrendezes - Torles)
+Adott az alabbi, tombben tarolt maximum-kupac: [ 50, 30, 20, 15, 10, 8, 5 ]
+A kupacrendezes (Heap sort) folyaman toroljuk a maximalis elemet. 
+Melyik ket elem cserel helyet legeloszor a tombben, 
+meg mielott a lesullyesztes (downheap) megkezdodne?
+A) Az 50 es a 30.
+B) A 30 es a 20.
+C) Az 50 es az 5.
+D) Az 50 es a 15.
+
+6. FELADAT (Rekurzio - Faktorialis)
+Hianyzik a rekurziv faktorialis szamitas baziskriteriuma (leallasi feltetele). Melyik a helyes?
+int fact(int n) {
+// ... HIANYZO KODRESZ ...
+return n * fact(n - 1);
+}
+A) if (n == 0) return 0;
+B) if (n == 1) return n * fact(n);
+C) if (n > 1) return 1;
+D) if (n <= 1) return 1;
+
+7. FELADAT (Ketiranyu lista - Torles)
+Egy 'p' mutatoyu elemet torlunk egy fejelem nelkuli ketiranyu listabol. A listaban tobb elem is van, es 'p' valahol kozepen talalhato (se nem elso, se nem utolso). Melyik kodreszlet vegzi el a helyes mutato-atkotest?
+A) p->prev->next = p->next;  p->next->prev = p->prev;
+B) p->next = p->prev;  p->prev = p->next;
+C) p->prev->next = p;  p->next->prev = p;
+D) p->next = NULL;  p->prev = NULL;
