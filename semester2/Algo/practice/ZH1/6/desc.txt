@@ -1,0 +1,67 @@
+Algoritmusok és adatszerkezetek I. - TESZTES Minta ZH (5.0)
+1. FELADAT (Keresőfa - Törlés szabálya)
+Egy bináris keresőfából (Binary Search Tree - BST) törölni szeretnénk egy olyan csomópontot, aminek pontosan KÉT gyereke van. A törölt elem helyére egy másikat kell mozgatnunk, hogy a fa keresőfa maradjon. Melyik elemmel szabad helyettesíteni?
+A) Kizárólag a törlendő elem bal részfájának legkisebb elemével.
+B) Kizárólag a törlendő elem jobb részfájának legnagyobb elemével.
+C) A törlendő elem bal részfájának legnagyobb, VAGY a jobb részfájának legkisebb elemével.
+D) Bármelyik levélelemmel, ami az adott részfákban található.
+
+2. FELADAT (Kupacok tulajdonsága - Elmélet)
+Adott egy 1-től indexelt, 10 elemet tartalmazó MINIMUM-Kupac (vagyis a szülő mindig kisebb vagy egyenlő a gyerekeinél), amit egy tömbben tárolunk. Hol helyezkedhet el a fa (és így a tömb) LEGNAGYOBB eleme?
+A) Biztosan a tömb legutolsó helyén (a 10. indexen).
+B) Biztosan a tömb legelső helyén (az 1. indexen).
+C) Bárhol a 2. és a 10. index között.
+D) Garantáltan valamelyik levélelemben (vagyis a tömb második felében, a 6. és 10. indexek között).
+
+3. FELADAT (Verem és Sor - Műveletkövetés)
+Adott egy üres Verem (S) és egy üres Sor (Q). Lefuttatjuk az alábbi kódrészletet. Mi lesz a Verem legfelső eleme (top) a kód lefutása UTÁN?
+
+S.push(1);
+S.push(2);
+Q.enqueue( S.pop() );
+S.push(3);
+Q.enqueue( S.pop() );
+S.push( Q.dequeue() );
+
+A) 1
+B) 2
+C) 3
+D) A verem üres lesz.
+
+4. FELADAT (Egyirányú, CIKLIKUS lista - Sarokeset törlésnél)
+Adott egy egyirányú, ciklikus lista (ahol a legutolsó elem next mutatója a legelső elemre, azaz a fej-re mutat).
+Törölni szeretnénk a p mutatójú elemet. Tudjuk, hogy p == fej, ÉS a lista csak ezt az egyetlen elemet tartalmazza (tehát p->next == p).
+Melyik a memóriaszivárgás nélküli, helyes törlés?
+A) fej = NULL; delete p;
+B) p->next = NULL; delete p;
+C) delete p; fej = NULL; (Itt a p törlése után a fej egy már felszabadított memóriaterületre mutat a nullázás előtt, de a nullázás megtörténik).
+D) fej = fej->next; delete p;
+
+5. FELADAT (Maximum-Kupac ellenőrzése tömbben)
+Az alábbi 1-től indexelt tömbök közül melyik ír le egy HELYES Maximum-Kupacot? (Emlékeztető: a szülő indexe $i$, a bal gyerek $2i$, a jobb gyerek $2i+1$).
+A)[ 50, 40, 30, 20, 10, 5, 8 ]
+B) [ 30, 25, 20, 15, 28, 10, 5 ]
+C) [ 10, 8, 9, 7, 10, 5, 2 ]
+D) [ 100, 90, 80, 70, 60, 85, 40 ]
+
+6. FELADAT (Aszimptotikus bonyolultság - Relációk)
+Tudjuk, hogy egy algoritmus futási ideje felülről korlátozható $O(n^2)$ függvénnyel, alulról pedig korlátozható $\Omega(n \log n)$ függvénnyel.
+Mit mondhatunk biztosan az algoritmus aszimptotikusan éles ($\Theta$) bonyolultságáról?
+A) Biztosan $\Theta(n^2)$.
+B) Biztosan $\Theta(n \log n)$.
+C) Az algoritmusnak nincs feltétlenül egyetlen $\Theta$ becslése (nem adható meg éles korlát ezekből az adatokból).
+D) A bonyolultsága a kettő szorzata, azaz $\Theta(n^3 \log n)$.
+
+7. FELADAT (Rekurzió - Hívási fa)
+Adott az alábbi rekurzív függvény:
+
+int f(int n) {
+    if (n <= 0) return 1;
+    return f(n - 2) + f(n - 2);
+}
+
+Hányszor hívódik meg a függvény a báziskritériummal (vagyis hányszor fut le az if (n <= 0) return 1; sor), ha az eredeti, legelső hívás f(4)?
+A) 2-szer
+B) 4-szer
+C) 8-szor
+D) 16-szor
