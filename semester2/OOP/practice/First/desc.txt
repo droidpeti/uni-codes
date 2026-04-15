@@ -1,0 +1,26 @@
+A Feladat: "A Webáruház Forgalma"
+Egy webáruház a napi vásárlásokat egy szöveges,
+szekvenciális fájlban rögzíti.
+A tárolt adatok egy sorban szóközzel elválasztva:
+
+A vásárlás dátuma (ÉÉÉÉ.HH.NN)
+
+A vásárló azonosítója (Szöveg)
+
+A termék kategóriája (Szöveg)
+
+A fizetett összeg forintban (Egész szám)
+
+Példa az állomány egy sorára:
+2023.11.24 VEVO-0841 ELEKTRONIKA 145000
+
+(1) Tervezzen meg egy felsoroló osztályt, amely képes a fájlt kívülről 
+vezérelve soronként beolvasni, azt feldolgozni, majd az adatokat 
+getterekkel elérhetővé tenni! A program nem használhat a szöveges 
+állomány méretétől függő tömböt/listát vagy stringet!
+(2) Mennyi volt a teljes bevétel az "ELEKTRONIKA" kategóriájú 
+termékekből? (Tervezze meg a megoldást pszeudokóddal a 
+felsoroló használatával!)
+(3) Volt-e olyan vásárlás, 
+ahol a fizetett összeg meghaladta az 500 000 Ft-ot? 
+(Tervezze meg a megoldást pszeudokóddal, optimalizálva a futási időt!)
