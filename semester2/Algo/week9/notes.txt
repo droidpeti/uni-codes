@@ -1,0 +1,103 @@
+Bucket sort reverse
+
+28 lower case charachters of the english alphabet
+
+sort by last letter
+
+kjf, uht, abs, oim, zhm, ahf, uhs
+
+F: kjf, ahf
+M: oim, zhm
+S: abs, uhs
+T: uht
+
+kjf, ahf, oim, zhm, abs, uhs, uht 
+
+sort by last to second letter
+
+B: abs
+H: ahf, zhm, uhs, uht
+I: oim
+J: kjf
+
+abs, ahf, zhm, uhs, uht, oim, kjf
+
+sort by first letter
+
+A: abs, ahf
+K: kjf
+O: oim
+U: uhs, uht
+Z: zhm
+
+abs, ahf, kjf, oim, uhs, uht, zhm
+
+Radix sort MSD (Fowards) (Most significant digit)
+Radix sort LSD (Reverse) (Least significant digit)
+
+101, 011, 010, 111, 000, 110, 001
+
+MSD
+
+101 * |
+011   V
+010
+111 *
+000 *
+110   ^
+001 * |
+
+001
+011 *
+010
+000 *
+---
+111 *
+110
+101 *
+
+001 *
+000 *
+---
+010 
+---
+011 
+---
+101
+---
+110
+--- 
+111
+
+000
+001
+010
+011
+101
+110
+111
+
+LSD
+
+101
+011
+010
+111
+000
+110
+001
+
+if digit is 1 push into B
+if digit is 0 unshift into B
+
+A: 101, 011, 010, 111, 000, 110, 001 (same as input for now)
+B: 010, 000, 110 | 001, 111, 011, 101
+
+now do the same but from B to A for the next digit
+
+A: 000, 101, 001 | 111, 011, 110, 010
+B: 000, 001, 010, 011 | 111, 110, 101
+
+A: 000, 001, 010, 011, 101, 110, 111
+
+Postfix form
