@@ -4,6 +4,7 @@
   <Folder Name="/semester2/OOP/assignment/" />
   <Folder Name="/semester2/OOP/assignment/assignment2/">
     <Project Path="semester2/OOP/assignment/assignment2/TundraApp/TundraApp.csproj" />
+    <Project Path="semester2/OOP/assignment/assignment2/TundraTests/TundraTests.csproj" />
   </Folder>
   <Folder Name="/semester2/OOP/practice/">
     <Project Path="semester2/OOP/practice/First/First.csproj" />

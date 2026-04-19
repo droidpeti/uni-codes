@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TundraApp/TundraApp.csproj" />
+  <Project Path="TundraTests/TundraTests.csproj" />
+</Solution>
