@@ -102,6 +102,33 @@ body{
     font-size: 0.8rem;
 }
 
+.article-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.key-items, td, th{
+    border: 1px black solid;
+    border-radius: 2px;
+}
+
+.key-items{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+th, td{
+    text-align: center;
+}
+
+.td-content{
+    font-size: 1.2rem;
+}
+
 @media (max-width: 768px) {
     
     .container {
@@ -113,12 +140,24 @@ body{
         flex-direction: column
     }
 
+    .article-img{
+        width: 100%;
+    }
+
     .title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .topnav a {
         padding: 10px;
-        font-size: 15px;
+        font-size: 0.65rem;
+    }
+
+    .content{
+        font-size: 1rem;
+    }
+
+    .td-content{
+        font-size: 0.9rem;
     }
 }
