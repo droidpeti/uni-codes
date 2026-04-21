@@ -156,6 +156,10 @@ th, td{
     width: 100%;
 }
 
+video{
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     
     .container {
@@ -273,6 +277,7 @@ body.high-contrast .table-img {
     background-color: #111111;
     border: 2px solid #ffff00;
     color: #ffff00;
+    text-transform: uppercase;
 }
 body.high-contrast a {
     color: #00ffff;
@@ -281,6 +286,13 @@ body.high-contrast .topnav, body.high-contrast .topnav a {
     background-color: #333;
     color: #fff;
     border-bottom: 1px solid #ff0;
+}
+
+body.high-contrast .topnav a.active {
+    background-color: #ffff00;
+    color: #000000;
+    font-weight: bold;
+    border: 2px solid #ffffff;
 }
 
 @media (max-width: 1024px) {
