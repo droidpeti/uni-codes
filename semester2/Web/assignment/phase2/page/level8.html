@@ -6,8 +6,14 @@
     <title>The Legend of Zelda - Level 8</title>
     <link rel="icon" type="image/x-icon" href="images/0_icon.png">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
         <nav class="topnav">
             <a href="index.html">Home</a>
@@ -20,8 +26,12 @@
             <a href="level7.html">Level 7</a>
             <a class="active" href="level8.html">Level 8</a>
             <a href="level9.html">Level 9</a>
+            <a href="extras.html">Extras</a>
         </nav>
-        <h1 class="title">Level 8 - The Lion</h1>
+        <h1 class="title" id="main-content">Level 8 - The Lion</h1>
+        <div class="center" style="margin-bottom: 20px;">
+            <button type="button" class="contrast-btn" onclick="toggleContrast()">Toggle High Contrast Mode</button>
+        </div>
         <article class="content">
             <h2 class="subtitle">Location and How to Get There</h2>
             

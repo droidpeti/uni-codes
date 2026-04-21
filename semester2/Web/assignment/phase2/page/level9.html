@@ -6,8 +6,14 @@
     <title>The Legend of Zelda - Level 9</title>
     <link rel="icon" type="image/x-icon" href="images/0_icon.png">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
         <nav class="topnav">
             <a href="index.html">Home</a>
@@ -20,8 +26,12 @@
             <a href="level7.html">Level 7</a>
             <a href="level8.html">Level 8</a>
             <a class="active" href="level9.html">Level 9</a>
+            <a href="extras.html">Extras</a>
         </nav>
-        <h1 class="title">Level 9 - Death Mountain</h1>
+        <h1 class="title" id="main-content">Level 9 - Death Mountain</h1>
+        <div class="center" style="margin-bottom: 20px;">
+            <button type="button" class="contrast-btn" onclick="toggleContrast()">Toggle High Contrast Mode</button>
+        </div>
         <article class="content">
             <h2 class="subtitle">Location and How to Get There</h2>
             
@@ -99,10 +109,10 @@
             <p><b>8/10</b>. A pretty good final challenge, sometimes it can feel too much though.</p>
             <p>I like the gray color scheme mixed with lava.</p>
             <p>Beating this level without a guide makes you a true veteran at this game.</p>
-            <footer class="footer">
-                <p>Created by <span lang="hu">Ballai Péter Lóránt</span>. &copy; 2026</p>
-            </footer>
         </article>
+        <footer class="footer">
+            <p>Created by <span lang="hu">Ballai Péter Lóránt</span>. &copy; 2026</p>
+        </footer>
     </div>
 </body>
 </html>

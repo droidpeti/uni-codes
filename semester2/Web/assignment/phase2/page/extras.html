@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda - Extras</title>
+    <link rel="icon" type="image/x-icon" href="images/0_icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <nav class="topnav">
+            <a href="index.html">Home</a>
+            <a href="level1.html">Level 1</a>
+            <a href="level2.html">Level 2</a>
+            <a href="level3.html">Level 3</a>
+            <a href="level4.html">Level 4</a>
+            <a href="level5.html">Level 5</a>
+            <a href="level6.html">Level 6</a>
+            <a href="level7.html">Level 7</a>
+            <a href="level8.html">Level 8</a>
+            <a href="level9.html">Level 9</a>
+            <a class="active" href="extras.html">Extras</a>
+        </nav>
+        
+        <header>
+            <h1 class="title" id="main-content">Extras & Feedback</h1>
+            <div class="center" style="margin-bottom: 20px;">
+                <button type="button" class="contrast-btn" onclick="toggleContrast()">Toggle High Contrast Mode</button>
+            </div>
+        </header>
+
+        <div class="two-column-layout">
+            
+            <article class="main-content content">
+                <h2 class="subtitle">Footage of me beating Level 1</h2>
+                <video width="100%" controls poster="images/video_poster.png">
+                    <source src="videos/zelda_gameplay.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <details class="transcript">
+                    <summary>Full Video Transcript</summary>
+                    <p>0:04 - The video begins with Link standing in the overworld, he then enters a cave, where he gets the sword from an old man.</p>
+                    <p>1:56 - Link stumbles upon a dead tree, the entrance of the first level on an island.</p>
+                    <p>4:46 - After Link defeats some Goriya enemies, he unlocks the boomerang.</p>
+                    <p>6:00 - Link enters a hidden passage and unlocks the bow.</p>
+                    <p>7:15 - Link enters the boss room, and defeats Aquamentus.</p>
+                    <p>7:32 - Link collects the first Tri-Force piece.</p>
+                </details>
+
+                <hr>
+
+                <h2 class="subtitle">Tell me your thoughts!</h2>
+                <form action="mailto:test@example.com" method="POST" enctype="text/plain" class="feedback-form">
+                    
+                    <div class="form-group">
+                        <label for="username">Your Name (Max 50 chars):</label>
+                        <input type="text" id="username" name="username" maxlength="50" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Did you enjoy The Legend of Zelda?</label>
+                        <div class="radio-group">
+                            <input type="radio" id="enjoy_yes" name="enjoyed" value="yes" required>
+                            <label for="enjoy_yes">Yes, I loved it!</label>
+                            
+                            <input type="radio" id="enjoy_no" name="enjoyed" value="no">
+                            <label for="enjoy_no">No, it was too hard.</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fav_feature">Select your favorite features:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="fav_dungeons" name="favorite" value="dungeons">
+                            <label for="fav_dungeons">The Dungeons</label>
+                            
+                            <input type="checkbox" id="fav_bosses" name="favorite" value="bosses">
+                            <label for="fav_bosses">The Boss Fights</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Additional Comments (Max 300 chars):</label>
+                        <textarea id="comments" name="comments" rows="4" maxlength="300"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Feedback</button>
+                </form>
+            </article>
+
+            <aside class="sidebar content">
+                <h2 class="subtitle">Fun Facts</h2>
+                <p>Here is a list of interesting things about the game:</p>
+                <ul>
+                    <li><b>Second Quest:</b> If you enter the name "ZELDA" as your character name, you instantly unlock a much harder version of the game.</li>
+                    <li><b>Hidden Rooms:</b> Some walls can be walked right through!</li>
+                    <li><b>Save Battery:</b> The original NES cartridge included an internal battery so players could save their progress.</li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <footer class="footer">
+            <p>Created by <span lang="hu">Ballai Péter Lóránt</span>. &copy; 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
