@@ -1,0 +1,109 @@
+A weblap legalább három, statikus HTML oldalból áll, a kezdőlap index.html néven lett elmentve. Minden HTML oldal, ami a csomagban van, be is van linkelve az oldalakra, nincs felesleges HTML állomány. Az oldalak relatív módon vannak linkelve, nincs gyökérmappára való hivatkozás.
+
+Van  (legalább egy) olyan oldal, amely  háttérképet tartalmaz (Nem muszáj, hogy a háttérkép a lap háttere legyen, lehet egy tetszőleges komponensé is.)
+
+Legalább 5 kép be van szúrva az oldalakra (összesen), legalább két kép előképként (thumbnail) funkcionál, vagyis a kép nagyobb változatára linkel
+
+Van olyan oldal, amelyen van olyan adattáblázat, amely legalább 2x3-as és vannak fejléc-cellái (<th>).
+A táblázat felirata (<caption>), lenyitható tartalomként lett elkészítve a <details> tag-be ágyazott <summary> tag segítségével.  Az oldal struktúráját nem szabad táblázat segítségével megvalósítani!
+
+Van olyan oldal, amelyben egy olyan űrlap található, amely tartalmaz legalább egy szövegmezőt (text), egy szövegterületet (textarea),legalább 2 választókapcsolót (radio), legalább 1 jelölőnégyzetet (checkbox), valamint egy elküldés (submit) gombot.
+
+Van olyan oldal, amelyben egy felhasználói élményt javító JavaScript kód van beillesztve (pl. választás alternatív stíluslapból, betűméret váltás, képgaléria, ...)
+A Bootstrap keretrendszer komponensei is elfogadhatóak ennél a pontnál (pl. Carousel).
+
+Az oldalak mindegyike tartalommal fel van töltve, a szerkezeti linkeken kívül legalább 3 külső hivatkozást is tartalmaznak (összesen).  A Lorem ipsum,stb. töltelékszövegekkel feltöltött oldalak nem elfogadhatóak!
+A szerkezeti linkek az aktuális oldalhoz képest relatívan vannak megadva.
+
+A HTML5-s oldal(ak)on  az alábbi tagek mindegyikének használatára van példa: <header><nav><section><article><aside><footer><figure><video>.
+A tageknek nem kell minden oldalon előfordulniuk, de amikor szemantikailag indokolt a használatuk, akkor a megfelelő taget KELL használni!
+
+Az elkészült weblap reszponzív.
+Ezen felül igaz legalább 1 oldal esetén, hogy a kijelzőmérettől függően legalább háromféle elrendezés van megvalósítva (okostelefon, tablet, nagyobb kijelző), amelyek közül a (leg)kisebb kijelzőméretre tervezett elrendezés egyetlen oszlopból áll, a (leg)nagyobbra tervezett pedig legalább két oszlopból. A tartalmi elemek (beleértve a képeket és a videókat) minden oldalon relatívan vannak méretezve.
+
+A tartalom és a megjelenés megfelelően el van különítve egymástól külső stíluslap(ok) használatával. Az inline megadás kerülendő, hacsak nincs speciális indoka a használatának!
+
+Az oldalcímek <title> egyediek minden oldalon, és kulcsszóval kezdődnek, vagy végződnek
+(pl. Magamról - Gipsz Jakab honlapja; Gipsz Jakab honlapja - Magamról)
+
+A szöveg a megadott alapméretben jól olvasható
+
+A betűtípus megadásoknál konkrét betűtípusok és általános betűcsaládok is meg vannak adva, a kisebb méretű
+szövegeknél talpnélküli (sans-serif) betűtípus van beállítva
+
+A  betűméretek oly módon vannak megadva, hogy könnyen átméretezhető legyen a szöveg (%,em, vagy rem megadással)
+
+A menüsor felül, vagy  bal oldalon helyezkedik el, megfelelően elkülönül a tartalomtól (pl. színezett hátterű)
+
+Kinézetünkben különböznek a még nem látogatott és látogatott linkek. A már látogatott link kontrasztaránya kisebb a nem látogatotthoz képest. A menü esetén ez nem feltétel.
+
+Nincs olyan szöveg aláhúzva, ami nem tölt be link szerepet
+
+A linkek alá vannak húzva a szövegben, kivétel lehet a navigációs menü és linklista.
+Nem elegendő, hogy az aláhúzás csak akkor jelenik meg, amikor a felhasználó a link fölé vitte az egeret. Az aláhúzásnak mindig láthatónak kell lennie.
+
+Az oldalak jól nyomtathatók, a nyomtatási képen minden fontos információ látszik.
+A képernyő és a nyomtató számára külön stíluslapot kell készíteni. A nyomtatási nézetben el kell tüntetni a minden oldalon ismétlődő elemeket, így például a menüt, a fejlécet, az oldalsávot stb. A videók legyenek elrejtve, a képek pedig legyenek kicsinyítve. A szöveg papír- és festéktakarékosan töltse ki az oldalakat.
+
+Az űrlapelemeknél van megfelelően hozzárendelt címke (label for="") és egyértelműen utal arra, hogy milyen információt kell az űrlapelemben szerepeltetni
+
+Az űrlap szövegmezői a várt adatnak megfelelő hosszúságúak
+A szövegmezők méretét és a begépelhető szöveg maximális hosszát is be kell állítani. A méret beállításhoz használható stíluslap is.
+
+Az űrlap címkéi közel vannak az űrlapmezőkhöz, így nem gyengül az asszociáció
+
+Az űrlap tartalma elküldhető (e-mailben post metódussal, vagy más módon feldolgozásra kerül)
+
+Az űrlapok választókapcsolói (radio) minden lehetséges választ lefednek
+
+Az űrlapnál a nyomógomb funkcióját egyértelműen jelzi a felirata
+
+A letapogathatóság elve alapján a kulcsszavak ki vannak emelve (félkövér, dőlt), ahol az értelmes, felsoroláslista lett használva
+
+Értelmesen megfogalmazott címsorok (<h1>…<h6>) tagolják a szöveget minden egyes oldalon.
+A HTML5-ös oldalakon a címsorszinteket egymásba ágyazott oldalszerkezeti elemekben szerepeltetett <h1> címsorral is be lehet állítani. Ha nem indokolt az alcímsorok használata, akkor elég egy <h1> taget elhelyezni.
+
+Minden oldalra igaz, hogy a címsorok logikusan vannak egymásba ágyazva, például nem lehet az oldalon csak 2-es címsor szerepet betöltő címsor, 1-es címsornak nem lehet 3-as alcímsor szerepet betöltő alcímsora, és így tovább.
+Csak akkor adható meg a pont, ha valamelyik oldalon legalább 2-es címsor szerepet betöltő címsor is előfordul (ami HTML5 oldalon lehet egy olyan 1-es címsor is, amely beágyazott oldalszerkezeti elemben szerepel)
+
+Nincs olyan mintás háttér alkalmazva, amely megnehezíti a rajta lévő szöveg elolvasását
+
+A szövegblokkok, listák balra (esetleg sorkizártan) vannak igazítva
+
+A <video> taggel beillesztett videóállományból ki van vágva jellemző képkocka és poszterként be van állítva, hogy segítse a felhasználót annak eldöntésében, hogy érdemes-e megtekintenie a filmet.
+
+Ugyanazok a szerkezeti linkek szerepelnek minden oldalon, ugyanolyan sorrendben
+
+A kezdőlapra minden oldalról vissza lehet jutni egy link segítségével (pl. a menüben elhelyezett kezdőlap menüponttal, vagy ikonnal).
+
+Ha valaki külső oldalról érkezik a weblap egy oldalára, egyértelműen kiderül számára, hogy melyik oldalon van (pl. aktuális oldal megkülönböztetése a menüben, nyomvonal navigáció stb.)
+Nem elegendő a menüpont nevét (például) címsorként megismételni.
+
+A nem design célú képeknél az ALT attribútum precízen ki van töltve (mindegyik képnél) (WCAG 2.0 1.1.1-es feltétel)
+
+A linkek szövegei önmagukban jól érthetőek (a "kattints ide" szöveg nem megfelelő), tömörek
+
+A szövegek jól olvashatóak, megfelelő kontrasztarány biztosított. (WCAG 2.0 1.4.3-as feltétel)
+
+Alternatív, nagybetűs, nagy kontrasztú stílus változat érhető el a gyengénlátó felhasználók számára minden oldalon.
+
+Blokkok elkerülése: Minden oldalon hozzáférhető egy mechanizmus, melynek segítségével elkerülhetők azok a tartalmi blokkok, amelyek több oldalon is ismétlődnek (pl. képernyőről kipozícionált hivatkozás használatával) (WCAG 2.0 2.4.1-es feltétel)
+A tartalomra ugrás céljára használt linket a képernyőolvasó programot használók számára kell elérhetővé tennünk, a vizuális böngészőprogramokban nem kell megjelennie.
+
+A videónál szerepel annak teljes szövegű leírása.
+A leírásnak minden lényeges történést tartalmaznia kell, ami a videóban látható vagy hallható, nem elegendő néhány szóban csak összefoglalni a videó tartalmát. Célszerű külön HTML-állományban elhelyezni, és a videó után belinkelni, vagy <details><summary> tagekben elhelyezni a videó után. A pont csak akkor adható meg, ha a videó legalább 30 másodperc hosszú, legalább 15 másodpercig beszélnek a résztvevők vagy a narrátor, nem csak statikus a háttere, vagyis vannak benne vizuális történések)
+
+Az oldal nyelve mindegyik oldalon beállításra került. Ahol az alapértelmezett nyelvtől eltérő szöveg is van az oldalon, az el van látva a megfelelő nyelvkóddal.
+
+A karakterkódolás megfelelően be van állítva (pl. utf-8), az ékezetes karakterek helyesen jelennek meg
+
+Nincsenek hiányzó elemek, törött linkek, nem működő funkciók
+
+A leggyakrabban használt böngészőprogramokkal tesztelve (Chrome, Firefox, Edge)  az oldal funkcionálisan működik (eltekintve azon HTML5 és CSS3 funkcióktól, amelyek esetleg nincsenek implementálva az adott böngészőben)
+
+Legalább egy oldal a HTML5 szabvány szerint készült és valid a https://validator.w3.org/ oldal szerint
+
+Mindegyik beadott oldal a HTML5 szabvány szerint készült és valid a https://validator.w3.org/ oldal szerint
+
+Van(nak) saját készítésű CSS állomány(ok), amelyek legalább 15 szabályt tartalmaznak. A CSS állományok valid(ak) a jigsaw.w3.org/css-validator/ oldal szerint.
+Amennyiben a Bootstrap keretrendszer lett használva, a saját készítésű stílusok megfelelően elkülönülnek a Bootstrap stílusállományaitól.

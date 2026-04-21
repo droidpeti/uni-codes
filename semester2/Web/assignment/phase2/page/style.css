@@ -60,6 +60,10 @@ body{
     margin: 2px;
 }
 
+.content a:visited {
+    color: #555555; 
+}
+
 .hero-images {
     display: flex;
     justify-content: center;
