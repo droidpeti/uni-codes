@@ -101,3 +101,119 @@ B: 000, 001, 010, 011 | 111, 110, 101
 A: 000, 001, 010, 011, 101, 110, 111
 
 Postfix form
+
+Convert infix expression into postfix form
+- operands are never pushed into the stack from the input, they get put into the output instantly
+- operators are pushed into the stack, after some operators were read from the stack
+
+precedence:  ) > ^ > */ > +- > := > (
+
+infix
+a + b * c
+
+| |     | |
+| | =>  |*|
+|+|     |+|
+ U       U
+
+postfix
+a b c * +
+
+infix
+a * b + c
+
+| |     | |
+| | =>  | |
+|*|     |+|
+ U       U
+
+postfix 
+a b * c +
+
+infix
+a ^ b * c + d
+
+| |     | |     | |
+| | =>  | | =>  | |
+|^|     |*|     |+|
+ U       U       U
+
+ postifx
+ a b ^ c * d +
+
+ infix 
+ a ^ (b ^ c) + d
+
+| |     | |     | |
+| | =>  |^| =>  | |
+|^|     |^|     |+|
+ U       U       U
+
+ postfix
+ a b c ^ ^ d +
+
+infix
+a + b - c
+
+| |     | |
+| | =>  | |
+|+|     |-|
+ U       U
+
+postfix
+a b + c -
+
+if we encounter a (, we push to the stack
+if we encounter a ), we pop the stack until we pop a the beginning of the paranthesis
+
+infix
+y := (a + b - 9 x (c+d)) + ((y + 5)^n^2+1) - 7
+
+y -> output
+:= -> push := to stack
+( -> push to stack
+a -> output
++ -> precedence higher than (, push + to stack
+b -> output
+- -> precedence equals to +, pop +
+  -> precedence higher than (, push - to stack
+9 -> output
+* -> precedence higher than -, push * to stack
+( -> push to stack
+c -> output
++ -> precedence higher than (, push + to stack
+d -> output
+) -> pop until we pop a ( 
+  -> pop +
+  -> pop (
+) -> pop until we pop a (
+  -> pop *
+  -> pop -
+  -> pop (
++ -> precedence higher than :=, push + to stack
+( -> push to stack
+( -> push to stack
+y -> output
++ -> precedence higher than (, push + to stack
+5 -> output
+) -> pop until (
+  -> pop +
+  -> pop (
+^ -> precedence higher than (, push ^ to stack
+n -> output
+^ -> precedence equals to ^, push to stack
+2 -> output
++ -> precedence smaller than ^, pop ^
+  -> precedence smaller than ^, pop ^
+  -> precedence higher than (, push +
+1 -> output
+) -> pop until (
+  -> pop +
+  -> pop (
+- -> precedence equals to +, pop +
+  -> precedence smaller than :=, push to stack
+7 -> output
+
+postfix
+yab+9cd+*-y5+n2^^1++7-:=
+
