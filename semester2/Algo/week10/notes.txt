@@ -1,0 +1,203 @@
+Problem 1:
+Consider an initially empty hash table of size 11.
+Given a sequence of keys, insert them into the hash table using open addressing with the primary hash function h(k) = k mod 11
+
+Draw the final state of the hash table for each of the following collision resolution strategies:
+
+a: Linear probing
+b: Quadratic probing
+c: Double hashing, using the secondary hash function h(k) = k mod 7 + 1 function
+
+18, 51, 69, 17, 73, 70, 28
+
+a:
+
+h(18) = 18 mod 11 = 7
+h(51) = 51 mod 11 = 7 <- already taken, can't, move one left, in linear probing
+h(69) = 3
+h(17) = 6, alredy taken, go left, 5
+h(73) = 7
+h(70) = 4
+h(28) = 6
+
+Index | Key
+-------------
+  0   | 
+  1   | 28
+  2   | 70
+  3   | 69
+  4   | 73
+  5   | 17
+  6   | 51
+  7   | 18
+  8   | 
+  9   | 
+ 10   | 
+
+ b:
+
+ 18, 51, 69, 17, 73, 70, 28
+
+ if taken then check one right, one left, four to the right, four to the left, etc...
+
+h(18) = 18 mod 11 = 7
+h(51) = 51 mod 11 = 7 <- already taken, can't, move one right, in Quadratic probing
+h(69) = 3
+h(17) = 6
+h(73) = 7
+h(70) = 4
+h(28) = 6
+
+Index | Key
+-------------
+  0   | 73
+  1   | 
+  2   | 
+  3   | 69
+  4   | 70
+  5   | 28
+  6   | 17
+  7   | 18
+  8   | 51
+  9   | 
+ 10   | 
+
+c:
+
+18, 51, 69, 17, 73, 70, 28
+
+Secondary function
+h(k) = k mod 7 + 1
+
+Primary Function
+h(k) = k mod 11
+
+h(18) = 18 mod 11 = 7
+h(51) = 7, conflict, use secondary function for jump size, h2(51) = 51 mod 7 + 1 = 3, keep jumping 3 to the left until you can insert it
+h(69) = 3
+h(17) = 6
+h(73) = 7, conflict h2(73) = 4, keep jumping 4 to the left 3 -> taken -> 10
+h(70) = 4, conflict h2(70) = 1
+h(28) = 6, conflict h2(28) = 1
+
+Index | Key
+-------------
+  0   | 
+  1   | 
+  2   | 70
+  3   | 69
+  4   | 51
+  5   | 28
+  6   | 17
+  7   | 18
+  8   | 
+  9   | 
+ 10   | 73
+
+========================================================================
+PROBLEM 2: HUFFMAN CODING
+========================================================================
+
+Consider the following string of text: 
+"ALÁZASHÁZASPÁRHAZASZÁLL"
+
+We wish to compress this text using Huffman coding. Please answer the 
+following:
+
+a) Determine the frequency of each unique character in the string and 
+   construct the corresponding Huffman tree.
+b) List the final binary Huffman code for each unique character.
+c) Calculate the minimum number of bits required to represent the 
+   original text using a standard fixed-length encoding.
+d) Calculate the total number of bits required to represent the 
+   compressed text using your generated Huffman codes.
+
+------------------------------------------------------------------------
+SOLUTION
+------------------------------------------------------------------------
+
+a) Character Frequencies & Tree Construction
+--------------------------------------------
+First, we count the occurrences of each letter (Total: 23 characters):
+A: 5
+Á: 4
+Z: 4
+L: 3
+S: 3
+H: 2
+P: 1
+R: 1
+
+Next, we build the Huffman tree by repeatedly combining the two nodes 
+with the lowest frequencies:
+1. P(1) + R(1) = PR(2)
+2. H(2) + PR(2) = HPR(4)
+3. L(3) + S(3) = LS(6)
+4. Á(4) + Z(4) = ÁZ(8)
+5. A(5) + HPR(4) = AHPR(9)
+6. LS(6) + ÁZ(8) = LSÁZ(14)
+7. LSÁZ(14) + AHPR(9) = Root(23)
+
+Huffman Tree (0 = Left branch, 1 = Right branch):
+
+                    [23]
+                   /    \
+                 0/      \1
+                 /        \
+              [14]        [9]
+              /  \        /  \
+            0/    \1    0/    \1
+            /      \    /      \
+          [6]      [8] (A:5)   [4]
+          / \      / \         / \
+        0/   \1  0/   \1     0/   \1
+       /      \  /     \     /     \
+     (L:3) (S:3)(Á:4) (Z:4)(H:2)   [2]
+                                   / \
+                                 0/   \1
+                                 /     \
+                               (P:1)  (R:1)
+
+
+b) Final Binary Huffman Codes
+--------------------------------------------
+By tracing the paths from the root down to each leaf:
+
+L : 000
+S : 001
+Á : 010
+Z : 011
+A : 10
+H : 110
+P : 1110
+R : 1111
+
+
+c) Fixed-Length Encoding (Original Size)
+--------------------------------------------
+There are 8 unique characters. To represent 8 unique characters, we 
+need exactly 3 bits per character (2^3 = 8).
+
+Total characters: 23
+Bits per character: 3
+Original Size: 23 * 3 = 69 bits
+
+
+d) Huffman Encoding (Compressed Size)
+--------------------------------------------
+To find the compressed size, we multiply the frequency of each 
+character by the length of its new Huffman code:
+
+L: 3 occurrences * 3 bits = 9 bits
+S: 3 occurrences * 3 bits = 9 bits
+Á: 4 occurrences * 3 bits = 12 bits
+Z: 4 occurrences * 3 bits = 12 bits
+A: 5 occurrences * 2 bits = 10 bits
+H: 2 occurrences * 3 bits = 6 bits
+P: 1 occurrence  * 4 bits = 4 bits
+R: 1 occurrence  * 4 bits = 4 bits
+
+Compressed Size: 9 + 9 + 12 + 12 + 10 + 6 + 4 + 4 = 66 bits
+
+Conclusion: The compression reduced the text from 69 bits to 66 bits.
+========================================================================
