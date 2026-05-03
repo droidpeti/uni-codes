@@ -1,0 +1,304 @@
+1.
+
+operand: output
+operator: 
+    if ^ or :=
+        pop while >
+    else
+        pop while >=
+
+precedence:  ^ > */ > +- > :=
+
+x -> output
+:= -> push
+a -> output
+* -> * > :=, push
+( -> push
+b -> output
+^ -> push
+( -> push
+b -> output
+- -> push
+c -> output
+- -> pop to output, push
+4 -> output
+) -> pop to output until (, then pop (
+  -> pop to output (-)
+  -> pop
++ -> ^ > +, pop to output, push
+b -> output
+) -> pop to output until (, then pop (
+  -> pop to output (+)
+  -> pop
+- -> - < *, pop to output, push
+c -> output
+* -> * > -, push
+( -> push
+x -> output
+/ -> push
+3 -> output
+) -> pop to output until (, then pop (
+  -> pop to output(/)
+  -> pop
+^ -> ^ > *, push
+2 -> output
+^ -> ^ = ^, push
+( -> push
+c -> output
+- -> push
+1 -> output
+) -> pop to output until (, then pop (
+  -> pop to output (-)
+  -> pop
+pop remaining to output
+
+stack: 
+
+output: (x((a((b((bc-)4-)^)b+)*)(c((x3/)(2(c1-)^)^)*)-):=)
+
+2.
+
+int sum_except_leaf(node* t){
+    if(t == NULL){
+        return 0;
+    }
+    if(t->left == NULL && t->right == NULL){
+        return 0;
+    }
+    return t->value + sum_except_leaf(t->left) + sum_except_leaf(t->right);
+}
+
+3.
+
+acc, bca, cab, aab, bcb, cca, abc
+
+'a': bca, cca
+'b': cab, aab, bcb
+'c': acc, abc
+
+bca, cca, cab, aab, bcb, acc, abc
+
+'a': cab, aab
+'b': abc
+'c': bca, cca, bcb, acc
+
+cab, aab, abc, bca, cca, bcb, acc
+
+'a': aab, abc, acc
+'b': bca, bcb
+'c': cab, cca
+
+aab, abc, acc, bca, bcb, cab, cca
+
+4.
+
+011, 000, 111, 010, 110, 001.
+
+a (MSD):
+
+0: 011, 000, 010, 001
+1: 111, 110
+
+0:0: 000, 001
+0:1: 011, 010
+
+1:0:
+1:1: 110, 111
+
+0:0:0: 000
+0:0:1: 001
+
+0:1:0: 010
+0:1:1: 011
+
+1:0:0: 
+1:0:1: 
+
+1:1:0: 110
+1:1:1: 111
+
+000, 001, 010, 011, 110, 111
+
+b (LSD):
+
+0: 000, 010, 110
+1: 011, 111, 001
+
+000, 010, 110, 011, 111, 001
+
+0: 000, 001
+1: 010, 110, 011, 111
+
+000, 001, 010, 110, 011, 111
+
+0: 000, 001, 010, 011
+1: 110, 111
+
+000, 001, 010, 011, 110, 111
+
+5.
+
+13, 24, 56, 11, 10, 24, 56, 60
+
+10: 1
+11: 1
+13: 1
+24: 2
+56: 2
+60: 1
+
+C[10] = 1
+C[11] = 2
+C[13] = 3
+C[24] = 5
+C[56] = 7
+C[60] = 8
+
+60, 56, 24, 10, 11, 56, 24, 13
+
+60: 8
+56: 7
+24: 5
+10: 1
+11: 2
+56: 6
+24: 4
+13: 3
+
+B = [10,11,13,24,24,56,56,60]
+
+6.
+
+6.
+
+h(k)=k mod 11
+7, 40, 36, 6, 73, 37, 72, 99
+
+Base mod values:
+7 mod 11 = 7
+40 mod 11 = 7
+36 mod 11 = 3
+6 mod 11 = 6
+73 mod 11 = 7
+37 mod 11 = 4
+72 mod 11 = 6
+99 mod 11 = 0
+
+a (Linear probing):
+
+7 mod 11 = 7
+40 mod 11 = 7, taken go to 8
+36 mod 11 = 3
+6 mod 11 = 6
+73 mod 11 = 7, taken, 8 taken, go to 9
+37 mod 11 = 4
+72 mod 11 = 6, taken, 7 taken, 8 taken, 9 taken, go to 10
+99 mod 11 = 0
+
+Index | Key
+-------------
+  0   | 99
+  1   | 
+  2   | 
+  3   | 36
+  4   | 37
+  5   | 
+  6   | 6
+  7   | 7
+  8   | 40
+  9   | 73
+ 10   | 72
+
+b (Quadratic probing):
+
+7 mod 11 = 7
+40 mod 11 = 7, taken, (7 + 1^2) mod 11 = 8
+36 mod 11 = 3
+6 mod 11 = 6
+73 mod 11 = 7, taken, (7 + 1^2) = 8 taken, (7 + 2^2) mod 11 = 0
+37 mod 11 = 4
+72 mod 11 = 6, taken, (6 + 1^2) = 7 taken, (6 + 2^2) mod 11 = 10
+99 mod 11 = 0, taken, (0 + 1^2) mod 11 = 1
+
+Index | Key
+-------------
+  0   | 73
+  1   | 99
+  2   | 
+  3   | 36
+  4   | 37
+  5   | 
+  6   | 6
+  7   | 7
+  8   | 40
+  9   | 
+ 10   | 72
+
+c (Double hashing):
+h'(k) = k mod 3 + 1
+
+7 mod 11 = 7
+40 mod 11 = 7, taken, h'(40) = 2, go to (7 + 2) mod 11 = 9
+36 mod 11 = 3
+6 mod 11 = 6
+73 mod 11 = 7, taken, h'(73) = 2, 9 taken, go to (9 + 2) mod 11 = 0
+37 mod 11 = 4
+72 mod 11 = 6, taken, h'(72) = 1, 7 taken, go to (7 + 1) mod 11 = 8
+99 mod 11 = 0, taken, h'(99) = 1, go to (0 + 1) mod 11 = 1
+
+Index | Key
+-------------
+  0   | 73
+  1   | 99
+  2   | 
+  3   | 36
+  4   | 37
+  5   | 
+  6   | 6
+  7   | 7
+  8   | 72
+  9   | 40
+ 10   |
+
+7.
+
+abcabccaaaabdedeacbbbbbbbbeaa
+
+total characters: 29
+b: 11
+a: 9
+c: 4
+e: 3
+d: 2
+
+           (  29  )
+           /      \1
+         0/      ( 18 )
+         /       0/    \1
+      (b:11)    /       \  
+             (a:9)     ( 9 )   
+                       0/   \1 
+                       /     \ 
+                    (c:4)   ( 5 )
+                            0/   \1
+                            /     \
+                         (d:2)   (e:3)
+
+b: 0
+a: 10
+c: 110
+d: 1110
+e: 1111
+
+original size: 29 characters * 8 bits = 232 bits
+
+compressed:
+b: 11 * 1 bit = 11 bits
+a: 9 * 2 bits = 18 bits
+c: 4 * 3 bits = 12 bits
+d: 2 * 4 bits = 8 bits
+e: 3 * 4 bits = 12 bits
+
+61 bits compressed size
+
+the compression ratio is 61:232
