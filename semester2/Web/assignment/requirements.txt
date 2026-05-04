@@ -1,27 +1,36 @@
-A weblap legalább három, statikus HTML oldalból áll, a kezdőlap index.html néven lett elmentve. Minden HTML oldal, ami a csomagban van, be is van linkelve az oldalakra, nincs felesleges HTML állomány. Az oldalak relatív módon vannak linkelve, nincs gyökérmappára való hivatkozás.
+A weblap legalább három, statikus HTML oldalból áll, a kezdőlap index.html néven lett elmentve. Minden HTML oldal, ami a csomagban van, be is van linkelve az oldalakra, nincs felesleges HTML állomány. Az oldalak relatív módon vannak linkelve, nincs gyökérmappára való hivatkozás. [KIEMELT]
 
 Van  (legalább egy) olyan oldal, amely  háttérképet tartalmaz (Nem muszáj, hogy a háttérkép a lap háttere legyen, lehet egy tetszőleges komponensé is.)
+[KIEMELT]
 
 Legalább 5 kép be van szúrva az oldalakra (összesen), legalább két kép előképként (thumbnail) funkcionál, vagyis a kép nagyobb változatára linkel
+[KIEMELT]
 
 Van olyan oldal, amelyen van olyan adattáblázat, amely legalább 2x3-as és vannak fejléc-cellái (<th>).
 A táblázat felirata (<caption>), lenyitható tartalomként lett elkészítve a <details> tag-be ágyazott <summary> tag segítségével.  Az oldal struktúráját nem szabad táblázat segítségével megvalósítani!
+[KIEMELT]
 
 Van olyan oldal, amelyben egy olyan űrlap található, amely tartalmaz legalább egy szövegmezőt (text), egy szövegterületet (textarea),legalább 2 választókapcsolót (radio), legalább 1 jelölőnégyzetet (checkbox), valamint egy elküldés (submit) gombot.
+[KIEMELT]
 
 Van olyan oldal, amelyben egy felhasználói élményt javító JavaScript kód van beillesztve (pl. választás alternatív stíluslapból, betűméret váltás, képgaléria, ...)
 A Bootstrap keretrendszer komponensei is elfogadhatóak ennél a pontnál (pl. Carousel).
+[KIEMELT]
 
 Az oldalak mindegyike tartalommal fel van töltve, a szerkezeti linkeken kívül legalább 3 külső hivatkozást is tartalmaznak (összesen).  A Lorem ipsum,stb. töltelékszövegekkel feltöltött oldalak nem elfogadhatóak!
 A szerkezeti linkek az aktuális oldalhoz képest relatívan vannak megadva.
+[KIEMELT]
 
 A HTML5-s oldal(ak)on  az alábbi tagek mindegyikének használatára van példa: <header><nav><section><article><aside><footer><figure><video>.
 A tageknek nem kell minden oldalon előfordulniuk, de amikor szemantikailag indokolt a használatuk, akkor a megfelelő taget KELL használni!
+[KIEMELT]
 
 Az elkészült weblap reszponzív.
 Ezen felül igaz legalább 1 oldal esetén, hogy a kijelzőmérettől függően legalább háromféle elrendezés van megvalósítva (okostelefon, tablet, nagyobb kijelző), amelyek közül a (leg)kisebb kijelzőméretre tervezett elrendezés egyetlen oszlopból áll, a (leg)nagyobbra tervezett pedig legalább két oszlopból. A tartalmi elemek (beleértve a képeket és a videókat) minden oldalon relatívan vannak méretezve.
+[KIEMELT]
 
 A tartalom és a megjelenés megfelelően el van különítve egymástól külső stíluslap(ok) használatával. Az inline megadás kerülendő, hacsak nincs speciális indoka a használatának!
+[KIEMELT]
 
 Az oldalcímek <title> egyediek minden oldalon, és kulcsszóval kezdődnek, vagy végződnek
 (pl. Magamról - Gipsz Jakab honlapja; Gipsz Jakab honlapja - Magamról)
@@ -80,15 +89,18 @@ Ha valaki külső oldalról érkezik a weblap egy oldalára, egyértelműen kide
 Nem elegendő a menüpont nevét (például) címsorként megismételni.
 
 A nem design célú képeknél az ALT attribútum precízen ki van töltve (mindegyik képnél) (WCAG 2.0 1.1.1-es feltétel)
+[KIEMELT]
 
 A linkek szövegei önmagukban jól érthetőek (a "kattints ide" szöveg nem megfelelő), tömörek
 
 A szövegek jól olvashatóak, megfelelő kontrasztarány biztosított. (WCAG 2.0 1.4.3-as feltétel)
+[KIEMELT]
 
 Alternatív, nagybetűs, nagy kontrasztú stílus változat érhető el a gyengénlátó felhasználók számára minden oldalon.
 
 Blokkok elkerülése: Minden oldalon hozzáférhető egy mechanizmus, melynek segítségével elkerülhetők azok a tartalmi blokkok, amelyek több oldalon is ismétlődnek (pl. képernyőről kipozícionált hivatkozás használatával) (WCAG 2.0 2.4.1-es feltétel)
 A tartalomra ugrás céljára használt linket a képernyőolvasó programot használók számára kell elérhetővé tennünk, a vizuális böngészőprogramokban nem kell megjelennie.
+[KIEMELT]
 
 A videónál szerepel annak teljes szövegű leírása.
 A leírásnak minden lényeges történést tartalmaznia kell, ami a videóban látható vagy hallható, nem elegendő néhány szóban csak összefoglalni a videó tartalmát. Célszerű külön HTML-állományban elhelyezni, és a videó után belinkelni, vagy <details><summary> tagekben elhelyezni a videó után. A pont csak akkor adható meg, ha a videó legalább 30 másodperc hosszú, legalább 15 másodpercig beszélnek a résztvevők vagy a narrátor, nem csak statikus a háttere, vagyis vannak benne vizuális történések)
@@ -96,14 +108,20 @@ A leírásnak minden lényeges történést tartalmaznia kell, ami a videóban l
 Az oldal nyelve mindegyik oldalon beállításra került. Ahol az alapértelmezett nyelvtől eltérő szöveg is van az oldalon, az el van látva a megfelelő nyelvkóddal.
 
 A karakterkódolás megfelelően be van állítva (pl. utf-8), az ékezetes karakterek helyesen jelennek meg
+[KIEMELT]
 
 Nincsenek hiányzó elemek, törött linkek, nem működő funkciók
+[KIEMELT]
 
 A leggyakrabban használt böngészőprogramokkal tesztelve (Chrome, Firefox, Edge)  az oldal funkcionálisan működik (eltekintve azon HTML5 és CSS3 funkcióktól, amelyek esetleg nincsenek implementálva az adott böngészőben)
+[KIEMELT]
 
 Legalább egy oldal a HTML5 szabvány szerint készült és valid a https://validator.w3.org/ oldal szerint
+[KIEMELT]
 
 Mindegyik beadott oldal a HTML5 szabvány szerint készült és valid a https://validator.w3.org/ oldal szerint
+[KIEMELT]
 
 Van(nak) saját készítésű CSS állomány(ok), amelyek legalább 15 szabályt tartalmaznak. A CSS állományok valid(ak) a jigsaw.w3.org/css-validator/ oldal szerint.
 Amennyiben a Bootstrap keretrendszer lett használva, a saját készítésű stílusok megfelelően elkülönülnek a Bootstrap stílusállományaitól.
+[KIEMELT]
