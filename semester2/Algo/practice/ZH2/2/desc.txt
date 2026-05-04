@@ -1,0 +1,48 @@
+1.
+Hozzuk lengyelformára az alábbi kifejezést! 
+Adjuk meg azt is, hogy hogyan alakul a verem tartalma az átalakítás során!
+Végül jelöljük meg zárójelekkel (vagy aláhúzással), hogy hogyan történik a lengyelformára hozott alak kiértékelése!
+
+y:=b+(a^(c-d-2)*c)-a(y/2)^3^(d+1)
+
+2.
+Egy láncoltan ábrázolt bináris fa csúcsaiban természetes számok a kulcsok.
+Írjon rekurzív algorimust (C/C++ szintaxissal), ami megszámolja, hogy a nem üres t fában hány darab levélcsúcs (leaf node) található!
+(Emlékeztető: a levélcsúcs az, aminek sem bal, sem jobb gyereke nincs).
+
+3.
+Visszafelé haladó edényrendezéssel (LSD Radix) rendezzük a számjegyek számának megfelelő számú lépésben
+(itt három) alfabetikus sorrendbe az alábbi, csak x, y és z betűkből álló szavakat!
+
+zxy, yxz, zzy, xzy, yxx, zyx, xyz
+
+4.
+Rendezzük 
+(a) Radix MSD, illetve 
+(b) Radix LSD rendezéssel a következő kettes számrendszerbeli számokat:
+
+101, 000, 100, 011, 110, 001. 
+(Ügyeljünk arra, hogy a rendezés minden lépése rekonstruálható és stabil legyen!
+Az LSD-t érdemes a megbeszélt "egy tömbös, vonalas" vagy a "két vödrös" módszerrel levezetni).
+
+5.
+Rendezzük leszámláló rendezéssel (Counting Sort) a következő számokat:
+22, 15, 43, 15, 10, 43, 60, 22! (Ügyeljünk arra, hogy a rendezés minden lépése rekonstruálható legyen:
+írjuk fel a gyakorisági (C) és a kumulatív (C') tömböt is, majd mutassuk be a kimeneti (B) tömb feltöltését!)
+
+6. 
+Nyílt címzéssel, a h(k) = k mod 11 hasítófüggvénnyel hasítsuk a következő kulcssorozatot:
+10, 22, 31, 4, 15, 28, 17, 88.
+Rajzoljuk le a keletkezett táblát (0-10 indexekkel) - amely kezdetben üres volt -, ha a kulcsütközések esetén:
+
+a. lineáris próbálást alkalmazunk,
+b. négyzetes próbálást alkalmazunk (i^2 lépésközökkel),
+c. kettős hasítást alkalmazunk a h'(k)=k mod 3 + 1
+
+(Mellékelje a levezetést és a modulo osztások pontos eredményét is!)
+
+7. 
+Tömörítsük az alábbi 8-bites karaktersorozatot Huffman-kóddal!
+Rajzoljuk fel a kódolás során készített Huffman-fát, illetve a kódtáblát!
+Határozzuk meg a tömörítési rátát!
+xyzxyzxxyyyzwwzzxyyxxxxxyyyww
