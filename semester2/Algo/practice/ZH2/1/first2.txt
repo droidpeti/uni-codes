@@ -1,0 +1,221 @@
+operand: output
+operator: 
+    if ^ or :=
+        pop while >
+    else
+        pop while >=
+
+Operator: := < +- < */ < ^
+
+x:=a*(b^(b-c-4)+b)-c*(x/3)^2^(c-1)
+
+x -> output
+:= -> push
+a -> output
+* -> * > :=, push
+( -> push
+b -> output
+^ -> push
+( -> push
+b -> output
+- -> push
+c -> output
+- -> - = -, pop(), push(-)
+4 -> output
+) -> pop everything, until popped start, pop(), pop()
++ -> + < ^ -> pop(), push(+)
+b -> output
+) -> pop
+- -> * > - pop, - > :=, push
+c -> output
+* -> * > -, push
+( -> push
+x -> output
+/ -> push
+3 -> output
+) -> pop
+^ -> ^ > *, push
+2 -> output
+^ -> ^ = ^, push
+( -> push
+c -> output
+- -> push
+1 -> output
+) -> pop
+end -> pop until empty
+
+stack:
+
+output: (x((a((b((bc-)4-)^)b+)*)(c((x3/)(2(c1-)^)^)*)-):=)
+
+2.
+
+int sum_except_leaf(node* t){
+    if(t == NULL || (t->left == NULL && t->right == NULL)){
+        return 0;
+    }
+    return t->value + sum_except_leaf(t->left) + sum_except_leaf(t->right);
+}
+
+3.
+
+LSD
+acc, bca, cab, aab, bcb, cca, abc
+
+a: bca, cca
+b: cab, aab, bcb
+c: acc, abc
+
+bca, cca, cab, aab, bcb, acc, abc
+
+a: cab, aab
+b: abc
+c: bca, cca, bcb, acc
+
+cab, aab, abc, bca, cca, bcb, acc
+
+a: aab, abc, acc
+b: bca, bcb
+c: cab, cca
+
+aab, abc, acc, bca, bcb, cab, cca
+
+6.
+
+7, 40, 36, 6, 73, 37, 72, 99
+
+h(k) = k mod 11
+
+a:
+
+7 mod 11 = 7
+40 mod 11 = 7, conflict, go left, 6
+36 mod 11 = 3
+6 mod 11 = 6, conflict, go left, 5
+73 mod 11 = 7, conflict, go left, 4
+37 mod 11 = 4, conflict, go left, 2
+72 mod 11 = 6, conflict, go left, 1
+99 mod 11 = 0
+
+Index | Key
+-------------
+  0   | 99
+  1   | 72
+  2   | 37
+  3   | 36
+  4   | 73
+  5   | 6
+  6   | 40
+  7   | 7
+  8   | 
+  9   | 
+ 10   | 
+
+b:
+
+7, 40, 36, 6, 73, 37, 72, 99
+
+h(k) = k mod 11
+
+if conflict, check +1, -1, +4, -4, +9, -9, +16, -16...
+
+7 mod 11 = 7
+40 mod 11 = 7, taken 8
+36 mod 11 = 3
+6 mod 11 = 6
+73 mod 11 = 7, taken, 8, 6, 0
+37 mod 11 = 4
+72 mod 11 = 6, taken, 7, 5
+99 mod 11 = 0, taken, 10
+
+Index | Key
+-------------
+  0   | 73
+  1   | 
+  2   | 
+  3   | 36
+  4   | 37
+  5   | 72
+  6   | 6
+  7   | 7
+  8   | 40
+  9   | 
+ 10   | 99
+
+c:
+
+7, 40, 36, 6, 73, 37, 72, 99
+
+h(k) = k mod 11
+
+h'(k) = k mod 3 + 1
+
+7 mod 11 = 7
+40 mod 11 = 7, conflict, 40 mod 3 + 1 = 2, 5
+36 mod 11 = 3
+6 mod 11 = 6
+73 mod 11 = 7, conflict, 73 mod 3 + 1 = 2, 5, 3, 1
+37 mod 11 = 4
+72 mod 11 = 6, conflict, 6 mod 3 + 1 = 1, 2
+99 mod 11 = 0
+
+Index | Key
+-------------
+  0   | 99
+  1   | 73
+  2   | 72
+  3   | 36
+  4   | 37
+  5   | 40
+  6   | 6
+  7   | 7
+  8   | 
+  9   | 
+ 10   | 
+
+7. 
+
+abcabccaaaabdedeacbbbbbbbbeaa
+
+b: 11
+a: 9
+c: 4
+e: 3
+d: 2           
+          ( 29 )
+          /     \1
+         /      ( 18 )
+        /       /     \1
+      0/       /      (  9  ) 
+      /      0/      /      \1
+     /       /     0/       ( 5 )
+    /       /      /       0/   \1
+b(11)   a(9)    c(4)    e(3)    d(2)
+
+b: 0
+a: 10
+c: 110
+e: 1110
+d: 1111
+
+b: 11 * 1 = 11
+a: 9 * 2  = 18
+c: 4 * 3  = 12
+e: 3 * 4  = 12
+d: 2 * 4  =  8
+            61
+
+61 compressed size
+
+29 * 8 = 232 bits original size
+
+61:232
+
+Uniform
+5db
+2^2 = 4
+2^3 = 8
+
+29 * 3 = 87 bit unfirom size
+
+compression ratio 61:87
