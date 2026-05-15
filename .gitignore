@@ -64,6 +64,8 @@ replay_pid*
 #C#
 #######
 
+*.csproj.lscache
+
 # dotenv files
 .env
 
