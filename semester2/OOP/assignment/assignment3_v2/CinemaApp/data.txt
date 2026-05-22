@@ -1,0 +1,12 @@
+VENUE;RoomA;Small;5;5
+VENUE;RoomB;Large;10;10
+VENUE;RoomC;VIP;3;4
+SHOW;Show1;The Matrix;18:00;RoomA
+SHOW;Show2;Inception;20:00;RoomB
+SHOW;Show3;The Matrix;22:00;RoomC
+BOOK;Show1;A;1
+BOOK;Show1;A;2
+BUY;Show1;A;1;Adult
+BUY;Show2;B;5;Student
+BUY;Show3;A;1;Regular
+BUY;Show3;A;2;Child
