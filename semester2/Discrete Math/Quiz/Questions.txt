@@ -1,0 +1,22 @@
+1. Kvíz: Halmazok és Kombinatorika
+
+K1. Mikor mondjuk két halmazra (A és B), hogy ekvivalensek?
+K2. Mikor nevezünk egy halmazt "kontinuum számosságúnak"?
+K3. Fogalmazd meg röviden, emberi nyelven a Skatulya-elvet!
+K4. Mi a különbség a variáció és a kombináció között (a sorrend szempontjából)?
+K5. Mi a képlete az ismétléses variációnak (ha 'n' darab elemből 'k' darabot húzunk)?
+
+2. Kvíz: Számelmélet Alapjai
+
+K6. Hogyan szól az oszthatóság definíciója egy integritási tartományban? (Mikor mondjuk, hogy 'a' osztja 'b'-t?) 
+K7. Mi a különbség a Teljes Maradékrendszer (TMR) és a Redukált Maradékrendszer (RMR) között? 
+K8. Mit jelent az Euler-féle phi fuggveny? (Vagyis mit ad meg a "phi(n)" érték?) 
+K9. Mit mond ki a Kis Fermat-tétel (annak a verziója, amikor a 'p' prím nem osztója az 'a' számnak)? 
+K10. Igaz vagy Hamis: Az Erathosztenesz szitaja egy modszer a primszamok megkeresesere.
+
+3. Kvíz: Algebra és Számhalmazok
+K11. Mi a racionális számok halmazának (Q) legnagyobb "hibája", ami miatt be kellett vezetni a valós számokat (R)? (Melyik tulajdonság hiányzik a Q-ból?) 
+K12. Mik a kommutativitas es az asszociativitas szavak jelentesei egy muveletnel? 
+K13. Mi az integritasi tartomany 3 fo tulajdonsaga? (Egyik a kommutativitas...) 
+K14. Mennyi az osszes 'n'-edik komplex egyseggyok osszege (ha n nagyobb, mint 1)? 
+K15. Mit mond ki a Moivre-azonossag, hogyan kell komplex szamot hatvanyozni vele?

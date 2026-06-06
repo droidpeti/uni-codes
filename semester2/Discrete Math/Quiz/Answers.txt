@@ -1,0 +1,21 @@
+1. Kvíz Megoldások (Halmazok és Kombinatorika): 
+
+M1: Akkor ekvivalensek, ha létezik közöttük egy bijektív (kölcsönösen egyértelmű) megfeleltetés
+M2: Ha ekvivalens a valós számok (R) halmazával
+M3: Ha 'n' darab tárgyat 'm' darab skatulyába teszünk, és több a tárgy, mint a skatulya, akkor biztosan lesz olyan skatulya, amibe egynél több tárgy kerül
+M4: A variációnál SZÁMÍT a kiválasztott elemek sorrendje, a kombinációnál viszont NEM számít a sorrend. 
+M5: n a k-adikon (vagyis n^k)
+
+2. Kvíz Megoldások (Számelmélet): 
+M6: 'a' osztja 'b'-t (a | b), ha létezik olyan 'c' elem, amelyre felírható, hogy: b = a * c
+M7: A TMR a modulus szerinti összes maradékosztályból pontosan egyet tartalmaz. Az RMR viszont CSAK azokból a maradékosztályokból tartalmaz egyet, amelyek a modulushoz relatív prímek
+M8: Kétféleképpen is jó: 1. Megadja a modulo 'n' redukált maradékosztályok számát. 2. Megadja az 'n'-nél nem nagyobb, 'n'-hez relatív prím pozitív egész számok számát
+M9: Azt mondja ki, hogy 'a' a (p-1)-edik hatványon kongruens 1-gyel (modulo p)
+M10: Igaz.
+
+3. Kvíz Megoldások (Algebra):
+M11: A racionális számok (Q) halmaza NEM felső határ tulajdonságú (hiányzik belőle a felső határ tulajdonság) A valós számoknál ez már megvan
+M12: Kommutatív: a tényezők felcserélhetők (ab = ba). Asszociatív: a zárójelek áthelyezhetők, a csoportosítás nem számít ((ab)(bc)). 
+M13: 1. Kommutatív gyűrű, 2. Van benne egységelem, 3. Nullosztómentes. (Ezt a hármat kell rávágni). 
+M14: Pontosan 0. (Ezt előszeretettel kérdezik beugróban!)
+M15: Ha egy komplex számot 'n'-edik hatványra emelünk, akkor a hosszát egyszerűen az 'n'-edik hatványra emeljük, a szögét pedig megszorozzuk 'n'-nel.
