@@ -1,0 +1,16 @@
+AVL Trees
+
+B+ Trees
+
+Dictionary
+
+                Unsorted Array,      Sorted Array
+Search(S,k)     O(n)                 O(log n)
+Insert(S,x)     O(1)                 O(n)
+Delete(S,x)     O(1)*                O(n)
+Min(S)          O(n)                 O(1)
+Max(S)          O(n)                 O(1)
+Predecessor(S,x)O(n)                 O(1)
+Successor(S,x)  O(n)                 O(1)
+
+*Swap with final item and delete
