@@ -1,0 +1,133 @@
+25,10,32,22,38,56,40,30,28,31
+
+Search Tree
+
+
+        25
+       /  \
+      10   32
+       \   /  \
+       22  30  38
+           / \  \
+          28 31  56
+                 /
+                40
+
+rotate left
+
+        32
+       /  \
+      25   38
+     / \     \
+    10  30    56
+     \  / \   /
+     22 28 31 40
+
+double rotate
+
+double left
+
+
+1. Build and AVL tree from these keys
+
+25, 10, 32, 22, 38, 56, 40, 30, 28, 31
+
+A binary tree is an AVL tree if, for any of it's nodes it's true that the difference in height between it's right and left subtrees is at most 1
+
+25
+-
+        25
+       /
+      10(-1)
+-
+        25
+       /  \
+      10   32
+-
+        25(-1)
+       /  \
+  (+1)10   32
+        \
+        22
+-
+        25(0)
+       /  \
+  (+1)10   32(+1)
+        \    \
+        22    38
+-
+        25
+       /  \
+  (+1)10   32(+2)  --> +2, because it's + check right child -> +1 (+2,+1) -> rotate left
+        \    \
+        22    38(+1)
+                \
+                56
+
+!!! NOT AN AVL TREE HERE !!!
+Rotate it to fix it
+
+(+2,-1) -> left double
+(+2,+1) -> left
+(-2,-1) -> right
+(-2,+1) -> right double
+
+-
+        25
+       /  \
+  (+1)10   38
+        \   /\
+        22 32 56
+                
+-
+        25(+1)
+       /  \
+  (+1)10   38(+1)
+        \   /\
+        22 32 56(-1)             
+              /
+             40
+
+-
+        25(+1)
+       /     \
+  (+1)10      38
+        \   /    \
+        22 32(-1) 56(-1)             
+           /      /
+          30     40
+
+-
+        25(+1)
+       /     \
+  (+1)10      38
+        \   /    \
+        22 32(-2) 56(-1)             
+           /      /
+          30(-1) 40
+         /
+        28
+
+-2,-1 -> rotate right
+
+-
+        25(+1)
+       /     \
+  (+1)10      38
+        \    /   \
+        22  30  56(-1)             
+           / \     /
+          28  32  40
+
+-
+        25(+2)
+       /     \
+  (+1)10       38
+        \    /    \
+        22  30(+1) 56(-1)             
+           / \       /
+          28  32(-1) 40
+             /
+            31
+
+rotate double left

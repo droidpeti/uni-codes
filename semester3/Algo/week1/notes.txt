@@ -1,5 +1,10 @@
 AVL Trees
 
+Left Rotation
+Right Rotation
+Double Rotation
+Double Left Rotation
+
 B+ Trees
 
 Dictionary
