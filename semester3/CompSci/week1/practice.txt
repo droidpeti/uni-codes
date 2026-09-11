@@ -1,0 +1,35 @@
+1. 
+
+Állítás-e?
+
+1 - Kétszer kettő az öt. - igen
+2 - Holnap megírom a leckém. - nem, mert jövőt tartalmaz 
+3 - A világbajnok magyar futball válogatott Angliában igazolt. - nem, mert nem létezik akiről beszélünk
+4 - Iskolánk tanára 50 éves. - Nem, mert nem meghatározható indiviluum
+5 - X nagyobb, mint 3 ahol X egy természetes szám. - Nem, mert nem meghatározható indiviluum
+6 - "Minden krétai hazudik" (Mondta az általam ismert egyetlen krétai) - Nem, mert önhivatkozást tartalmaz
+7 - Mi értelme ennek a feladatnak? - Nem, mert nem kijelentő mondat
+
+következtetések:
+Azt mondjuk, hogy az (A1, A2,...An)
+következtetés helyes, ha az
+A1...An-1 állítások igazsága esetén az An állításnak is igaznak kell lennie
+
+2.
+Helyes-e az alábbi következtetés?
+
+1 Ha (nálam van a kapukulcs) {A}, akkor (ki tudom nyitni a kaput) {B}.
+(Nálam van a kapukulcs) {A}, (Tehát), (ki tudom nyitni a kaput) {B}
+
+A => B | A | B
+  i    | i | ? <- i
+
+2 Ha (a benzin elfogyott az autóból) {A}, akkor (az autó megáll) {B}.
+Nem fogyott el a benzin. (Tehát) az autó nem áll meg.
+
+Nem igaz az, hogy a benzin elfogyott az autóból.
+
+A => B | !A | !B
+  i    | i  | ?  <- 
+
+Tehát a következtetés nem helyes
