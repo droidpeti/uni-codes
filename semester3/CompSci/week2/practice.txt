@@ -1,0 +1,47 @@
+Adjunk meg olyan formulákat az Ar logikai nyelven, melzynek az < No; =; s, +, *; 0>-beli jelentse a következőt
+
+a) x kisebb, mint y
+b) z az x és az y legnagyobb közös osztója
+c) z az x és z legkissebb közös töbszöröse
+d) a prímszámok száma végtelen
+ 
+termek: konstansok (0), individum változók (x,y,z) t1 és t2 termek akkor termek a következők is: s(t), (t1+t2), (t2 * t2)
+
+formulák: atomi formula: t1 és t2 terme : (t1=t2)
+összetett formulák: A1 és A2 formulák, akkor !A1, (A1 || A2), (A1 > A2) összetett formulák, minden A1, létezik A1
+
+a:
+ 
+∃z (((x + z) = y) && !(z = 0))
+
+b:
+
+b1:
+x az y osztója
+
+∃z (((x * z) = y) && !(x = 0)) <- (x|y)
+>= : ∃n((s+n) = z)
+
+b:
+(((z|x) && (z|y)) && ∀s(((s|x) && (s|y)) => (s<=z)))
+
+d:
+
+d1:
+x prímszám p(x) : ∀y ((y | x) => ((y = s(0)) || (y = x)))
+
+d: minden prímszámnál van nagyobb prímszám
+∀x((p(x)) => ∃y((p(y)) && y > x))
+
+∀x(∀y((y|x) => ((y = s(0)) || ((y = x))) => ∃y (∀z(z|y) => ((z = s(0) || z = y)))))
+
+e: Az ikerprímek száma végtelen
+két olyan prím, melyek különbsége 2
+
+f: Minden szám elő áll négy négyzetszám összegeként
+
+∀x ∃a ∃b ∃c ∃d (x = ((a*a)+(b*b)+(c*c)+(d*d)))
+
+g: Van legnagyobb természetes szám
+
+∃y∀x∃z((x + z) = y)
