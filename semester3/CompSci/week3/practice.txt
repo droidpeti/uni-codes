@@ -1,0 +1,69 @@
+Adjunk meg olyan formulákat az Ar logikai nyelven, melynek az < No; =; s, +, *; 0>-beli jelentse a következőt
+ 
+termek: konstansok (0), individum változók (x,y,z) t1 és t2 termek akkor termek a következők is: s(t), (t1+t2), (t2 * t2)
+
+formulák: atomi formula: t1 és t2 terme : (t1=t2)
+összetett formulák: A1 és A2 formulák, akkor !A1, (A1 || A2), (A1 > A2) összetett formulák, minden A1, létezik A1
+
+Az ikerprímek száma végtelen.
+
+∀x ∃y p(y)&&(p(y+(s(s(0))))&&(x<y))
+
+Egy H halmaz részhalmazainak
+
+Részh nyelve
+
+< P(H); ⊆; ; >
+
+A részh nyelv ábécéje
+a logikán kívüli speciális szimbólumok::
+    logikai összekötők: !, &&, ||, =>
+    elválasztójelek: (,)
+    kvantorok: ∀, ∃
+
+termek: x,y,z invidilum változók0
+formulák:
+     - atomi: (x ⊆ y)
+     - összetett: ha A1 és A2 formulák !A1
+
+2. Feladat
+
+Fejezzük ki formulával a Részh nyelvben, hogy
+
+a.
+az x és y halmazok egyenlők (x=y)
+b.
+az x halmaz valódi részhalmaza y-nak (xCy)
+c.
+Az x az y és z halmaz metszete (x = y && z)
+
+a:
+(x⊆y) && (y⊆x)
+
+b:
+(x⊆y) && !(y⊆x)
+
+c:
+(x⊆y)&&(x⊆z) && ∀p(((((p⊆y))&&(p⊆z))>(p⊆x)))
+
+d: az x maga a H alaphalmaz (x = H)
+∀y(y⊆x)
+
+e: x az üres halmaz
+∀y(x⊆y)
+
+f: az x halmaz 1 elemű
+∀y(y⊆) => ((y = ∅) || (y=x))
+
+g: az x az y és z halmazok uniója (x = y || z)
+(((y⊆x)&&(z⊆x))&&(∀p((y⊆p)&&(z⊆p)) => (x⊆p)))
+
+Az Euklideszi geometriaGeom nyelve!
+
+<Up, Ue, Us; =; ∋e; ∋>
+
+= : két pont azonos
+∋e: egyenesre illesztkedik pont
+∋s: síkra illesztkedik pont
+
+HF q és r egyenesek egybeesnek
