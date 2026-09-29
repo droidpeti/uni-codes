@@ -1,0 +1,259 @@
+1.
+Build an S tree by inserting these keys in this order:
+
+60, 100, 40, 20, 70, 90, 30
+
+We insert an X key into the S tree, like we would insert it into a regular search tree
+After the insertion, we make the X key into the S tree's root, by doing the following 3 rotations
+
+A; The parent of the X key is the root of the S tree
+
+        P
+      /   \
+     X     c
+    / \
+   a   b
+
+Rotate
+
+        X
+      /   \
+     a     p
+          / \
+         b   c
+
+B; X is the child of it's parent (P) on the same side, as P is the parent of it's Parent (G)
+
+        G
+       / \
+      P   d
+     / \
+    X   c
+   / \
+  a   b
+
+rotate
+
+        X
+       / \
+      a   P 
+         / \
+        b   G
+           / \
+          c   d
+
+C; X is the child of it's parent (P) on the other side, as P is the parent of it's Parent (G)
+
+        G
+       / \
+      P   d
+     / \
+    a   X
+       / \    
+      b   c
+
+Rotate
+
+          X
+       /    \
+      P      G
+     / \    / \
+    a   b  c   d
+
+60, 100, 40, 20, 70, 90, 30
+
+Insert 60
+
+60
+
+Insert 100
+
+    60
+      \
+      100
+
+A rotation
+
+    100
+   /
+  60
+
+Insert 40
+
+    100
+   /
+  60
+ /
+40
+
+B rotation
+
+ 40
+   \
+    60
+      \
+       100
+
+Insert 50
+
+ 40
+   \
+    60
+   /  \
+  50  100
+
+C rotation
+
+    50
+   /  \
+  40   60
+         \
+         100
+
+Insert 20
+
+    50
+   /  \
+  40   60
+ /       \
+20       100
+
+B rotation
+
+20
+  \
+   40
+     \
+      50
+        \
+         60
+           \
+            100
+
+Insert 70
+
+20
+  \
+   40
+     \
+      50
+        \
+         60
+           \
+            100
+            /
+           70
+
+C rotation
+
+20
+  \
+   40
+     \
+      50
+        \
+         60
+           \
+            70
+            / \
+           60 100
+
+B rotation
+
+    20
+      \
+       70
+      /  \
+     50  100
+    /  \
+   40  60
+
+A rotation
+
+        70
+       /  \
+      20  100
+        \
+         50
+        /  \
+      40    60
+
+Insert 90
+
+          70
+       /     \
+      20      100
+        \     /
+         50  90
+        /  \
+      40    60
+
+C rotation
+
+            90
+          /   \
+         70   100
+        /
+       20
+         \
+          50
+         /  \
+        40  60
+
+Insert 30
+
+            90
+          /   \
+         70   100
+        /
+       20
+         \
+          50
+         /  \
+        40  60
+       /
+      30
+
+B rotation
+
+            90
+          /   \
+         70   100
+        /
+       20
+         \
+          30
+            \
+             40 
+              \
+               50
+                \
+                 60
+
+C rotation
+
+            90
+          /   \
+         30   100
+        /  \
+       20  70
+           /
+          40
+            \
+             50
+               \
+                60
+
+A rotation
+
+            30
+          /   \
+         20    90
+              /  \
+            70   100
+           /
+          40
+            \
+             50
+               \
+                60
