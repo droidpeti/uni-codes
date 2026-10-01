@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Hunt.Model/Hunt.Model.csproj" />
+  <Project Path="Hunt.Test/Hunt.Test.csproj" />
+  <Project Path="Hunt/Hunt.csproj" />
+</Solution>
