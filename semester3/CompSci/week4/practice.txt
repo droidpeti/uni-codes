@@ -1,0 +1,146 @@
+∋
+⊆
+∀
+∃
+
+Az Euklideszi geometriaGeom nyelve!
+
+pont: A,B,C   
+egyenes: p,q,r,s  
+sík: a,b,c
+
+<Up, Ue, Us, p, e, s, =; ∋e; ∋s, , >
+
+= : két pont azonos
+∋e: egyenesre illesztkedik pont
+∋s: síkra illesztkedik pont
+
+1. feladat
+
+Fogalmazza meg az alábbi állításokat, a Geom nyelven:
+
+a:
+q és r egyenesek egybeesnek
+
+∀A (( q ∋e A ) => ( r ∋e A ))
+
+b:
+q és r egyenesek metszik egymást
+
+∃A ((q ∋e A) && (r ∋e A)) && !∀A (( q ∋e a ) => ( r ∋e A ))
+
+c:
+q és r egyenesek egy síkban vannak
+
+∃a(∀A(r ∋e r) => (a ∋s A)) && ∀B ((q ∋e B) => (a ∋s B))
+
+d:
+q és r egyenesek párhuzamosak
+
+"egy síkban vannak és nincs közös pontjuk"
+
+itt a c és b az előző feladatok
+
+c && !b
+
+e:
+
+Az a és a b síkok egybe esnek
+
+∀A (( a ∋s A ) => ( b ∋s A ))
+
+f:
+
+Az a és a b síkok párhuzamosak
+
+∀A ((a ∋s A) => !(b ∋s A))
+
+2. feladat
+
+Határozzuk meg az alábbi formula ítéletlogikai összetettségét, az összes részformuláját
+és rajzoljuk fel a szerkezeti fáját!
+
+((!x => Y) && Z)
+
+a logikai összetettség, Operátorok száma: 3
+
+szerkezeti fa:
+
+((!x => Y) && Z)
+         /  \
+  !x => Y    Z
+    / \
+   !X  Y
+    |
+    X
+
+részformulák halmaza, a szerkezeti fa összes csúcsa felsorolva: ((!x => Y) && Z), !x => Y, Z, !X, Y, X
+
+3. Feladat
+
+Jelöljük be az alábbi formulákban a logikai összekötők hatáskörét!
+
+ahány zárojelben van benne, azt a számot adjuk neki
+
+a:
+_____________________________________
+                                1
+ ______________________________
+                         2
+   _____________________
+             3
+   ________    ________     ___
+      4           4          2  
+((((X => Y) && (Y => Z)) => !X) && Z)
+      4      3    4      2  2   1
+
+Az 1-es sorszámú && a fő összekötő
+
+b:
+
+       3    2  2   1    2   3  3
+(((P || Q) && !R) && (R => (!R => Q)))
+
+4. Feladat:
+Hagyjuk el a lehető legtöbb zárójelet az alábbi formulákból!
+
+zárójel elhagyás
+1. negációs formula körül nincs elhagyandó zárójel
+2. binér összekötős formula körül van zárójel
+    a: Ha az egész formula binér összekötős, akkor a külső zárójelet elhagyjuk
+    b: Egy binér összekötős formula körüli részformulái a következő képpen hagyjuk el:
+    (A o B)
+    Ha A (A1 ~ A2) alakú, akkor a zárójelét, abban az esetben hagyhatjuk el, ha ~ prioritása nagyobb, mint a o-é
+    Ha B (B1 ~ B2) alakú, akkor a zárójelét, abban az esetben hagyhatjuk el, ha ~ prioritása nagyobb vagy egyenlő, mint o-é
+
+prioritások:
+
+!, &&, ||, =>
+
+a:
+     3      2    3      1   2  2
+(((X => Y) && (Y => Z)) => (!X || Z))
+ ______________________    __________
+  _______     ________
+
+((X => Y) && (Y => Z)) => (!X || Z)
+
+(X => Y) && (Y => Z) => (!X || Z)
+
+(X => Y) && (Y => Z) => !X || Z
+
+b:
+     2    1     2
+((P => Q) => (Q => P))
+
+(P => Q) => (Q => P)
+
+(P => Q) => Q => P
+
+fő logikai összekötő:
+A legkissebb szinsztámúak között a legkissebb prioritású, ezek közül pedig a bal szélső
+
+hf:
+(((X => (!Y && Z)) || (X && X)) || Z)
+
+Írjuk is vissza az elhagyott zárójeleket!
