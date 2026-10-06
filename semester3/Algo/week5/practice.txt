@@ -1,0 +1,118 @@
+1.
+
+Traverse the graph below, starting from vertex #1!
+The processing order of the vertices is in ascending order.
+Write down the depth and finishing numbers during the processing, and grade the edges by them!
+
+1 -> 2, 3
+2 -> 4, 5
+3 -> 6, 7
+4 -> 8
+5 -> 1, 8
+6 -> 5, 9, 12
+7 -> 6
+8 -> 11
+9 -> 12
+10 -> 7
+11 -> 5, 9
+12 -> 10   
+
+Grading edges:
+
+fn: finishing number
+dn: depth number
+
+X -> Y
+    -if dn[y] = 0 
+        x -> y is a tree edge
+    -if dn[y] <= dn[x] and fn[y] = 0
+        x -> y is a back edge
+    - if dn[y] > dn[x]
+        x -> y is a forward edge
+    - if dn[y] > dn[x] and fn[y] != 0
+        x -> y is a cross edge
+
+    1   2   3   4   5   6   7   8   9   10  11  12
+dn  1   2   12  3   6   11  10  4   7   9   5   8
+fn  12  10  11  9   1   2   3   8   6   4   7   5
+
+
+1: dn = 1
+go to 2
+2: dn = 2
+1->2 is tree edge
+go to 4
+4: dn = 3
+2->4 is tree edge
+go to 8
+8: dn = 4
+4->8 is tree edge
+go to 11
+11: dn = 5
+8->11 is tree edge
+go to 5
+5: dn 6
+5->11 is tree edge
+5 -> 8 is back edge, because dn[8] (4) > dn[5] (6)
+5 -> 1 is back edge, because dn[8] (4) > dn[1] (1)
+
+If we classified all edges from a vertex, then the vertex gets the next finishing number, and on the tree edge, which points to the vertex
+going backwards we find the vertex, where the processing continues from
+
+5: all edges classified, fn = 1
+go back to 11
+go to 9
+9: dn 7
+11->9 is tree edge
+go to 12
+12: dn 8
+9->12 is tree edge
+go to 10
+10: dn 9
+12->10 is tree edge
+go to 7
+7: dn 10
+10->7 is tree edge
+go to 6
+6: dn 11
+7->6 is tree edge
+check 5
+6->5 is a cross edge, because dn[5] < dn[6] and fn[5] != 0
+check 9
+6 -> 9 is a back edge because fn[9] = 0 and dn[6] <= dn[9]
+6: all edges classified, fn = 2
+go back to 7
+check to 12
+7 -> 12 is back edge
+7: all edges classified, fn = 3
+go back to 10, all edges classified
+10: fn = 4
+go back to 12
+all edges classified
+12: fn = 5
+go back to 9
+all edges classified
+9: fn = 6
+go back to 11
+all edges classified
+11: fn = 7
+go back to 8
+all edges classified
+8: fn = 8
+go back to 4
+all edges classified
+4: fn = 9
+go back to 2
+check to 5
+2->5 is a forward edge, because dn[5] > dn[2] and fn[5] != 0
+go back to 1
+go to 3
+check to 6
+3->6 is a cross edge
+check to 7
+3->7 is a cross edge
+3: all edges classified
+3: fn = 11
+go back to 1
+1: all edges classified
+1: fn = 12
