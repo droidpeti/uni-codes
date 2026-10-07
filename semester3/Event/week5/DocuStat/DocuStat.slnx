@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../feladat/feladat.csproj" />
+  <Project Path="DocuStatView/DocuStatView.csproj" />
+</Solution>
