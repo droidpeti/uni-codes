@@ -1,0 +1,167 @@
+∋
+⊆
+∀
+∃
+
+1. Feladat
+
+Döntsük el az alábbi szimbólumsorozatokról, hogy formulának tekinthetők-e, és ha igen, negációs, konjunkciós, diszjunkciós, implikációs formulák-e?
+
+konj: és
+diszj: vagy
+
+prioritások, csökkenő sorrendben:
+
+! > && > || > =>
+
+ha ugyanaz a szintje, akkor a legkissebb prioritású!
+
+                  ____
+a: P => Q => R && !(P) => P <= nem jó formula, mert zárójel csak binér összekötős formula körül lehet!
+
+       1    0   0    1  1
+b: (P || Q) || R && (!P => P) <= diszjunkciós formula
+
+          _
+c: P && Q !(Q || R) && !(P => P) <= nem jó formula, mert nincs operátor a negáció és az előtte lévő operandus között!
+
+               _
+d: (P => R) => ((Q => R) => (P || Q => R) <= nem jó formula, mert nincs lezárva egy zárójel!
+
+     0     1     0  0   1     0
+e: Q => (P && R) && !(P || R) || Q
+
+2. Feladat
+
+Határozzuk meg igazságértékelés fával az alábbi formulák igaz, illetve hamis halmazait!
+
+a: x => y && z || !x
+
+b: (!x => !y) && (z && x => !y)
+
+a:
+
+                x y z ... x => y && z || !x
+
+interpretációk  i i i
+                i i h
+                i h i
+                i h h
+                h i i
+                h h i 
+                h i h
+                h h h
+!
+
+(!A)i
+  |
+ (A)h
+
+(!A)h
+  |
+ (A)i
+
+||
+
+(A && B)i
+    |
+    (A)i
+    |
+    (B)i
+
+(A && B)h
+  /     \
+ (A)h   (B)h
+
+||
+
+(A || B)i
+  /     \
+ (A)i   (B)i
+
+(A || B)h
+    |
+    (A)h
+    |
+    (B)h
+
+=>
+
+(A => B)i
+  /     \
+ (A)h   (B)i
+
+(A => B)h
+    |
+    (A)i
+    |
+    (B)h
+
+
+a:
+
+x => ((y && z) || !x) i
+    /       \  
+   X h      (((y && z) || !x))i
+                /           \
+               y && z i     !x i
+                 |
+                 y i         x h
+                 |
+                 z i
+
+x y z
+h * *
+
+T = (* i i) U (h * *) = {h i i, h i h, h h i, h h h}
+
+x => ((y && z) || !x) h
+             |           
+            X i      
+             |                          
+        (((y && z) || !x)) h
+             |
+          (y||z) h
+             |
+            (!x) h
+            /   \
+         (y) h  (z) h
+          |      |
+         (x) i  (x) i
+
+H = (i h *) U (i * h) = {i i h, i h i, i h h}
+
+((y || z) || (z => !x))i
+           |
+        (y || z)i
+            |
+         (z => !x)i
+         /          \
+        (y)i        (z)i
+        /  \        /   \
+      (z)h (!x)i   (z)h (!x)i
+             |       |    |
+            (x)h    ---  (x)h
+
+3. Feladat
+
+Lássuk be az alábbi formuláról, hogy tautológiák!
+
+tautológia: mindig igaz
+
+a: |=0 A => (B => A)
+
+b: |=0 (A => B => C) => (A => B) => A => C
+
+c: |=0 A => B => A && B
+
+Megoldás:
+    - igazságtáblával
+    - igazságértékelési fával: a hamis halmaz üres
+    - tautologikus ekvivalenciákkal: levezetjük a formulából a T-t
+
+X Y | (X => Y) | X => (Y => X)
+i i      i          i
+h i      i          i
+i h      h          i
+h h      i          i
