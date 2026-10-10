@@ -1,0 +1,732 @@
+1. 
+a:
+Építsünk AVL-fát a következő adatokból:
+90, 110, 60, 40, 120, 70, 30, 80, 50, 100, 20!
+Ha elromlott a fa kiegyensúlyozása,
+állítsuk helyre a megfelelő forgatással! Adjuk meg a
+címkéket, az alkalmazott forgatási sémát,
+és azonosítsuk az alkalmazott forgatás részeit!
+
+b:
+Építsünk AVL-fát a következő adatokból:
+50, 100, 30, 110, 70, 20, 120, 40, 60, 90, 80.
+Ha elromlott a fa kiegyensúlyozása, állítsuk helyre a megfelelő forgatással!
+Adjuk meg a címkéket, az alkalmazott forgatási sémát,
+és azonosítsuk az alkalmazott forgatás részeit!
+
+2 is positive => left
+2 is negative => right
+prefix doesn't match => double
+prefix matches => single
+
+(+2,-1) -> left double
+(+2,+1) -> left
+(-2,-1) -> right
+(-2,+1) -> right double
+
+a:
+90, 110, 60, 40, 120, 70, 30, 80, 50, 100, 20
+
+insert 90:
+
+    90
+
+insert 110:
+
+    90 (1)
+      \
+      110
+  
+insert 60:
+
+    90
+   /  \
+  60  110
+
+insert 40:
+
+       90 (-1)
+   /       \
+  60 (-1)  110
+ /
+40
+
+insert 120:
+
+       90
+   /       \
+  60 (-1)  110 (1)
+ /            \
+40            120
+
+insert 70:
+
+       90
+   /       \
+  60       110 (1)
+ /  \         \
+40  70        120
+
+insert 30:
+
+            90 (-1)
+        /       \
+       60 (-1)  110 (1)
+     /    \        \
+    40(-1) 70      120
+   /
+  30
+
+insert 80:
+
+            90 (-1)
+        /       \
+       60       110 (1)
+     /    \        \
+    40(-1) 70      120
+   /         \
+  30         80
+
+insert 50:
+
+            90 (-1)
+        /       \
+       60       110 (1)
+     /    \        \
+    40    70       120
+   /  \     \
+  30   50    80
+
+insert 100:
+
+            90 (-1)
+        /       \
+       60       110
+     /    \     /  \
+    40    70  100  120
+   /  \     \
+  30   50    80
+
+insert 20:
+
+            90 (-2)
+        /       \
+       60 (-1)   110
+     /    \     /  \
+    40(-1) 70  100  120
+   /  \     \
+  30   50    80
+ /
+20
+
+right rotation:
+
+              60
+        /           \
+        40 (-1)      90
+      /    \      /       \
+     30(-1) 50   70 (1)   110
+    /            \       /  \
+   20            80     100 120
+
+b:
+
+50, 100, 30, 110, 70, 20, 120, 40, 60, 90, 80
+
+2 is positive => left
+2 is negative => right
+prefix doesn't match => double
+prefix matches => single
+
+(+2,-1) -> left double
+(+2,+1) -> left
+(-2,-1) -> right
+(-2,+1) -> right double
+
+insert 50:
+
+        50
+
+insert 100:
+
+        50
+          \
+          100
+
+insert 30:
+
+        50
+       /  \
+      30  100
+
+insert 110:
+
+        50 (1)
+       /  \
+      30  100 (1)
+             \
+             110
+
+insert 70:
+
+
+        50 (1)
+       /  \
+      30  100
+          /  \
+         70  110
+
+insert 20:
+
+        50
+       /  \
+      30  100
+     /    /  \
+    20   70  110
+
+insert 120:
+
+        50 (1)
+       /  \
+      30  100 (1)
+     /    /  \
+    20   70  110 (1)
+                \
+                120
+
+insert 40:
+
+            50 (1)
+       /        \
+      30        100 (1)
+     /  \       /  \
+    20  40     70  110 (1)
+                     \
+                      120
+
+insert 60:
+
+            50 (1)
+       /        \
+      30          100
+     /  \       /    \
+    20  40     70(-1) 110 (1)
+              /         \
+             60          120
+
+insert 90:
+
+            50 (1)
+       /        \
+      30          100
+     /  \       /    \
+    20  40     70    110 (1)
+              /  \      \
+             60   90     120
+
+insert 80:
+
+            50 (2)
+       /        \
+      30          100 (-1)
+     /  \       /    \
+    20  40     70(1)  110 (1)
+              /  \      \
+             60   90(-1) 120
+                 /
+                80
+
++2, -1
+
+double left rotation 50, 100, 70
+
+           70
+       /        \
+      50 (1)     100 
+     /  \       /   \
+    30  60     90(-1)110(1)
+   /  \       /       \
+  20  40     80       120
+
+2.
+
+Építsünk fel egy 𝑑 = 4 fokszámú B+ fát a következő kulcsok beszúrásával:
+2, 17, 26, 5, 10, 21, 14, 16, 11, 12, 13!
+Ezután töröljük 14, 16 és 2 kulcsokat!
+
+Insert 2:
+
+    2
+
+Insert 17:
+
+    2/17
+
+Insert 26:
+
+    2/17/26
+
+Insert 5:
+
+    2/5/17/26
+
+too much, split, reparent
+
+        17
+      /    \  
+    2/5     17/26
+
+Insert 10:
+
+        17
+      /    \  
+    2/5/10 17/26
+
+Insert 21:
+
+        17
+      /    \  
+    2/5/10 17/21/26
+
+Insert 14:
+
+           17
+      /         \  
+    2/5/10/14 17/21/26
+
+Too much, split
+
+          10/17
+      /     |    \  
+    2/5  10/14 17/21/26
+
+Insert 16:
+
+          10/17
+      /     |     \  
+    2/5  10/14/16 17/21/26
+
+Insert 11:
+
+            10/17
+      /     |        \  
+    2/5 10/11/14/16 17/21/26
+
+Too much, split:
+
+           10/14/17
+      /     /   \      \  
+    2/5 10/11  14/16 17/21/26
+
+Insert 12:
+
+           10/14/17
+      /     /     \      \  
+    2/5 10/11/12  14/16 17/21/26
+
+Insert 13:
+
+             10/14/17
+      /     /        \      \  
+    2/5 10/11/12/13   14/16 17/21/26
+
+Too much, split
+
+             10/12/14/17
+      /     /   |       \      \  
+    2/5 10/11 12/13   14/16 17/21/26
+
+Root is full, create new root
+
+             (    14   )
+             /          \
+         10/12            17
+      /    |  \        /      \  
+    2/5 10/11 12/13   14/16 17/21/26
+
+Delete 14:
+
+             (    14   )
+             /          \
+         10/12            17
+      /    |  \        /      \  
+    2/5 10/11 12/13  16  17/21/26
+
+Delete 16:
+
+             (    14   )
+             /          \
+         10/12            17
+      /    |  \        /      \  
+    2/5 10/11 12/13       17/21/26
+
+Borrow from sibling:
+
+            (    14   )
+             /          \
+         10/12            21
+      /    |  \        /      \  
+    2/5 10/11 12/13   17     21/26
+
+Delete 2:
+
+             (    14   )
+             /          \
+         10/12            21
+      /    |  \        /      \  
+     5 10/11 12/13   17     21/26
+
+3. Építsünk S-fát a következő adatokból: 90, 110, 60, 40, 120, 70, 20, 80!
+
+We insert an X key into the S tree,
+like we would insert it into a regular search tree
+After the insertion, we make the X key into the S tree's root,
+by doing the following 3 rotations
+
+A; The parent of the X key is the root of the S tree
+
+        P
+      /   \
+     X     c
+    / \
+   a   b
+
+Rotate
+
+        X
+      /   \
+     a     p
+          / \
+         b   c
+
+B; X is the child of it's parent (P) on the same side,
+as P is the parent of it's Parent (G)
+
+        G
+       / \
+      P   d
+     / \
+    X   c
+   / \
+  a   b
+
+rotate
+
+        X
+       / \
+      a   P 
+         / \
+        b   G
+           / \
+          c   d
+
+C; X is the child of it's parent (P) on the other side,
+as P is the parent of it's Parent (G)
+
+        G
+       / \
+      P   d
+     / \
+    a   X
+       / \    
+      b   c
+
+Rotate
+
+          X
+       /    \
+      P      G
+     / \    / \
+    a   b  c   d
+
+Insert 90:
+
+    90
+
+Insert 110:
+
+    90
+   / 
+ 110
+
+A rotation
+
+    110
+   /
+  90
+
+Insert 60:
+
+       110 
+      /
+    90
+   /
+  60
+
+B rotation:
+
+        60 
+          \
+          90
+            \
+            110
+
+Insert 40:
+
+        60 
+       /  \
+      40   90
+            \
+            110
+
+A rotation:
+
+        40 
+          \
+           60
+             \
+              90
+                \
+                110
+
+Insert 120:
+
+        40 
+          \
+           60
+             \
+              90
+                \
+                110
+                  \
+                  120
+
+B rotation:
+
+        40 
+          \
+           60
+             \
+              120
+             /
+           110 
+          /
+         90
+
+B rotation:
+
+        120 
+        /
+       60
+      /  \  
+     40  110     
+         /
+        90
+
+Insert 70:
+
+        120 
+        /
+       60
+      /  \  
+     40  110     
+         /
+        90
+       /
+      70
+    
+B rotation:
+
+        120 
+        /
+       60
+      /  \  
+     40  70     
+           \
+           90
+             \
+             110
+
+C rotation:
+
+         70
+        /  \
+       60  120
+      /   /
+     40  90
+           \
+           110    
+           
+           
+
+Insert 20:
+
+         70
+        /  \
+       60  120
+      /   /
+     40  90   
+    /      \
+   20      110
+
+B rotation:
+
+          70
+        /    \
+       20     120
+         \     /
+          40  90
+            \   \
+            60  110
+
+A rotation:
+
+          20
+             \
+             70
+            /  \
+          40   120
+            \   /
+            60 90
+                \
+                110
+
+Insert 80:
+
+          20
+             \
+             70
+            /  \
+          40    120
+            \   /
+            60 90
+               / \
+              80 110
+
+B rotation:
+
+          20
+             \
+             70
+            /  \
+          40   80
+           \     \
+            60    90
+                   \
+                  120
+                 /
+               110
+
+B rotation:
+
+          80
+        /    \
+       70     90
+      /         \
+     20         120
+       \        /
+       40     110
+         \
+         60
+
+4.
+
+Járjuk be az 1-es csúcsból indulva mélységi bejárással az alábbi gráfot!
+A csúcsok szomszédjainak feldolgozási sorrendje legyen a csúcsok
+címkéiben nagyság szerint növekedően rendezett.
+Jelöljük a gráfon a bejárás során a csúcsokhoz rendelt mélységi és
+befejezési számokat, és ezek alapján osztályozzuk a gráf éleit!
+
+Grading edges:
+
+fn: finishing number
+dn: depth number
+
+X -> Y
+    -if dn[y] = 0 
+        x -> y is a tree edge
+    -if dn[y] <= dn[x] and fn[y] = 0
+        x -> y is a back edge
+    - if dn[y] > dn[x] and fn[y] != 0
+        x -> y is a forward edge
+    - if dn[y] < dn[x] and fn[y] != 0
+        x -> y is a cross edge
+
+1 -> 2, 3
+2 -> 4, 5
+3 -> 2, 7
+4 -> 8
+5 -> 8
+6 -> 5, 9
+7 -> 12
+8 -> 11
+9 -> -
+10 -> 7
+11 -> 5
+12 -> 10
+
+key 1   2   3   4   5   6   7   8   9   10  11  12
+dn  1   2   7   3   6   -   8   4   -   10  5   9
+fn  10  5   9   4   1   -   8   3   -   6   2   7
+
+start at 1:
+
+1: discovered dn = 1
+go to 2
+1 -> 2 is a tree edge
+2: discovered dn = 2
+go to 4
+2 -> 4 is a tree edge
+4: discovered dn = 3
+go to 8
+4 -> 8 is a tree edge
+8: discovered dn = 4
+go to 11
+8 -> 11 is a tree edge
+11: discovered dn = 5
+go to 5
+11 -> 5 is a tree edge
+5: discovered dn = 6
+check to 8
+dn[8] = 4 < dn[5] = 6 && fn[8] = 0
+5 -> 8 is a back edge
+5: finished fn = 1
+go back to 11
+11: finished fn = 2
+go back to 8
+8: finished fn = 3
+go back to 4
+4: finished fn = 4
+go back to 2
+check to 5
+dn[5] = 6 > dn[2] = 2 && fn[5] = 1
+2 -> 5 is a forward edge
+2: finished fn = 5
+go back to 1
+go to 3
+1 -> 3 is a tree edge
+3: discovered dn = 7
+check to 2
+dn[2] = 2 < dn[3] = 7 && fn[2] = 5
+3 -> 2 is a cross edge
+go to 7
+3 -> 7 is a tree edge
+7: discovered dn = 8
+go to 12
+7 -> 12 is a tree edge
+12: discovered dn = 9
+go to 10
+12 -> 10 is a tree edge
+10: discovered dn = 10
+check to 7
+dn[7] = 8 < dn[10] = 10 && fn[7] = 0
+10 -> 7 is a back edge
+10: finished fn = 6
+go back to 12
+12: finished fn = 7
+go back to 7
+7: finished fn = 8
+go back to 3
+3: finished fn = 9
+go back to 1
+1: finished fn = 10
