@@ -666,8 +666,8 @@ X -> Y
 12 -> 10
 
 key 1   2   3   4   5   6   7   8   9   10  11  12
-dn  1   2   7   3   6   -   8   4   -   10  5   9
-fn  10  5   9   4   1   -   8   3   -   6   2   7
+dn  1   2   7   3   6   11  8   4   12  10  5   9
+fn  10  5   9   4   1   12  8   3   11  6   2   7
 
 start at 1:
 
@@ -730,3 +730,76 @@ go back to 3
 3: finished fn = 9
 go back to 1
 1: finished fn = 10
+Can't reach more from here
+An other component starts from 6
+6: discovered dn = 11
+check to 5
+dn[5] = 6 < dn[6] = 11 && fn[5] != 0
+6 -> 5 is a cross edge
+go to 9
+6 -> 9 is a tree edge
+9: discovered dn = 12
+9: finished fn = 11
+go back to 6
+check to 12
+dn[12] = 9 < dn[6] = 11 && fn[12] != 0
+6 -> 12 is a cross edge
+6: finished fn = 12
+
+5. Állapítsuk meg, hogy a 4. feladatban szereplő gráf DAG tulajdonságú-e!
+Ha nem az, a mélységi bejárás eredménye alapján a lehető legkevesebb él
+törlésével alakítsuk DAG tulajdonságúvá,
+és adjuk meg a csúcsok egy topologikus rendezését!
+
+Ha van benne visszaél, akkor nem DAG tulajdonságú
+A visszaéleket kell törölni, hogy DAG tulajdonságú legyen
+Delete 5 -> 8
+Delete 10 -> 7
+
+topologikus sorrend,
+a befejezési szám szerint csökkenő sorrendben rendezni
+
+key 1   2   3   4   5   6   7   8   9   10  11  12
+dn  1   2   7   3   6   11  8   4   12  10  5   9
+fn  10  5   9   4   1   12  8   3   11  6   2   7
+
+topologikus sorrend:
+
+6, 9, 1, 3, 7, 12, 10, 2, 4, 8, 11, 5 
+
+6.
+
+Határozzuk meg az alábbi,
+szomszédsági mátrixszal megadott gráf redukált gráfját!
+
+( 0 1 0 1 0
+  0 0 0 0 1
+  0 1 0 0 0
+  0 0 1 0 1
+  0 0 1 0 0 )
+
+1 -> 2, 4
+2 -> 5
+3 -> 2
+4 -> 3, 5
+5 -> 3
+
+1 -> 2 -> 5
+|    ^   /^
+v    |  / |
+4 -> 3</  |
+|         |
+----------|
+
+Components:
+K1 = {1}
+K2 = {4}
+K3 = {2, 3, 5}
+
+K1 -> K2, K3
+K2 -> K3
+K3 -> -
+
+( 0 1 1
+  0 0 1
+  0 0 0 )

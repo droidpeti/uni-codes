@@ -1,0 +1,57 @@
+1.
+a: Építsünk AVL-fát a következő adatokból:
+50, 30, 80, 20, 40, 35, 45, 10, 90, 70, 60!
+Ha elromlott a fa kiegyensúlyozása, állítsuk helyre
+a megfelelő forgatással!
+Adjuk meg a címkéket (mérlegszámokat), az alkalmazott forgatási sémát,
+és azonosítsuk az alkalmazott forgatás részeit!
+
+b: Építsünk AVL-fát a következő adatokból:
+100, 50, 150, 200, 250, 120, 130, 110, 140, 10, 20.
+Ha elromlott a fa kiegyensúlyozása,
+állítsuk helyre a megfelelő forgatással!
+Adjuk meg a címkéket, az alkalmazott forgatási sémát,
+és azonosítsuk az alkalmazott forgatás részeit!
+
+2. Építsünk fel egy d=4 fokszámú B+ fát a következő kulcsok beszúrásával:
+5, 15, 25, 35, 45, 10, 20, 30, 40, 50!
+Ezután töröljük a 15, 25 és 5 kulcsokat (ebben a sorrendben)!
+
+3. Építsünk S-fát (Splay-fát) a következő adatokból:
+50, 30, 80, 20, 40, 90, 10, 70!
+(Figyelj arra, hogy minden beszúrás után a beszúrt elemnek
+a gyökérbe kell kerülnie a megfelelő A, B vagy C forgatásokkal).
+
+4. Járjuk be az 1-es csúcsból indulva mélységi bejárással az alábbi,
+éllistával megadott gráfot!
+A csúcsok szomszédjainak feldolgozási sorrendje
+legyen a csúcsok címkéiben nagyság szerint növekedően rendezett.ű
+Jelöljük a gráfon a bejárás során a csúcsokhoz rendelt mélységi (dn)
+és befejezési (fn) számokat, és ezek alapján osztályozzuk a gráf éleit!
+
+A gráf élei (X -> Y):
+
+    1 -> 2, 3
+    2 -> 4, 5
+    3 -> 6
+    4 -> 7
+    5 -> 7
+    6 -> 3, 8
+    7 -> 8
+    8 -> 2
+    9 -> 10
+    10 -> -
+
+5. Állapítsuk meg, hogy a 4. feladatban szereplő gráf DAG tulajdonságú-e!
+Ha nem az,a mélységi bejárás eredménye alapján
+a lehető legkevesebb él törlésével alakítsuk DAG tulajdonságúvá,
+és adjuk meg a csúcsok egy topologikus rendezését!
+
+6. Határozzuk meg az alábbi, szomszédsági mátrixszal megadott gráf
+redukált gráfját (erősen összefüggő komponensek alapján)!
+
+( 0 1 1 0 0
+  1 0 0 0 1
+  0 0 0 1 0
+  0 0 1 0 0
+  0 0 0 0 0 )
