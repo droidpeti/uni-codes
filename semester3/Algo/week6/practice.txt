@@ -1,0 +1,143 @@
+1.
+
+Traverse the graph below, starting from vertex #1!
+The processing order of the vertices is in ascending order.
+Write down the depth and finishing numbers during the processing, and grade the edges by them!
+
+Does it have DAG property, if not, then make it have it, by deleting the least amount of edges!
+Order the vertices topologically
+
+1 -> 2, 6
+2 -> 4, 5
+3 -> 6, 7
+4 -> 8
+5 -> 8, 1
+6 -> 5, 9, 12
+7 -> 12
+8 -> 11
+9 -> 12
+10 -> 7
+11 -> 5
+12 -> 10
+
+1: discovered, dn = 1
+go to 2
+1 -> 2 is a tree edge
+2: discovered, dn = 2
+go to 4
+2 -> 4 is a tree edge
+4: dn = 3
+go to 8
+4 -> 8 is a tree edge
+8: dn = 4
+go to 11
+4 -> 11 te
+11: dn = 5
+go to 5
+11 -> 5 te
+5: dn = 6
+check to 1
+5 -> 1 is back edge
+check to 8
+5 -> 8 is back edge
+5: fn = 1
+go back to 11
+go to 9
+11 -> 9 fe
+9> dn = 7
+9 -> 12 te
+12: dn = 8
+12 -> 10 te
+10: dn = 9
+10 -> 7 te
+7> dn = 10
+7 -> 6 te
+6: dn = 11
+check to 5
+6 -> 5 is a cross edge
+check to 9
+6 -> 9 is a back edge
+check to 12
+6 -> 12 is a back edge
+6> finished fn = 2
+go back to 7
+check to 12
+7 -> 12 is back edge
+7: finished, fn = 3
+go back to 10
+10: fn = 4
+go back to 12
+12: fn = 5
+go back to 9
+9: fn = 6
+11: fn = 7
+8: fn = 8
+4: fn = 9
+go back to 2
+2 -> 5 is a forward edge
+2: fn = 10
+go back to 1
+1 -> is a forward edge
+1: fn = 11
+
+Not all vertexes classified
+continue from 3
+3: dn = 12
+3 -> 6 is cross edge
+3 -> 7 is cross edge
+3: fn = 12
+
+DAG delete back edges:
+5 -> 1
+5 -> 8
+6 -> 9
+6 -> 12
+7 -> 12
+
+Topological order:
+
+3, 1, 2, 4, 8, 11, 9, 12, 10, 7, 6, 5
+
+2.
+
+Create the reduced graph of the previous one
+
+1: Order the vertices by the finish number
+2: reverse the edges
+3: Traverse the graph by the order of the vertices
+
+K1 = {1,2,4,5,...,12}
+K2 = {3}
+
+K2 -> K1
+
+3.
+
+Neighboring matrix reduced graph
+
+( 0 1 0 1 0
+  0 0 0 0 1
+  0 1 0 0 0 
+  0 0 1 0 1
+  0 0 1 0 0 )
+
+1 -> 2, 4
+2 -> 5
+3 -> 2
+4 -> 3, 5
+5 -> 3
+
+1 -> 2 -> 5
+|    ^   /^
+v    |  / |
+4 -> 3</  |
+|         |
+\---------/
+
+K1 = {1}
+K2 = {2, 3, 5}
+K3 = {4}
+
+K1 -> K2, K3
+K2 -> -
+K3 -> K1
