@@ -3,14 +3,13 @@ set -e
 
 echo "=== DocuStat (6. gyakorlat) projekt letrehozasa ==="
 
+rm -rf DocuStatComplete
 mkdir -p DocuStatComplete/DocuStat/Persistence
 mkdir -p DocuStatComplete/DocuStat/Model
 mkdir -p DocuStatComplete/DocuStatView
 cd DocuStatComplete
 
-if [ ! -f "DocuStat.sln" ]; then
-    dotnet new sln -n DocuStat
-fi
+dotnet new sln -n DocuStat
 
 # 1. DocuStat.csproj
 cat << 'EOF' > DocuStat/DocuStat.csproj
@@ -235,8 +234,7 @@ namespace ELTE.DocuStat.Model
         private void ComputeDistinctWords()
         {
             DistinctWordCount.Clear();
-            string[] words = FileContent.Split(new char[] { ' ', '', '
-', '	' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] words = FileContent.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string rawWord in words)
             {
@@ -254,16 +252,23 @@ namespace ELTE.DocuStat.Model
         public int ComputeSentenceCount()
         {
             if (string.IsNullOrWhiteSpace(FileContent)) return 0;
-            var matches = Regex.Matches(FileContent, @"[\.!\?]+(\s|$)");
-            return Math.Max(1, matches.Count);
+            char[] endChars = new char[] { '.', '!', '?' };
+            int count = 0;
+            for (int i = 0; i < FileContent.Length; i++)
+            {
+                if (endChars.Contains(FileContent[i]) && (i == FileContent.Length - 1 || char.IsWhiteSpace(FileContent[i + 1])))
+                {
+                    count++;
+                }
+            }
+            return Math.Max(1, count);
         }
 
         public int ComputeProperNounCount()
         {
             if (string.IsNullOrWhiteSpace(FileContent)) return 0;
             int count = 0;
-            string cleaned = Regex.Replace(FileContent, @"\s+", " ");
-            string[] tokens = cleaned.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string[] tokens = FileContent.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries);
 
             for (int i = 1; i < tokens.Length; i++)
             {
@@ -302,7 +307,7 @@ namespace ELTE.DocuStat.Model
         private int CountSyllables(string word)
         {
             if (string.IsNullOrEmpty(word)) return 0;
-            int count = Regex.Matches(word, @"[aeiouy]+", RegexOptions.IgnoreCase).Count;
+            int count = Regex.Matches(word, "[aeiouy]+", RegexOptions.IgnoreCase).Count;
             return Math.Max(1, count);
         }
 
@@ -515,7 +520,6 @@ namespace ELTE.DocuStat.View
             ((System.ComponentModel.ISupportInitialize)numericUpDownOccurrences).BeginInit();
             SuspendLayout();
 
-            // splitContainerMain
             splitContainerMain.Dock = DockStyle.Fill;
             splitContainerMain.FixedPanel = FixedPanel.Panel2;
             splitContainerMain.Location = new System.Drawing.Point(0, 0);
@@ -526,7 +530,6 @@ namespace ELTE.DocuStat.View
             splitContainerMain.Size = new System.Drawing.Size(800, 500);
             splitContainerMain.SplitterDistance = 360;
 
-            // splitContainerTop
             splitContainerTop.Dock = DockStyle.Fill;
             splitContainerTop.Location = new System.Drawing.Point(0, 0);
             splitContainerTop.Name = "splitContainerTop";
@@ -535,7 +538,6 @@ namespace ELTE.DocuStat.View
             splitContainerTop.Size = new System.Drawing.Size(800, 360);
             splitContainerTop.SplitterDistance = 400;
 
-            // textBox
             textBox.Dock = DockStyle.Fill;
             textBox.Multiline = true;
             textBox.ReadOnly = true;
@@ -543,12 +545,10 @@ namespace ELTE.DocuStat.View
             textBox.WordWrap = false;
             textBox.Name = "textBox";
 
-            // listBoxCounter
             listBoxCounter.Dock = DockStyle.Fill;
             listBoxCounter.FormattingEnabled = true;
             listBoxCounter.Name = "listBoxCounter";
 
-            // panelParameters
             panelParameters.Dock = DockStyle.Fill;
             panelParameters.Controls.Add(labelCharacters);
             panelParameters.Controls.Add(labelNonWhitespaceCharacters);
@@ -563,7 +563,6 @@ namespace ELTE.DocuStat.View
             panelParameters.Controls.Add(numericUpDownOccurrences);
             panelParameters.Controls.Add(textBoxIgnoredWords);
 
-            // Labels & Inputs
             labelCharacters.AutoSize = true;
             labelCharacters.Location = new System.Drawing.Point(15, 20);
             labelCharacters.Text = "Character count:";
@@ -611,7 +610,6 @@ namespace ELTE.DocuStat.View
             textBoxIgnoredWords.Location = new System.Drawing.Point(560, 97);
             textBoxIgnoredWords.Size = new System.Drawing.Size(190, 23);
 
-            // DocuStatControl
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(splitContainerMain);
@@ -689,8 +687,7 @@ namespace ELTE.DocuStat.View
             IFileManager? fileManager = FileManagerFactory.CreateForPath(fileName);
             if (fileManager == null)
             {
-                MessageBox.Show($"File reading is unsuccessful!
-Unsupported file format for: {fileName}",
+                MessageBox.Show($"File reading is unsuccessful!{Environment.NewLine}Unsupported file format for: {fileName}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -715,8 +712,7 @@ Unsupported file format for: {fileName}",
                 {
                     tabControl.TabPages.Remove(tabPage);
                 }
-                MessageBox.Show($"File reading is unsuccessful!
-{ex.Message}",
+                MessageBox.Show($"File reading is unsuccessful!{Environment.NewLine}{ex.Message}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -769,34 +765,28 @@ namespace ELTE.DocuStat.View
             menuStrip.SuspendLayout();
             SuspendLayout();
 
-            // menuStrip
             menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, countWordsMenuItem });
             menuStrip.Location = new System.Drawing.Point(0, 0);
             menuStrip.Name = "menuStrip";
             menuStrip.Size = new System.Drawing.Size(820, 24);
 
-            // fileToolStripMenuItem
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openFileDialogMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Text = "&File";
 
-            // openFileDialogMenuItem
             openFileDialogMenuItem.Name = "openFileDialogMenuItem";
             openFileDialogMenuItem.Text = "&Open file...";
             openFileDialogMenuItem.Click += OpenDialog;
 
-            // countWordsMenuItem
             countWordsMenuItem.Name = "countWordsMenuItem";
             countWordsMenuItem.Text = "&Count words";
             countWordsMenuItem.Click += CalculateStatistics;
 
-            // tabControl
             tabControl.Dock = DockStyle.Fill;
             tabControl.Location = new System.Drawing.Point(0, 24);
             tabControl.Name = "tabControl";
             tabControl.Size = new System.Drawing.Size(820, 526);
 
-            // DocuStatDialog
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(820, 550);
@@ -841,4 +831,4 @@ dotnet sln add DocuStatView/DocuStatView.csproj
 echo "=== Projekt forditasa (dotnet build) ==="
 dotnet build
 
-echo "=== KESZ! A teljes megoldas letrejott a DocuStatComplete mappaban. ==="
+echo "=== KESZ! A teljes megoldas hibamentesen lefordult a DocuStatComplete mappaban. ==="
