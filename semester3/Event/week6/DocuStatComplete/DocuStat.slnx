@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DocuStat/DocuStat.csproj" />
+  <Project Path="DocuStatView/DocuStatView.csproj" />
+</Solution>
