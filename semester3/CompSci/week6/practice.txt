@@ -1,0 +1,111 @@
+∋
+⊆
+∀
+∃
+
+1.
+
+Egyszerűsítsük tautologikus ekvivalenciák felhasználásával az alábbi formulát!
+
+(D => B) && (B => !D) || (A && !C && D) || (!A && B && D) || (!C && !D) || (A && C && !D) || (A && !C && !D) || (A && C) || !(C || !D)
+
+azonosságok:
+
+x => y = !x || y
+x && y = y || x
+x && y = y && x
+x && (y || z) = (x && y) || (x && z)
+x || (y && z) = (x || y) && (x || z)
+(x && y) && z = x && (y && z)
+(x || y) || z = x || (y || z)
+
+De Morgan:
+!(x || y) = !x && !y
+!(x && y) = !x || !y
+
+!!x = x
+
+T = true
+F = false
+
+x && T = x
+x || T = T
+x && x = x
+x && F = F
+x || F = x
+x || x = x
+x || !x = T
+x && !x = F
+
+abszorbciós
+x && (x || y) = x
+x || (x && y) = x
+x || (!x && y) = x || y
+
+!x || (!x || ... ) = x ( ... az y )
+
+(D => B) && (B => !D) || (A && !C && D) || (!A && B && D) || (!C && !D) || (A && C && !D) || (A && !C && !D) || (A && C) || !(C || !D)
+_____________________
+(!D || B) && (!B || !D) 
+
+                                            x && (y || z) = (x && y) || (x && z)
+
+((!D || B) && !B) || ((!D || B) && !D)
+
+((!D && !B) || (B && !B)) || ((!D || !D) || (B && !D))
+
+(!D && !B) || (!D || (B && !D))
+(!D && !B) || !D || (B && !D)
+                                            x || (x && y) = x
+(!D && !B) || !D
+
+!D
+
+!D || (A && !C && D) || (!A && B && D) || (!C && !D) || (A && C && !D) || (A && !C && !D) || (A && C) || !(C || !D)
+
+!D || (A && !C && D) || (!A && B && D) || (!C && !D) || (A && C && !D) || (A && !C && !D) || (A && C) || (!C && D)
+                                          __________    ______________    _______________
+                                          !D || (!D &&...) = !D
+
+!D || (A && !C && D) || (!A && B && D) || (!C && !D) || (A && C && !D) || (A && !C && !D) || (A && C) || (!C && D)                                      
+      ______________    ______________                                                       ________    _________
+      !D || (D && ...) D || ...
+
+!D || (A && !C) || (!A && B) || (A && C) || !C
+
+!D || (!A && B) || !C || A
+
+!D || B || A || !C
+
+( ... || ... ) && ( ... || ... ) = ( ... && ... ) || ( ... && ... )
+
+1. lépés: diszjunktív normál formára hozás
+
+( ... && ... && ... ) || ( ... && ... && ...) || ... || ( ... && ... && ... )
+
+
+2. lépés: valamelyik konjunkciós tagot egyetlen ítélet változóra, vagy ellentettjére redukáljuk
+
+3. lépés: Kihúzzuk az összes olyan elemét a diszjunkciós láncnak, amiben szerepelt a 2. lépésben meghatározott ítéletváltozó, vagy ellentettje
+
+4. lépés: Az ítéletváltozó ellentettjét tartalmazó tagokból pedig kihúzzuk az ítéletváltozót
+
+5. lépés: Ha a 3-4 lépések hatására az egyik konjunkciós lánc egy elemű lett, akkor megismételjük a 3-4. lépéseket
+
+Feladat leltár
+
+1. aritmetika, részhalmazok, 3d euklideszi geometria nyelvén állítás
+pl: Z az X és X legnagyobb közös osztója
+
+2. Logikai összetettsége a formulának
+Hány formulája van
+Milyen magas a szerkezeti fa
+A legtávolabbi levélbe vezető élek száma: magasság
+Fő logikai összetevő
+Zárójel elhagyás és visszaírás
+Igazságtábla
+Igazságértékeléssel
+Hány ága vezet ellentmondásra
+Tautologia vagy nem
+
+Formulákból az egészségesek kiválasztása, ezekből a konjunkciósat
