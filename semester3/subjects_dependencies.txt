@@ -1,0 +1,19 @@
+Algo 2 EA -> -
+Algo 2 GY -> Algo 2 EA, Adatbázisok (4. f) -> -
+
+Anal 2 EA -> (Nummód (4. f) -> Kötvál) , Gépi tanulás (Kötvál), Anal 3 (Kötvál)
+Anal 2 GY -> Anal 2 EA
+
+Dimat 2 EA -> Adatud (5. f)
+Dimat 2 GY -> Dimat 2 EA
+
+Evp -> Szoftvertech (4. f), IoT (kötvál)
+
+Konkurrens -> -
+
+Python (Kötvál) -> -
+
+Számtud 1 EA -> Számtud 2 -> -
+Számtud 1 GY -> Számtud 1 EA (5. f)
+
+Webprog -> -

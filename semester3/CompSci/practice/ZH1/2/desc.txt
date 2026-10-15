@@ -1,0 +1,85 @@
+1.
+
+Adjunk meg olyan formulákat a megadott logikai nyelveken, melyeknek a hozzátartozó struktúrabeli jelentése a leírt állítás!
+(Ügyeljen arra, hogy csak a megadott szimbólumokat és logikai jeleket használja!)
+
+a:
+aritmetika nyelve: <N0; = ; s; +; *;0>
+
+Z az X és Y LNKO-ja
+
+b:
+Halmazelmélet nyelve: <P(U); =, C_>
+
+C halmaz az A és B halmaz metszete, és A-nak van valódi részhalmaza
+
+c:
+euklideszi geometria nyelve <P, E, S; =; Illeszkedik>
+pontok: <P,Q,R>
+egyenesek: <e,f>
+síkok: <S,T>
+Illeszkedés: I(x,y)
+
+Az e és f egyenesek kitérőek
+
+2.
+
+(((P => !Q) && (!P || R)) => (!Q || R))
+
+a. Határozza meg a B formula logikai összetettségét (a benne szereplő logikai összekötők számát)!
+b. Sorolja fel a B formula összes részformuláját! Hány darab (különböző) részformulája van B-nek?
+c. Rajzolja fel a B formula szerkezeti fáját, és adja meg a fa magasságát (a gyökértől a legtávolabbi levélbe vezető élek számát)!
+d. Jelölje meg a B formula fő logikai összekötőjét!
+e. Jelölje be a B formula összes logikai összekötőjének hatáskörét!
+f. Hagyja el a lehető legtöbb zárójelet a B formulából (a precedencia- és asszociativitási szabályok alapján)!
+g. Készítse el a B formula igazságtábláját (igazságértékeléssel)!
+h. Határozza meg a B formula igazhalmazát ítéletfa (analitikus tabló) segítségével!
+Állapítsa meg, hány ága vezet ellentmondásra (zárt ágak), hány nyílt ága marad, és döntse el, hogy a formula tautológia-e
+
+3.
+
+Az alábbi karaktersorozatokról állapítsa meg,
+hogy melyek tekinthetők egészséges (jólformált)
+formulának,
+ha a formulákból a zárójelelhagyás szabályai szerint
+hiányozhatnak zárójelek!
+A helyes formulák esetén állapítsa meg a típusát
+(konjunkciós, diszjunkciós,
+implikációs vagy negációs formula),
+majd válassza ki közülük a konjunkciósakat,
+és az összes egészséges formulát alakítsa teljesen 
+zárójelezett formulává!
+Ha a karaktersorozat nem tekinthető formulának,
+röviden indokolja meg, miért!   
+
+a:
+P && !Q => R && !P
+
+b:
+(P => Q) && !(R || P) && Q
+
+c:
+P || Q && ! => R
+
+d:
+!(P && Q) && (R => !P)
+
+e:
+((P || Q) => R) && S)
+
+f:
+!!P || Q
+
+g:
+(P && Q) => (R) || S
+
+4.
+Tautologikus átalakítások / Egyszerűsítés
+
+Tautologikus ekvivalenciák lépésről lépésre történő
+alkalmazásával egyszerűsítse az alábbi ítéletlogikai
+formulát a lehető legegyszerűbb alakra!
+
+((!A => !B) && (B => A)) => ((A && !C) || (A && C) || !(A || D))
+
+
