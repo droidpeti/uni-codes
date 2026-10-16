@@ -1,0 +1,334 @@
+ELTE SEK Progamtervező Informatikus BSc Mintatanterv Tárgyak
+
+Kötelező tárgyak:
+
+Ezekből mindent el kell végezni.
+
+1. félév:
+
+Egyetemi alapozó és tanulásmódszertani kurzus - 1 kredit - Ráépülő tárgyak: -
+Funkcionális Programozás - 5 kredit - Ráépülő tárgyak: -
+Imperatív Programozás - 5 kredit - Ráépülő tárgyak: Programozási Nyelvek (2. f), Algoritmusok és Adatszerkezetek 1 GY (2. f)
+Matematikai Alapok - 4 kredit - Ráépülő tárgyak: Analízis 1 GY (2. f), Diszkrét Matematika 1 GY (2. f)
+Programozás - 6 kredit - Ráépülő tárgyak: Objektumelvű Programozás (2. f), Algoritmusok és Adatszerkezetek 1 GY (2. f), kötvál: Beágyazott eszközök, Python
+Számítógépes Rendszerek - 5 kredit - Ráépülő tárgyak: Webfejlesztés (2. f), Operációs Rendszerek (4. f), Kötvál: IoT Ipari Programozás, Beágyazott eszközök
+
+2. félév:
+
+Algoritmusok és Adatszerkezetek 1 EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Algoritmusok és Adatszerkezetek 2 (3. f)
+Analízs 1 EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Analízis 2 (3. f), Adattudomány alapjai (5. f)
+Diszkrét Matematika 1 EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Diszkrét Matematika 2 (3. f)
+Objektumelvű Programozás - 6 kredit - Ráépülő tárgyak: Telekommunikációs hálózatok (5. f), Eseményvezérelt Programozás (3. f), Kötvál: Web és Cloud Programozás C# nyelven
+Programozási nyelvek - 6 kredit - Ráépülő tárgyak: Konkurrens Programozás (5. f), Operációs Rendszerek (4. f), Kötvál: Web és Cloud Programozás C# Nyelven
+Web-fejlesztés - 3 kredit - Ráépülő tárgyak: Webprogramozás (3. f)
+
+3. félév:
+
+Algoritmusok és Adatszerkezetek 2 EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), GY -> Adatbázisok (4. f)
+Analízis 2 EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Numerikus Módszerek (4. f), Kötvál: Gépi tanulás alapjai, Analízis 3
+Diszkrét Matematika 2 EA + GY - 6 (3 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Adattudomány alapjai (5. f)
+Eseményvezérelt Programozás - 5 kredit - Ráépülő tárgyak: Szoftvertechnológia (4. f), Kötvál: IoT Ipari Programozás
+Számítástudomány alapjai EA + GY: 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Számítástudomány alapjai 2 (5. f)
+Webprogramozás: 4 kredit - Ráépülő tárgyak: -
+
+4. félév:
+
+Adatbázisok EA + GY - 4 (2 + 2 kredit) - Ráépülő tárgyak: GY -> EA (gyenge)
+Mérnöki Alapismeretek Informatikusoknak 1 - 4 kredit - Ráépülő tárgyak: - (Nem tudom a második része miért nem épül rá)
+Numerikus Módszerek EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge), Kötvál: Numerikus Számítási Algoritmusok
+Operációs Rendszerek - 3 kredit - Ráépülő tárgyak: -
+Számítógéppel támogatott tervezés - 3 kredit - Ráépülő tárgyak: -
+Szoftvertechnológia: 5 kredit - Ráépülő tárgyak: -
+
+5. félév:
+
+Adattudomány Alapjai EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge)
+Konkurrens Programozás - 3 kredit - Ráépülő tárgyak: -
+Mérnöki Alapismeretek Informatikusoknak 2 - 3 kredit - Ráépülő tárgyak: -
+Mesterséges Intelligencia - 3 kredit - Ráépülő tárgyak: -
+Számítástudomány Alapjai 2 EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge)
+Telekommunikációs Hálózatok EA + GY - 5 (2 + 3 kredit) - Ráépülő tárgyak: GY -> EA (gyenge) 
+
+6. félév:
+
+Szakdolgozati Konzultáció - 20 kredit
+
+Nincs ajánlott félév:
+
+Jogi ismeretek - 3 kredit - Ráépülő tárgyak: -
+Innovatív Vállalkozás Menedzsment 1 - 3 kredit - Ráépülő tárgyak: Kötvál: Innovatív Vállalkozás Menedzsment 2
+
+Kötelezően választható tárgyak:
+
+Ezekből minimum 10 kreditet kell elvégezni
+
+1. félév:
+
+-
+
+2. félév:
+
+Beágyazott eszközök - 5 kredit - Előkövetelmények: Programozás (1. f), Számítógépes Rendszerek (1. f)
+
+3. félév:
+
+-
+
+4. félév:
+
+IoT Ipari Programozás - 5 kredit - Előkövetelmények: Eseményvezérelt Programozás (3. f), Számítógépes Rendszerek (1. f)
+Web és Cloud Programozás C# nyelven - 5 kredit: Objektumelvű Programozás (2. f), Programozási Nyelvek (2. f)
+
+5. félév:
+
+Analízis 3 EA + GY - 5 (2 + 3 kredit) - Előkövetelmények: Analízis 2 (3. f)
+Projektlabor - 5 kredit - Előkövetelmények: -
+A Gépi Tanulás Alapjai - 5 kredit - Előkövetelmények: Analízis 2 (3. f)
+
+6. félév:
+
+Numerikus Számítási Algoritmusok - 3 kredit - Előkövetelmények: Numerikus Módszerek (4. f)
+
+Nincs ajánlott félév:
+
+Informatikai Biztonság - 5 kredit - Előkövetelmények: -
+Innovatív Vállalkozás Menedzsment 2 - 5 kredit - Előkövetelmények: Innovatív Vállalkozás Menedzsment 1
+Python - 5 kredit - Előkövetelmények: Programozás (1. f)
+
+Szabadon Választható Tárgyak:
+
+Bármelyik tárgyat az egyetemen felveheted.
+Minimum 10 kredit kell.
+Ki lehet váltani, a Kötelezően választható tárgyak krediteivel is.
+
+================================================================================
+REKURZÍV RÁÉPÜLÉSI STATISZTIKA ÉS KRITIKUS ÚTVONALAK (CSÚSZÁSVESZÉLY)
+================================================================================
+Megjegyzés a számoláshoz: Az előadás + gyakorlat (EA + GY) tárgyakat egyetlen 
+tárgyegységként számoljuk, a tárgyon belüli "GY -> EA (gyenge)" előkövetelményt 
+nem vettük külön tárgyként, csak a későbbi félévekben ráépülő új tárgyakat.
+--------------------------------------------------------------------------------
+KÖTELEZŐ TÁRGYAK REKURZÍV RÁÉPÜLÉSEI FÉLÉVENKÉNT
+--------------------------------------------------------------------------------
+
+1. félév:
+
+* Programozás (6 kredit) -> ÖSSZESEN: 7 kötelező + 4 kötvál (11 tárgy!)
+  - Rekurzívan ráépülő KÖTELEZŐK (7 db): 
+    Objektumelvű Programozás (2. f)
+    Algoritmusok és Adatszerkezetek 1 (2. f)
+    Eseményvezérelt Programozás (3. f)
+    Algoritmusok és Adatszerkezetek 2 (3. f)
+    Szoftvertechnológia (4. f)
+    Adatbázisok (4. f)
+    Telekommunikációs Hálózatok (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (4 db): 
+    Beágyazott eszközök (2. f), Python (nincs f.), Web és Cloud Programozás C# nyelven (4. f), IoT Ipari Programozás (4. f)
+
+
+
+* Matematikai Alapok (4 kredit) -> ÖSSZESEN: 6 kötelező + 3 kötvál (9 tárgy!)
+  - Rekurzívan ráépülő KÖTELEZŐK (6 db): 
+    Analízis 1 (2. f)
+    Diszkrét Matematika 1 (2. f)
+    Analízis 2 (3. f)
+    Diszkrét Matematika 2 (3. f)
+    Numerikus Módszerek (4. f)
+    Adattudomány Alapjai (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (3 db): 
+    Analízis 3 (5. f), A Gépi Tanulás Alapjai (5. f), Numerikus Számítási Algoritmusok (6. f)
+
+* Imperatív Programozás (5 kredit) -> ÖSSZESEN: 6 kötelező + 1 kötvál (7 tárgy!)
+  - Rekurzívan ráépülő KÖTELEZŐK (6 db): 
+    Programozási Nyelvek (2. f)
+    Algoritmusok és Adatszerkezetek 1 (2. f)
+    Algoritmusok és Adatszerkezetek 2 (3. f)
+    Operációs Rendszerek (4. f)
+    Adatbázisok (4. f)
+    Konkurrens Programozás (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (1 db): 
+    Web és Cloud Programozás C# nyelven (4. f)
+
+* Számítógépes Rendszerek (5 kredit) -> ÖSSZESEN: 3 kötelező + 2 kötvál (5 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (3 db): 
+    Web-fejlesztés (2. f)
+    Webprogramozás (3. f)
+    Operációs Rendszerek (4. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (2 db): 
+    Beágyazott eszközök (2. f), IoT Ipari Programozás (4. f)
+
+* Egyetemi alapozó és tanulásmódszertani kurzus (1 kredit) -> 0 kötelező + 0 kötvál
+
+* Funkcionális Programozás (5 kredit) -> 0 kötelező + 0 kötvál
+
+2. félév:
+
+* Analízis 1 EA + GY (5 kredit) -> ÖSSZESEN: 3 kötelező + 3 kötvál (6 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (3 db): 
+    Analízis 2 (3. f)
+    Numerikus Módszerek (4. f)
+    Adattudomány Alapjai (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (3 db): 
+    Analízis 3 (5. f), A Gépi Tanulás Alapjai (5. f), Numerikus Számítási Algoritmusok (6. f)
+
+* Objektumelvű Programozás (6 kredit) -> ÖSSZESEN: 3 kötelező + 2 kötvál (5 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (3 db): 
+    Eseményvezérelt Programozás (3. f)
+    Szoftvertechnológia (4. f)
+    Telekommunikációs Hálózatok (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (2 db): 
+    Web és Cloud Programozás C# nyelven (4. f), IoT Ipari Programozás (4. f)
+
+* Programozási nyelvek (6 kredit) -> ÖSSZESEN: 2 kötelező + 1 kötvál (3 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (2 db): 
+    Operációs Rendszerek (4. f)
+    Konkurrens Programozás (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (1 db): 
+    Web és Cloud Programozás C# nyelven (4. f)
+
+* Algoritmusok és Adatszerkezetek 1 EA + GY (5 kredit) -> ÖSSZESEN: 2 kötelező + 0 kötvál (2 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (2 db): 
+    Algoritmusok és Adatszerkezetek 2 (3. f)
+    Adatbázisok (4. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (0 db): -
+
+* Diszkrét Matematika 1 EA + GY (5 kredit) -> ÖSSZESEN: 2 kötelező + 0 kötvál (2 tárgy)
+
+  - Rekurzívan ráépülő KÖTELEZŐK (2 db): 
+    Diszkrét Matematika 2 (3. f)
+    Adattudomány Alapjai (5. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (0 db): -
+
+* Web-fejlesztés (3 kredit) -> ÖSSZESEN: 1 kötelező + 0 kötvál (1 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (1 db): 
+    Webprogramozás (3. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (0 db): -
+
+3. félév:
+
+* Analízis 2 EA + GY (5 kredit) -> ÖSSZESEN: 1 kötelező + 3 kötvál (4 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (1 db): 
+    Numerikus Módszerek (4. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (3 db): 
+    Analízis 3 (5. f), A Gépi Tanulás Alapjai (5. f), Numerikus Számítási Algoritmusok (6. f)
+
+* Eseményvezérelt Programozás (5 kredit) -> ÖSSZESEN: 1 kötelező + 1 kötvál (2 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (1 db): 
+    Szoftvertechnológia (4. f)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (1 db): 
+    IoT Ipari Programozás (4. f)
+
+* Algoritmusok és Adatszerkezetek 2 EA + GY (5 kredit) -> ÖSSZESEN: 1 kötelező + 0 kötvál (1 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (1 db): 
+    Adatbázisok (4. f)
+
+* Diszkrét Matematika 2 EA + GY (6 kredit) -> ÖSSZESEN: 1 kötelező + 0 kötvál (1 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (1 db): 
+    Adattudomány Alapjai (5. f)
+
+* Számítástudomány alapjai EA + GY (5 kredit) -> ÖSSZESEN: 1 kötelező + 0 kötvál (1 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (1 db): 
+    Számítástudomány Alapjai 2 (5. f)
+
+* Webprogramozás (4 kredit) -> 0 kötelező + 0 kötvál
+
+4. félév:
+
+* Numerikus Módszerek EA + GY (5 kredit) -> ÖSSZESEN: 0 kötelező + 1 kötvál (1 tárgy)
+  - Rekurzívan ráépülő KÖTELEZŐK (0 db): -
+  - Rekurzívan ráépülő KÖTVÁLOK (1 db): 
+    Numerikus Számítási Algoritmusok (6. f)
+
+* Adatbázisok EA + GY (4 kredit) -> 0 kötelező + 0 kötvál
+
+* Mérnöki Alapismeretek Informatikusoknak 1 (4 kredit) -> 0 kötelező + 0 kötvál
+
+* Operációs Rendszerek (3 kredit) -> 0 kötelező + 0 kötvál
+
+* Számítógéppel támogatott tervezés (3 kredit) -> 0 kötelező + 0 kötvál
+
+* Szoftvertechnológia (5 kredit) -> 0 kötelező + 0 kötvál
+
+5. félév:
+
+* Adattudomány Alapjai EA + GY (5 kredit) -> 0 kötelező + 0 kötvál
+
+* Konkurrens Programozás (3 kredit) -> 0 kötelező + 0 kötvál
+
+* Mérnöki Alapismeretek Informatikusoknak 2 (3 kredit) -> 0 kötelező + 0 kötvál
+
+* Mesterséges Intelligencia (3 kredit) -> 0 kötelező + 0 kötvál
+
+* Számítástudomány Alapjai 2 EA + GY (5 kredit) -> 0 kötelező + 0 kötvál
+
+* Telekommunikációs Hálózatok EA + GY (5 kredit) -> 0 kötelező + 0 kötvál
+
+6. félév:
+
+* Szakdolgozati Konzultáció (20 kredit) -> 0 kötelező + 0 kötvál
+
+Nincs ajánlott félév (Kötelezők):
+
+* Innovatív Vállalkozás Menedzsment 1 (3 kredit) -> ÖSSZESEN: 0 kötelező + 1 kötvál (1 tárgy)
+
+  - Rekurzívan ráépülő KÖTVÁLOK (1 db): 
+
+    Innovatív Vállalkozás Menedzsment 2 (nincs f.)
+
+* Jogi ismeretek (3 kredit) -> 0 kötelező + 0 kötvál
+
+--------------------------------------------------------------------------------
+
+KÖTELEZŐEN VÁLASZTHATÓ (KÖTVÁL) TÁRGYAK REKURZÍV RÁÉPÜLÉSEI
+
+--------------------------------------------------------------------------------
+
+A mintatanterv alapján egyik kötelezően választható tárgyra sem épül másik 
+
+tárgy (mindegyiknél 0 kötelező + 0 kötvál a továbbépülés):
+
+* 2. félév: Beágyazott eszközök -> 0 kötelező + 0 kötvál
+
+* 4. félév: IoT Ipari Programozás -> 0 kötelező + 0 kötvál
+
+* 4. félév: Web és Cloud Programozás C# nyelven -> 0 kötelező + 0 kötvál
+
+* 5. félév: Analízis 3 EA + GY -> 0 kötelező + 0 kötvál
+
+* 5. félév: Projektlabor -> 0 kötelező + 0 kötvál
+
+* 5. félév: A Gépi Tanulás Alapjai -> 0 kötelező + 0 kötvál
+
+* 6. félév: Numerikus Számítási Algoritmusok -> 0 kötelező + 0 kötvál
+
+* Nincs ajánlott félév: Informatikai Biztonság, Innovatív Vállalkozás Menedzsment 2, Python -> 0 kötelező + 0 kötvál
+
+--------------------------------------------------------------------------------
+
+TOP 5 LEGFONTOSABB TÁRGY A CSÚSZÁS ELKERÜLÉSÉHEZ (ÖSSZESÍTETT RANGSOR)
+
+--------------------------------------------------------------------------------
+
+Ha ezeket a tárgyakat nem sikerül elsőre teljesíteni, az lavinaszerű csúszást okoz a későbbi félévekben:
+
+1. Programozás (1. félév) – 7 kötelező + 4 kötvál (11 tárgyat blokkol!)
+
+2. Matematikai Alapok (1. félév) – 6 kötelező + 3 kötvál (9 tárgyat blokkol!)
+
+3. Imperatív Programozás (1. félév) – 6 kötelező + 1 kötvál (7 tárgyat blokkol!)
+
+4. Analízis 1 (2. félév) – 3 kötelező + 3 kötvál (6 tárgyat blokkol!)
+
+5. Számítógépes Rendszerek (1. félév) ÉS Objektumelvű Programozás (2. félév) – 3 kötelező + 2 kötvál (5-5 tárgyat blokkolnak!)
