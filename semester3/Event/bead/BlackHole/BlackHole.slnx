@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BlackHole.Model/BlackHole.Model.csproj" />
+  <Project Path="BlackHole.Test/BlackHole.Test.csproj" />
+  <Project Path="BlackHole/BlackHole.csproj" />
+</Solution>

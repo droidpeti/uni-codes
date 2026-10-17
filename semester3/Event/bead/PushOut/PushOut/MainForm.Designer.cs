@@ -1,0 +1,155 @@
+#nullable enable
+namespace PushOut;
+
+partial class MainForm
+{
+    private System.ComponentModel.IContainer? components = null;
+    private MenuStrip _menuStrip = null!;
+    private ToolStripMenuItem _fileMenuItem = null!;
+    private ToolStripMenuItem _newGame3MenuItem = null!;
+    private ToolStripMenuItem _newGame4MenuItem = null!;
+    private ToolStripMenuItem _newGame6MenuItem = null!;
+    private ToolStripSeparator _separator1 = null!;
+    private ToolStripMenuItem _saveMenuItem = null!;
+    private ToolStripMenuItem _loadMenuItem = null!;
+    private ToolStripSeparator _separator2 = null!;
+    private ToolStripMenuItem _exitMenuItem = null!;
+    private StatusStrip _statusStrip = null!;
+    private ToolStripStatusLabel _turnLabel = null!;
+    private ToolStripStatusLabel _stepsLabel = null!;
+    private ToolStripStatusLabel _scoreLabel = null!;
+    private Panel _boardPanel = null!;
+
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing && (components != null))
+        {
+            components.Dispose();
+        }
+        base.Dispose(disposing);
+    }
+
+    private void InitializeComponent()
+    {
+        _menuStrip = new MenuStrip();
+        _fileMenuItem = new ToolStripMenuItem();
+        _newGame3MenuItem = new ToolStripMenuItem();
+        _newGame4MenuItem = new ToolStripMenuItem();
+        _newGame6MenuItem = new ToolStripMenuItem();
+        _separator1 = new ToolStripSeparator();
+        _saveMenuItem = new ToolStripMenuItem();
+        _loadMenuItem = new ToolStripMenuItem();
+        _separator2 = new ToolStripSeparator();
+        _exitMenuItem = new ToolStripMenuItem();
+        _statusStrip = new StatusStrip();
+        _turnLabel = new ToolStripStatusLabel();
+        _stepsLabel = new ToolStripStatusLabel();
+        _scoreLabel = new ToolStripStatusLabel();
+        _boardPanel = new Panel();
+        _menuStrip.SuspendLayout();
+        _statusStrip.SuspendLayout();
+        SuspendLayout();
+
+        _menuStrip.Items.AddRange(new ToolStripItem[] { _fileMenuItem });
+        _menuStrip.Location = new Point(0, 0);
+        _menuStrip.Name = "_menuStrip";
+        _menuStrip.Size = new Size(500, 24);
+        _menuStrip.TabIndex = 0;
+        _menuStrip.Text = "Menu";
+
+        _fileMenuItem.DropDownItems.AddRange(new ToolStripItem[]
+        {
+            _newGame3MenuItem,
+            _newGame4MenuItem,
+            _newGame6MenuItem,
+            _separator1,
+            _saveMenuItem,
+            _loadMenuItem,
+            _separator2,
+            _exitMenuItem
+        });
+        _fileMenuItem.Name = "_fileMenuItem";
+        _fileMenuItem.Size = new Size(37, 20);
+        _fileMenuItem.Text = "&File";
+
+        _newGame3MenuItem.Name = "_newGame3MenuItem";
+        _newGame3MenuItem.Size = new Size(195, 22);
+        _newGame3MenuItem.Text = "New Game (3x3 - 15 steps)";
+        _newGame3MenuItem.Click += OnNewGame3Click;
+
+        _newGame4MenuItem.Name = "_newGame4MenuItem";
+        _newGame4MenuItem.Size = new Size(195, 22);
+        _newGame4MenuItem.Text = "New Game (4x4 - 20 steps)";
+        _newGame4MenuItem.Click += OnNewGame4Click;
+
+        _newGame6MenuItem.Name = "_newGame6MenuItem";
+        _newGame6MenuItem.Size = new Size(195, 22);
+        _newGame6MenuItem.Text = "New Game (6x6 - 30 steps)";
+        _newGame6MenuItem.Click += OnNewGame6Click;
+
+        _separator1.Name = "_separator1";
+        _separator1.Size = new Size(192, 6);
+
+        _saveMenuItem.Name = "_saveMenuItem";
+        _saveMenuItem.Size = new Size(195, 22);
+        _saveMenuItem.Text = "&Save Game...";
+        _saveMenuItem.Click += OnSaveGameClick;
+
+        _loadMenuItem.Name = "_loadMenuItem";
+        _loadMenuItem.Size = new Size(195, 22);
+        _loadMenuItem.Text = "&Load Game...";
+        _loadMenuItem.Click += OnLoadGameClick;
+
+        _separator2.Name = "_separator2";
+        _separator2.Size = new Size(192, 6);
+
+        _exitMenuItem.Name = "_exitMenuItem";
+        _exitMenuItem.Size = new Size(195, 22);
+        _exitMenuItem.Text = "E&xit";
+        _exitMenuItem.Click += OnExitClick;
+
+        _statusStrip.Items.AddRange(new ToolStripItem[] { _turnLabel, _stepsLabel, _scoreLabel });
+        _statusStrip.Location = new Point(0, 478);
+        _statusStrip.Name = "_statusStrip";
+        _statusStrip.Size = new Size(500, 22);
+        _statusStrip.TabIndex = 1;
+        _statusStrip.Text = "Status";
+
+        _turnLabel.Name = "_turnLabel";
+        _turnLabel.Size = new Size(100, 17);
+        _turnLabel.Text = "Turn: White";
+
+        _stepsLabel.Name = "_stepsLabel";
+        _stepsLabel.Size = new Size(100, 17);
+        _stepsLabel.Text = "| Steps left: 15";
+
+        _scoreLabel.Name = "_scoreLabel";
+        _scoreLabel.Size = new Size(140, 17);
+        _scoreLabel.Text = "| White: 3  Black: 3";
+
+        _boardPanel.Location = new Point(10, 34);
+        _boardPanel.Name = "_boardPanel";
+        _boardPanel.Size = new Size(300, 300);
+        _boardPanel.TabIndex = 2;
+
+        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(500, 500);
+        Controls.Add(_boardPanel);
+        Controls.Add(_statusStrip);
+        Controls.Add(_menuStrip);
+        FormBorderStyle = FormBorderStyle.FixedSingle;
+        KeyPreview = true;
+        MainMenuStrip = _menuStrip;
+        MaximizeBox = false;
+        Name = "MainForm";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Push Out";
+        _menuStrip.ResumeLayout(false);
+        _menuStrip.PerformLayout();
+        _statusStrip.ResumeLayout(false);
+        _statusStrip.PerformLayout();
+        ResumeLayout(false);
+        PerformLayout();
+    }
+}

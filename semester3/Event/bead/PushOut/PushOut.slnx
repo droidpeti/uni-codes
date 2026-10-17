@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="PushOut.Model/PushOut.Model.csproj" />
+  <Project Path="PushOut.Test/PushOut.Test.csproj" />
+  <Project Path="PushOut/PushOut.csproj" />
+</Solution>

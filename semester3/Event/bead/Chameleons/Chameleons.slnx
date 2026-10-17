@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Chameleons.Model/Chameleons.Model.csproj" />
+  <Project Path="Chameleons.Test/Chameleons.Test.csproj" />
+  <Project Path="Chameleons/Chameleons.csproj" />
+</Solution>

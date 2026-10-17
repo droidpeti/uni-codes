@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Minesweeper.Model/Minesweeper.Model.csproj" />
+  <Project Path="Minesweeper.Test/Minesweeper.Test.csproj" />
+  <Project Path="Minesweeper/Minesweeper.csproj" />
+</Solution>
