@@ -1,0 +1,13 @@
+Az első tag, és a mellette lévő operátor,
+benne lesz az összes többi taggal egy-egy zárójelben,
+ami az eredeti zárójelben volt operátor, az lesz a zárójelek között
+
+x && (y || z) = (x && y) || (x && z)
+x || (y && z) = (x || y) && (x || z)
+
+Ha önmaga van benne, akkor csak simán maga marad meg
+Ha az ellentettje, akkor maga és egy vagy operátorral elválasztva ami az ellentettjén kívül van a zárójelben
+
+x && (x || y) = x
+x || (x && y) = x
+x || (!x && y) = x || y
