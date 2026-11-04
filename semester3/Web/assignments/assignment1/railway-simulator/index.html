@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vasúti Forgalomirányító és Váltóállomás Szimulátor</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="screen screen-menu" data-screen="menu" aria-labelledby="menu-title">
+      <header class="menu-header">
+        <h1 id="menu-title">Vasúti Forgalomirányító és Váltóállomás Szimulátor</h1>
+        <p>A Nagy Csomóponti Pályaudvar új diszpécsert keres. Állítsd a váltókat, kapcsold a jelzőket, és juttasd célba a vonatokat balesetmentesen!</p>
+      </header>
+
+      <div class="menu-grid">
+        <div class="menu-column">
+          <form id="start-form" class="card" novalidate autocomplete="off">
+            <h2>Új szimuláció</h2>
+
+            <label class="field">
+              <span>Diszpécser neve</span>
+              <input id="player-name" name="player" type="text" maxlength="24" required placeholder="Pl. Kovács Anna">
+            </label>
+
+            <fieldset class="levels">
+              <legend>Nehézségi szint</legend>
+              <label class="level-option">
+                <input type="radio" name="level" value="easy" checked>
+                <span class="level-body">
+                  <strong>Könnyű</strong>
+                  <small>Kitérő vágány jelzőkkel · 2 váltó · 3 jelző · 4 szerelvény</small>
+                </span>
+              </label>
+              <label class="level-option">
+                <input type="radio" name="level" value="medium">
+                <span class="level-body">
+                  <strong>Közepes</strong>
+                  <small>Rendező-pályaudvar · 3 váltó · 4 jelző · 5 szerelvény</small>
+                </span>
+              </label>
+              <label class="level-option">
+                <input type="radio" name="level" value="hard">
+                <span class="level-body">
+                  <strong>Nehéz</strong>
+                  <small>Fejpályaudvari csúcsforgalom · 4 váltó · 6 jelző · 6 szerelvény</small>
+                </span>
+              </label>
+            </fieldset>
+
+            <p id="menu-message" class="menu-message" role="status" aria-live="polite"></p>
+
+            <div class="button-row">
+              <button class="btn btn-primary" type="submit">Szimuláció Indítása</button>
+              <button class="btn" type="button" data-action="load">Mentett játékállás betöltése</button>
+            </div>
+          </form>
+
+          <article class="card rules">
+            <h2>Játékszabályzat és irányítás</h2>
+            <h3>Cél</h3>
+            <p>Minden szerelvényt a saját színének megfelelő peronra kell juttatni ütközés és kisiklás nélkül, a lehető legrövidebb idő alatt.</p>
+            <h3>Irányítás</h3>
+            <ul>
+              <li><strong>Bal egérgomb a váltóra</strong> (kör alakú csomópont): a váltó a következő vágányágra áll. A sárga nyíl és a kiemelt vágányszakasz mutatja az aktív irányt.</li>
+              <li><strong>Bal egérgomb a fényjelzőre:</strong> a jelző Vörös (Megállj!) és Zöld (Szabad az út!) állapot között vált.</li>
+              <li><strong>Jobb egérgomb a vonatra:</strong> kézi vészfékezés. A vonat megáll és „FÉK” felirat jelenik meg fölötte. Újabb jobb kattintással a fék feloldódik.</li>
+              <li><strong>P billentyű:</strong> szünet / folytatás.</li>
+            </ul>
+            <h3>Szabályok</h3>
+            <ul>
+              <li>Vörös jelzés előtt a vonat automatikusan megáll, kerete vörösre vált, és „TILOS” felirat jelenik meg. Zöld jelzésre folytatja az útját.</li>
+              <li>Ha két szerelvény közelsége veszélyes zónába ér, pulzáló szaggatott kör figyelmeztet. Ha összeérnek, a vonatok megsemmisülnek, a játék véget ér.</li>
+              <li>Ha a vonat vágányvégre fut, kisiklik, és hibapontot kapsz.</li>
+              <li>Ha a vonat nem a saját színének megfelelő peronra érkezik, hibapontot kapsz.</li>
+              <li>Az azonos vágányon haladó szerelvények automatikusan követési távolságot tartanak.</li>
+              <li>A pályát befejezve az eredményed felkerül a helyi dicsőséglistára: előbb a hibátlan teljesítések, majd a leggyorsabb idők szerint.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="card leaderboard" aria-labelledby="board-title">
+          <h2 id="board-title">Dicsőséglista</h2>
+          <div class="board-tabs" role="group" aria-label="Pálya kiválasztása">
+            <button class="tab" type="button" data-action="board-tab" data-level="easy" data-board-tab>Könnyű</button>
+            <button class="tab" type="button" data-action="board-tab" data-level="medium" data-board-tab>Közepes</button>
+            <button class="tab" type="button" data-action="board-tab" data-level="hard" data-board-tab>Nehéz</button>
+          </div>
+          <table class="board-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Név</th>
+                <th scope="col">Idő</th>
+                <th scope="col">Hibák</th>
+                <th scope="col">Dátum</th>
+              </tr>
+            </thead>
+            <tbody id="board-body"></tbody>
+          </table>
+        </aside>
+      </div>
+    </section>
+
+    <section class="screen screen-game" data-screen="game" aria-label="Játékképernyő" hidden>
+      <header class="hud" aria-label="Játékadatok">
+        <div class="hud-item">
+          <span class="hud-label">Diszpécser</span>
+          <strong id="hud-player"></strong>
+        </div>
+        <div class="hud-item hud-wide">
+          <span class="hud-label">Pálya</span>
+          <strong id="hud-level"></strong>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Játékidő</span>
+          <strong id="hud-time">00:00</strong>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Célba ért</span>
+          <strong id="hud-delivered"></strong>
+        </div>
+        <div class="hud-item hud-wide">
+          <span class="hud-label">Hibák és késések</span>
+          <strong id="hud-errors"></strong>
+        </div>
+      </header>
+
+      <div class="game-body">
+        <div class="board-wrap">
+          <canvas id="board" width="1000" height="600" aria-label="Vágányhálózat"></canvas>
+        </div>
+        <aside class="side-panel">
+          <h2>Menetrend</h2>
+          <ol id="schedule-list" class="schedule-list"></ol>
+          <h2>Események</h2>
+          <ul id="event-log" class="event-log"></ul>
+        </aside>
+      </div>
+
+      <footer class="controls">
+        <button id="btn-pause" class="btn" type="button" data-action="pause">Szünet</button>
+        <button class="btn" type="button" data-action="reset">Újraindítás</button>
+        <button id="btn-save" class="btn" type="button" data-action="save">Játékállás mentése</button>
+        <button class="btn" type="button" data-action="menu">Főmenü</button>
+        <p id="hud-notice" class="notice" role="status" aria-live="polite"></p>
+      </footer>
+    </section>
+  </main>
+
+  <dialog id="modal" class="modal" aria-labelledby="modal-title">
+    <div id="modal-card" class="modal-card" data-tone="info">
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+      <div id="modal-actions" class="button-row"></div>
+    </div>
+  </dialog>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
