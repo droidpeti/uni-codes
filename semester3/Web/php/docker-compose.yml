@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  web:
+    image: docker.io/library/php:8.4-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www/html:/var/www/html:Z

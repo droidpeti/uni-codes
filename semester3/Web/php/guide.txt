@@ -1,0 +1,7 @@
+create the directory www/html here
+
+start:
+    podman-compose up -d
+
+stop:
+    podman-compose down
