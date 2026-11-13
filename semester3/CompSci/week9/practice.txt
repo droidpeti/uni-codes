@@ -1,0 +1,104 @@
+∋
+⊆
+∀
+∃
+
+1.
+
+Melyek a szabad, kötött, vegyes változók az alábbi formulában?
+
+∀z((f(z) = y) || !∀y((f(y) = x) && !(z = y)))
+
+szabad: szerepel a formulában, de nem vonatkozik rá kvantor
+kötött: szerepel a formulában, de minden előfordulása egy őt megnevező kvantor hatáskörébe esik
+vegyes: paramétere a formulának, de kvantor is megnevezi
+
+szabad: x
+kötött: z
+vegyes: y
+
+2.
+
+Legyen az <{P, Q}, {f, g, h}, {1,2}>
+egyfajtájó struktúra szignatúrája a 
+következő: 
+
+Y1(P) = 2, Y2(Q) = 1
+Y2(f) = 1, Y2(g) = 1, Y2(h) = 1
+
+Tekintsük a nyelv alábbi interpretációját
+
+< U, Ipr, Ifn, Iconst> ahol
+
+U = {i, j, k}
+Ipr: P -> Pi : Pi ig = {(i,j), (j, k), (k,j)}
+     Q -> Qi : Qi ig = {(j), (k)}
+
+Ifn: f -> fi : Fi = j (konstans fv)
+     g -> gi : gi(x) = x (identitás fv)
+     h -> hi : hi: i -> k
+                   j -> i
+                   k -> j
+
+Iconst: 1 -> i
+        2 -> k
+
+Készítse el a 
+
+(∀x(P(x,y) || Q(x)) => !∃x P(x,y)) && P(f(y), h(g(1)))
+formula értéktábláját ebben az interpretációban!
+
+Megoldás:
+
+x kötött, y szabad változó => a formula paraméteres, az y az egyetlen paramétere
+
+y | (∀x(P(x,y) || Q(x)) => !∃x P(x,y)) && P(f(y), h(g(1))) |
+i |
+j |
+k |
+
+Szerkezeti fa:
+
+((∀x(P(x,y) || Q(x))) => !∃x P(x,y)) && P(f(y), h(g(1)))
+                        /                   \
+   (∀x(P(x,y) || Q(x)) => !∃x P(x,y))     P(f(y), h(g(1)))
+              /           \
+   ∀x(P(x,y) || Q(x))    !∃x P(x,y)
+              |             |
+      P(x,y) || Q(x)      ∃x P(x,y)
+         /      \           |
+      P(x,y)    Q(x)       P(x,y)
+
+x | Q(x)
+i | hamis
+j | igaz
+k | igaz
+
+x | P(x, y = i) | P(x, y = j) | P(x, y = k)
+i | hamis       | igaz        | hamis
+j | hamis       | hamis       | igaz
+k | hamis       | igaz        | hamis
+
+y | ∃x P(x,y) | !∃x P(x,y)
+i | hamis     | igaz
+j | igaz      | hamis
+k | igaz      | hamis
+
+x | P(x, y = i) || Q(x) | P(x, y = j) || Q(x) | P(x, y = k) || Q(x) |
+i | hamis               | igaz                | hamis
+j | igaz                | igaz                | igaz
+k | igaz                | igaz                | igaz
+
+∀x(P(x,y = i) || Q(x)) = hamis
+∀x(P(x,y = j) || Q(x)) = igaz
+∀x(P(x,y = k) || Q(x)) = hamis
+
+y | (∀x(P(x,y) || Q(x)) => !∃x P(x,y))
+i | igaz
+j | hamis
+k | igaz
+
+y | ((∀x(P(x,y) || Q(x))) => !∃x P(x,y)) && P(f(y), h(g(1)))
+i | igaz
+j | hamis
+k | igaz
