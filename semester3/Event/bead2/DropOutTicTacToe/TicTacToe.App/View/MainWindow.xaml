@@ -1,0 +1,109 @@
+<Window x:Class="TicTacToe.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Drop-Out Tic-Tac-Toe"
+        Width="780"
+        Height="860"
+        MinWidth="560"
+        MinHeight="520"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Game">
+                <MenuItem Header="_New game">
+                    <MenuItem Header="_10 x 10" CommandParameter="10" Command="{Binding NewGameCommand}" />
+                    <MenuItem Header="_20 x 20" CommandParameter="20" Command="{Binding NewGameCommand}" />
+                    <MenuItem Header="_30 x 30" CommandParameter="30" Command="{Binding NewGameCommand}" />
+                </MenuItem>
+                <MenuItem Header="{Binding PauseMenuText}" Command="{Binding PauseCommand}" />
+                <Separator />
+                <MenuItem Header="_Save game..." Command="{Binding SaveGameCommand}" />
+                <MenuItem Header="_Load game..." Command="{Binding LoadGameCommand}" />
+                <Separator />
+                <MenuItem Header="E_xit" Command="{Binding ExitCommand}" />
+            </MenuItem>
+        </Menu>
+
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="{Binding StatusText}" FontWeight="Bold" />
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Player X thinking time: " />
+                    <TextBlock Text="{Binding FirstPlayerTime}" />
+                </StackPanel>
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Player O thinking time: " />
+                    <TextBlock Text="{Binding SecondPlayerTime}" />
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+
+        <Viewbox Margin="8" Stretch="Uniform">
+            <ItemsControl ItemsSource="{Binding Cells}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="{Binding Size}" Columns="{Binding Size}" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Width="34"
+                                Height="34"
+                                Margin="1"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                Content="{Binding Text}"
+                                CommandParameter="{Binding}"
+                                Command="{Binding DataContext.StepCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="WhiteSmoke" />
+                                    <Setter Property="Foreground" Value="Black" />
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border x:Name="Border"
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="Gray"
+                                                        BorderThickness="1">
+                                                    <ContentPresenter HorizontalAlignment="Center"
+                                                                      VerticalAlignment="Center" />
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <MultiTrigger>
+                                                        <MultiTrigger.Conditions>
+                                                            <Condition Property="IsMouseOver" Value="True" />
+                                                            <Condition Property="IsEnabled" Value="True" />
+                                                        </MultiTrigger.Conditions>
+                                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                                    </MultiTrigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Text}" Value="X">
+                                            <Setter Property="Foreground" Value="Crimson" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding Text}" Value="O">
+                                            <Setter Property="Foreground" Value="RoyalBlue" />
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding IsWinning}" Value="True">
+                                            <Setter Property="Background" Value="Gold" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Viewbox>
+    </DockPanel>
+</Window>
