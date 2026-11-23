@@ -1,0 +1,109 @@
+∋
+⊆
+∀
+∃
+
+1. Feladat
+
+konjuktív normálforma: diszjunkciós literál láncok konjukciós lánca
+
+Hozza konjuktív normálforma alakúra a
+¬(x||y&&z) formulát hamishalmazának meghatározásával!
+
+konjuktív normálforma Pl:
+
+(¬x || y || ¬z) && (y || z) && (x || z)
+
+Megoldás:
+
+Hamishalmaz meghatározása:
+
+igazságtáblával, igazságértékelés fával
+
+igazságértékelés fa:
+
+f(¬(x || (y && z))) h
+        |
+f(x || (y && z)) i
+    /       \
+  f(x) i    f(y && z) i
+   |            |
+  (i,*,*)     f(y) i
+                |
+              f(z) i
+                |
+              (*,i,i)
+
+{i i i, i i h, i h i, i h h, h i i}
+
+    x   |   y   |   z   |   egész formula   |   klóz    
+    i   |   i   |   i   |   h =>            | ¬x || ¬y || ¬z
+    i   |   i   |   h   |   h =>            | ¬x || ¬y || z
+    i   |   h   |   i   |   h =>            | ¬x || y || ¬z
+    i   |   h   |   h   |   h =>            | ¬x || y || z
+    h   |   i   |   i   |   h =>            | x || ¬y || ¬z
+
+Ahol igaz van, azt negáljuk, ahol hamis van, az megmarad
+konjuktív normálforma: bármely hamis, az egész hamis lesz
+
+(¬x || ¬y || ¬z) && (¬x || ¬y || z) && (¬x || y || ¬z) && (¬x || y || z) && (x || ¬y || ¬z)
+
+{A1, A2, ... An} ?= B
+
+{A1, A2, ... An, ¬B} kielégíthetetlen?
+    
+KNF: konjuktív normálforma
+
+{KNF A1, KNF A2, ... KNF An, KNF ¬B} kielégíthetetlen?
+
+{a KNF-eket felépítő klózhalmaz kielégíthetetlen}
+
+2. Feladat
+
+A szemantikus fára való illesztés módszerével igazolja, hogy az
+{¬Y, X || Z, ¬X || ¬Y, ¬X || Y, Y || ¬Z} klózhalmaz kielégíthetetlen!
+
+A fa alakját a (Z, X, Y) bázis adja, a klózokat a megadott sorrendben illesztjük a fára
+
+Megoldás:
+
+szemantikus fa:
+
+              |-----Z/\¬Z----|
+         |--X/\¬X-|       |-X/\¬X-|-->  X || Z  
+        Y/\¬Y   Y/\¬Y    Y/\¬Y   Y/\¬Y  
+        1   2   3   4    5   6   7   8
+
+1: ¬Y -> ¬X || ¬Y
+2: ¬X || Y -> Y || ¬Z
+3: ¬Y -> ¬X || ¬Y
+4: ¬X || Y -> Y || ¬Z
+5: ¬Y -> ¬X || ¬Y
+6: ¬X || Y -> Y || ¬Z
+7: ¬Y -> ¬X || ¬Y
+8: ¬X || Y -> Y || ¬Z
+
+Mindkét ága lezárult, tehát kielégíthetetlen. 7db cáfolócsúcs van
+
+Klóz illesztése a szemantikus fára:
+
+A klózt a gyökértől indulva süllyesztjük a szemantikus fán.
+Ha a fa néha (vagy: fa minden) gyökeréhez kapcsolódó két ág Q-val és ¬Q-val van felcímkézve,
+akkor ha a süllyesztendő klózban a Q literál szerepel,
+akkor a ¬Q ág felé süllyesztjük, ha a ¬Q szerepel a klózban, akkor pedig a Q ág felé süllyed tovább.
+Ha a klózban sem a Q, sem a ¬Q literál nem szerepel, akkor mind a két ágon (Q és ¬Q) tovább kell süllyesztenünk a fában.
+
+Ha a süllyesztés közben az összes klózban szereplő literál szerepelt a gyökértől az aktuális csúcshoz vezető élek címkéi között,
+akkor a süllyesztés befejeződik és azt mondjuk, hogy a klóz lezárta a szemantikus fa aktuális csúcsát.
+
+Ha a klózok illesztése után a szemantikus fa minden ága lezárásra kerül,
+akkor azt mondjuk, hogy a szemantikus fa zárt, és ez azt jelenti,
+hogy a klóz halmaz kielégíthetetlen.
+
+Pl:
+
+    P || ¬Q || R        P || ¬R
+           Q/\¬Q        Q /\ ¬Q
+    P||¬Q||R         P||¬R P||¬R
+
+Magát a csúcsokat pedig cáfoló csúccsá nyilvánítjuk

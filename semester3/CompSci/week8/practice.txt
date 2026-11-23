@@ -1,0 +1,116 @@
+∋
+⊆
+∀
+∃
+
+1. Feladat
+
+Egy többfajtájú struktúra feletti elsőrendű
+logikai nyelv logikán kívüli szimbólumokat a következő
+halmaznégyes definiálja:
+
+<{~, -}; {P, Q}; {f, g, h}; {1, 2}>
+
+A struktúra szignatúrája a következő
+
+V1(P) = (~, ~)
+V2(f) = (-; ~)
+V3(1) = (~)
+V1(Q) = (~, -)
+V2(g) = (~, -; ~)
+V3(2) = (-)
+V2(h) = (~; -)
+
+Válassza ki az alábbiak közül a ~ (-) fajtájú termeket
+
+a:
+1
+
+~ fajtájú term
+
+b:
+P(g(f(2), 2), f(2))
+
+atomi formula
+
+c:
+Q(f(2), h(f(2)))
+
+atomi formula
+
+d:
+g(f(2), h(1))
+
+~ fajtájú term
+
+e:
+g(f(f(2)), h(1))
+
+hibás, f(2) miatt
+
+f:
+h(1)
+
+- fajtájú term
+
+g:
+h(g(f(2), 2), h(1))
+
+hibás, h egyváltozós
+
+h:
+h(g(f(2), h(g(1, h(1)))))
+
+- fajtájú term
+
+atomi formula:
+közvetlen részformula, tovább nem bontható
+
+prímformula:
+atomi formula, vagy kvantoros formula (fő összekötő egy kvantor)
+
+literálformula:
+prímformula, vagy egy prímformula negáltja
+
+2. Feladat
+
+Legyenek a, b, c ... - fajtájú, x, y, z ... ~ fajtájú
+változók az 1. Feladatban megadott logikai nyelvben.
+Mely kategóriába sorolhatók az alábbi kifejezések az
+atomi formula, prímformula, literálformula, és formula közül?
+
+a:
+
+Q(f(h(x), h(f(a))))
+
+atomi formula, prímformula, literálformula, formula
+
+b:
+
+¬∀zQ(z, h(g(z,h(z)))) || P(f(b), y)
+
+formula
+
+c:
+
+¬∃cP(g(y, a), f(b))
+
+literálformula, formula
+
+d:
+
+P(g(x, c), f(b))
+
+atomi formula, prímformula, literálformula, formula
+
+e:
+
+∃zQ(f(h(x)), h(f(a)))
+
+prímformula, literálformula, formula
+
+f:
+
+¬∀zQ(z, h(g(z, h(z)))) && P(f(b), y)
+
+formula
