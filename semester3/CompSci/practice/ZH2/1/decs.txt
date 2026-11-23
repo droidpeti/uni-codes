@@ -1,0 +1,95 @@
+1. Feladat (Termek és formulák fajtái)
+Egy többfajtájú struktúra feletti elsőrendű logikai nyelv logikán kívüli szimbólumait a következő halmaznégyes definiálja:
+< {#, @}; {R, S}; {f, g, h}; {a, b} >
+
+A struktúra szignatúrája a következő:
+
+V1(R) = (#, @)
+
+V1(S) = (@, @, #)
+
+V2(f) = (@; #)
+
+V2(g) = (#, @; @)
+
+V2(h) = (#; @)
+
+V3(a) = (#)
+
+V3(b) = (@)
+
+Legyenek u, v, w # fajtájú, x, y, z pedig @ fajtájú változók.
+
+a) Válogassa ki az alábbiak közül a helyes # és @ fajtájú termeket (amelyik hibás vagy formula, indokolja röviden!):
+
+g(a, b)
+
+f(g(f(b), h(a)))
+
+h(g(a, b))
+
+R(f(b), g(a, b))
+
+f(h(a))
+
+S(b, g(f(x), y), u)
+
+b) Sorolja be az alábbi kifejezéseket az atomi formula, prímformula, literálformula és formula kategóriák közül az összesbe, amelyikbe beletartoznak!
+
+S(h(u), b, f(x))
+
+¬∃x R(f(y), g(u, x))
+
+∀u(R(u, x) => S(x, b, a))
+
+¬(∀z R(a, z) && S(b, y, u))
+
+∃w ¬S(b, h(w), w)
+
+2. Feladat (Változók előfordulása)
+Határozza meg a szabad, kötött és vegyes változók halmazát az alábbi elsőrendű logikai formulában!
+
+∃x ((g(x, y) = z) && ¬∀z ((f(z) = w) || ∀y (x = y)))
+
+3. Feladat (Interpretáció és értéktábla)
+Legyen az < {P, Q}, {f, g}, {1, 2} > egyfajtájú struktúra szignatúrája a következő:
+
+Y1(P) = 2, Y1(Q) = 1
+
+Y2(f) = 1, Y2(g) = 2
+
+Tekintsük a nyelv alábbi interpretációját: < U, Ipr, Ifn, Iconst >, ahol:
+
+U = {α, β, γ}
+
+Ipr:
+
+P -> Pi : Pi_ig = { (α, β), (β, β), (γ, α) }
+
+Q -> Qi : Qi_ig = { (α), (γ) }
+
+Ifn:
+
+f -> fi : fi(α) = γ, fi(β) = α, fi(γ) = β
+
+g -> gi : gi(x, y) = x (mindig az első argumentumot adja vissza)
+
+Iconst:
+
+1 -> α, 2 -> γ
+
+Készítse el az alábbi formula értéktábláját ebben az interpretációban (a részkifejezések kiértékelésével együtt)!
+
+(∃x (Q(x) && P(x, y)) => ∀x P(y, x)) || Q(f(g(y, 2)))
+
+4. Feladat (KNF előállítása hamishalmazból)
+Hozza konjunktív normálforma (KNF) alakúra az alábbi ítéletlogikai formulát a hamishalmazának meghatározásával (igazságértékelés-fával vagy igazságtáblázattal):
+
+(x => y) && ¬(y && z)
+
+5. Feladat (Szemantikus fára való illesztés)
+A szemantikus fára való illesztés módszerével igazolja, hogy az alábbi klózhalmaz kielégíthetetlen!
+
+{ X || Y,  ¬Y || Z,  ¬X || ¬Z,  ¬X || Z,  Y || ¬Z }
+
+A fa alakját a (X, Y, Z) bázis adja, a klózokat a megadott sorrendben illessze a fára! Jelölje meg a cáfolócsúcsokat, és adja meg a számukat!
