@@ -1,0 +1,294 @@
+∋
+⊆
+∀
+∃
+
+1.
+
+<{P, Q}, {f,g,h}, {1, 2}>
+(2,1; 2, 2, 1; 2)
+
+P: 2 argumentumú
+Q: 1 argumentumú
+
+f: 2 argumentumú
+g: 2 argumentumú
+h: 1 argumentumú
+
+1, 2: 2db konstans
+
+a: Karikázd be az alábbi kifejezések közül a termeket! A többi kifejezés esetében 
+egy-egy mondattal indokold, hogy miért nem term! 
+
+f(1, g(h(2))), P(h(1)), h(g(f(h(1), (g(2,1))))), h(h(1))
+
+f(1, g(h(2))) hibás, mert a g 2 argumentumú
+P(h(1)) hibás, mert a P 2 argumentumú, meg a P amúgy is formula
+h(g(f(h(1), (g(2,1))))) hibás, mert az g 2 argumentumú
+h(h(1)), ez term
+
+b:
+
+Csoportosítsd az alábbi kifejezéseket három kategóriába!
+
+∀xf(x,1)
+∀x∃yP(f(g(1,2), h(x)), 1)
+∀xQ(x) => ∃yP(y, g(y, 1))
+Q(h(1))
+¬∀xQ(h(x))
+
+atomi formula: Q(h(1))
+prímformula, de nem atomi formula: ∀x∃yP(f(g(1,2), h(x)), 1)
+literál, de nem prímformula: ¬∀xQ(h(x))
+formula, de nem prímformula: ∀xQ(x) => ∃yP(y, g(y, 1))
+nem formula: ∀xf(x,1)
+
+c:
+
+Tekintsük a nyelv I = <U, IPr, IFn, ICnst> interpretációját, ahol
+U = {a, b, c}
+
+1 = a
+2 = c
+
+P{(a,b), (a,c), (c, b)}
+Q{(b), (c)}
+
+f(x, y) = a
+g(x,y) = x
+h(a) = b
+h(b) = c
+h(c) = a
+
+(∀x(P(x, y) || Q(x)) => ¬∃xP(x, y)) && P(f(2, y), h(g(1, 2)))
+
+x kötött, y szabad változó
+
+y | (∀x(P(x,y) || Q(x)) => !∃x P(x,y)) && P(f(2,y), h(g(1,2)))  |
+a |                                                             |
+b |                                                             |
+c |                                                             |
+
+(∀x(P(x,y) || Q(x)) => !∃x P(x,y)) && P(f(2,y), h(g(1,2)))
+                        /                   \
+   (∀x(P(x,y) || Q(x)) => !∃x P(x,y))     P(f(2,y), h(g(1,2)))
+              /           \
+   ∀x(P(x,y) || Q(x))    !∃x P(x,y)
+              |             |
+      P(x,y) || Q(x)      ∃x P(x,y)
+         /      \           |
+      P(x,y)    Q(x)       P(x,y)
+
+x | Q(x)
+a | hamis
+b | igaz
+c | igaz
+
+x | P(x, y = a) | P(x, y = b) | P(x, y = c)
+a | hamis       | igaz        | igaz
+b | hamis       | hamis       | hamis
+c | hamis       | igaz        | hamis
+
+y | ∃x P(x,y) | !∃x P(x,y)
+a | hamis     | igaz
+b | igaz      | hamis
+c | igaz      | hamis
+
+x | P(x, y = a) || Q(x) | P(x, y = b) || Q(x) | P(x, y = c) || Q(x)
+a | hamis               | igaz                | igaz
+b | igaz                | igaz                | igaz
+c | igaz                | igaz                | igaz
+
+y | ∀x(P(x,y) || Q(x))
+a | hamis
+b | igaz
+c | igaz
+
+y | (∀x(P(x,y) || Q(x)) => !∃x P(x,y)) 
+a | igaz
+b | hamis
+c | hamis
+
+y | P(f(2,y), h(g(1,2)))
+a | igaz
+b | igaz
+c | igaz
+
+y | (∀x(P(x,y) || Q(x)) => !∃x P(x,y)) && P(f(2,y), h(g(1,2)))
+a | igaz
+b | hamis
+c | hamis
+
+2. Egy többfajtájú struktúra feletti elsőrendű logikai nyelv logikán kívüli jeleit a következő 
+halmaznégyes és szignatúra definiálja 
+
+<{~,−},{P,Q},{f,g,h},{1,2}>  
+v1(𝑃)=(~,~), v1(𝑄)=(~,−), v2(𝑓)=(−;−), v2(𝑔)=(~,~;−), v2(ℎ)=(~;−), 
+v3(1)=(−), v3(2)=(~) 
+
+Írj fel egy ~ és egy − fajtájú termet!
+
+~ term: 2 
+- term: 1
+
+Írj fel   
+egy atomi formulát:
+
+P(2, 2)
+
+egy prímformulát, ami nem atomi:
+
+∃x~(P(x~, 2))
+
+egy formulát, ami nem prímformula,
+
+¬∃x~(P(x~, 2))
+
+3.
+Az alábbi formulából hagyd el a lehető legtöbb zárójelet és határozd meg műveletek és 
+kvantorok hatáskörét!
+
+Nem lehet több zárójelet elhagyni
+
+______________________________________________________
+____________________________________
+                        ____________
+ __________________      ___________
+ _________                 _________
+(∀x(P(a, y) || Q(x)) => ¬∀x∃yP(y,x)) && P(f(x, x), b)
+ 
+4.
+
+Melyek a szabad / a kötött és / a vegyes individuumváltozók az alábbi formulában?
+
+∀x∃y(f(y) = x && ¬∃z(f(z) = x && ¬(y = z)))
+
+szabad: -
+kötött: x, y, z
+vegyes: -
+
+5.
+
+Hozd DNF alakúra a ¬(A || B && C) formulát illetva KNF alakúra a hamishalmaz meghatározásával!
+
+A B C | ¬(A || B && C)
+i i i | h
+i i h | h
+i h i | h
+i h h | h
+h i i | h
+h i h | i
+h h i | i
+h h h | i
+
+igazhalmaz: {(h, i, h), (h, h, i), (h, h, h)}
+hamishamlmaz: {(i, i, i), (i, i, h), (i, h, i), (i, h, h), (h, i, i)}
+
+DNF: diszjunkciós normálforma, vagy láncolat
+
+Igazsághalmaz kell hozzá
+
+Ha a változó a sorban igaz, leírod
+Ha hamis, leírod a negáltját
+
+Ezeket vagy jelekkel kell összekötni
+
+(¬A && B && ¬C) || (¬A && ¬B && C) || (¬A && ¬B && ¬C)
+
+KNF: konjukciós normálforma, és láncolat
+
+Hamishalmaz kell hozzá
+
+ha a változó igaz, a negáltját írod
+ha a változó hamis, a változót írod
+
+(¬A || ¬B || ¬C) && (¬A || ¬B || C) && (¬A || B || ¬C) && (¬A || B || C) && (A || ¬B || ¬C)
+
+KNF:
+(¬A || ¬B || ¬C) && (¬A || ¬B || C) && (¬A || B || ¬C) && (¬A || B || C) && (A || ¬B || ¬C)
+
+
+DNF:
+(¬A && B && ¬C) || (¬A && ¬B && C) || (¬A && ¬B && ¬C)
+
+6.
+
+A szemantikus fára való illesztés módszerével igazold, hogy az
+{X || Y, ¬X || Z, ¬Z, ¬Y || Z}
+klózhalmaz kielégíthetetlen
+
+C1: X || Y
+C2: ¬X || Z
+C3: ¬Z
+C4: ¬Y || Z
+
+                (        )
+              Z/          \¬Z   
+            ( )            (x)
+          X/   \¬X       X/  \¬X
+        (x)     ( )     ( )   ( )          
+     Y/    \¬Y Y/ \¬Y   Y/\¬Y Y/\¬Y
+     ()     () (x) (x)   ()  () () () 
+
+Minden ág lezárult, kielégíthetetlen
+
+7.
+
+Igazold rezolúciós levezetéssel, hogy az
+{X || Z, X => U => ¬Y, X => Z || U, Y || Z} |= Z
+következtetés helyes!
+
+{X || Z, ¬X || ¬U || ¬Y, ¬X || Z || U, Y || Z} |= Z
+
+1. {X, Z}
+2. {¬X, ¬U, ¬Y}
+3. {¬X, Z, U}
+4. {Y, Z}
+5. {¬Z}
+
+(1) és (5) rezolválása (Z és ¬Z kiesik)
+6. {X}
+
+(4) és (5) rezolválása (Z és ¬Z kiesik)
+7. {Y}
+
+(3) és (5) rezolválása (Z és ¬Z kiesik)
+8. {¬X, U}
+
+(6) és (8) rezolválása (X és ¬X kiesik)
+9. {U}
+
+(2) és (6) rezolválása (X és ¬X kiesik)
+10. {¬U, ¬Y}
+
+(9) és (10) rezolválása (U és ¬U kiesik)
+11. {¬Y}
+
+(7) és (11) rezolválása (Y és ¬Y kiesik)
+12. üres klóz
+
+mivel levezettük az üres klózt, a következtetés helyes
+
+Magyarul:
+
+Ha a {} lévő összes klóz igaz, akkor Z is igaz!
+
+tfh hogy Z hamis
+
+X || Z itt X-nek muszáj igaznak lennie
+Y || Z itt az Y-nak muszáj igaznak lennie
+¬X || Z || U itt az ¬X || U nak muszáj igaz lennie
+
+¬X || U, de mivel X || Z-ben X-nek muszáj igaznak lennie, ezért itt ¬X mindig hamis
+ezért U-nak muszáj igaznak lennie
+
+¬X || ¬U || ¬Y
+
+X-nek muszáj igaznak lennie
+Y-nak muszáj igaznak lennie
+U-nak muszáj igaznak lennie
+
+de itt a háromból legalább egynek muszáj igaznak lennie, ami nem lehet
+ellentmondás
+
+Ezért a Z-nek mindig igaznak kell lennie
