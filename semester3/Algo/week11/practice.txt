@@ -1,0 +1,122 @@
+1.
+
+Compress the following 8 bit string, with LZW coding.
+
+sigma = {x, y, z}
+
+the codes of the words are 12 bit positive integers, in ascending order.
+
+The first three codes (1, 2, 3)
+
+xxyyxyzxzzzxyzzyxx
+
+Solution:
+
+xxyyxyzxzzzxyzzyxx
+
+Starting Dictionary
+
+Word    |   Code
+  X     |     1
+  Y     |     2
+  Z     |     3
+
+While the algorithm is running, it is always true, that the word in variable a is inside the dictionary
+
+Algorithm start
+
+The B variable contains the most recently read charachter from the string
+
+we store the next charachter of the string in the B variable
+(if reading from the input fails, then we print a's code to the output)
+
+Does the dictionary contain the concatination of aB?
+
+if contains: 
+    variable a content gets overwritten by the concatination aB
+else: 
+    we store the aB concatination in dictionary (with the next id)
+    we print the code of the charachter stored in variable a
+    we overwrite variable a's content with variable B's content
+
+Algorithm end
+
+sigma * ∋ a words
+sigma ∋ B   charachters
+
+Dictionary
+
+Word    |   Code
+  X     |     1
+  Y     |     2
+  Z     |     3
+  XX    |     4
+  XY    |     5
+  YY    |     6
+  YX    |     7
+  XYZ   |     8
+  ZX    |     9
+  XZ    |     A
+  ZZ    |     B
+  ZZX   |     C
+  XYZZ  |     D
+  ZY    |     E
+  YXX   |     F
+
+    a   |   B   |   dictionary  |   output
+x(1)    | x(2)  |   xx          |   1           Add XX to the dictionary with code 4
+x(2)    | y(3)  |   xy          |   1           Add XY to the dictionary with code 5
+y(3)    | y(4)  |   yy          |   2           Add YY to the dictionary with code 6
+y(4)    | x(5)  |   yx          |   2           Add YX to the dictionary with code 7
+x(5)    | y(6)  |   xy          |
+xy(5-6) | z(7)  |   xyz         |   5           Add XYZ to the dictionary with code 8
+z(7)    | x(8)  |   zx          |   3           Add ZX with 9
+x(8)    | z(9)  |   xz          |   1           Add XZ with A
+z(9)    | z(10) |   zz          |   3           Add zz with B
+z(10)   | z(11) |               |
+zz(10-11)|x(12) |   zzx         |   B          Add zzx with C
+x(12)   | y(13) |               |
+xy(12-13)|      |               |
+xyz(12-14)|z(15)|   xyzz        |   8           Add XYZZ with D
+z(15)   | y(16) |   zy          |   3           Add ZY with E
+yx(16-17)|x(18) |   yxx         |   7           Add YXX with F
+x(18)   |   -   |               |   1
+
+otuput: 11225313B8371
+
+2.
+
+Decode the following string with LZW algorithm, if the dictionary contains
+
+sigma = {x, y, z}
+
+And x, y, z recived the first 3 codes in the code table (in this order)
+
+11225313B8371
+
+Dictionary 
+
+Word    |   Code
+X       |   1
+Y       |   2
+Z       |   3
+XX      |   4
+XY      |   5
+YY      |   6
+YX      |   7
+XYZ     |   8
+ZX      |   9
+XZ      |   A
+Z..     |   B
+ZZ      |   B
+
+
+Solution:
+
+1   1   2   2   5   3    1   3   B   8   3   7   1
+X   X   Y   Y   XY  Z    X   Z   Z.. XYZ Z   YX  X
+                                 |
+                                 V
+                                 ZZ
+
+XXYYXYZXZZZXYZZYXX
