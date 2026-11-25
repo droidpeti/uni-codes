@@ -1,0 +1,87 @@
+1. Feladat (Többfajtájú szignatúra és formulák)
+Egy többfajtájú struktúra feletti elsőrendű logikai nyelv logikán kívüli szimbólumait a következő halmaznégyes és szignatúra definiálja:
+
+<{~, -}; {P, Q}; {f, g, h}; {1, 2}>
+
+v1(P) = (~, -, ~)
+
+v1(Q) = (-, -)
+
+v2(f) = (-, ~; -)
+
+v2(g) = (~; ~)
+
+v2(h) = (-; ~)
+
+v3(1) = (-)
+
+v3(2) = (~)
+
+Legyenek a, b, c a - fajtájú, x, y, z pedig a ~ fajtájú változók.
+
+a) Határozd meg az alábbi kifejezésekről, hogy melyik kategóriába tartoznak: ~ fajtájú term, - fajtájú term, atomi formula, vagy szintaktikailag hibás (utóbbinál egy mondatban indokold a hibát)!
+
+f(h(1), g(2))
+
+g(h(f(a, x)))
+
+P(g(y), f(b, 2), h(1))
+
+Q(f(1, 2), f(a, h(b)))
+
+b) Írj fel a fenti nyelvben:
+
+egy olyan prímformulát, amely nem atomi formula,
+
+egy olyan literálformulát, amely nem prímformula,
+
+egy olyan formulát, amely nem literálformula.
+
+2. Feladat (Változók típusai és zárójelezés)
+a) Melyek a szabad, a kötött és a vegyes individuumváltozók az alábbi formulában?
+
+∀y(P(x, y, z) && !∃x(g(x) = y || ∀w(h(w) = z)))
+
+b) Hagyd el a lehető legtöbb zárójelet az alábbi formulából (a műveleti precedenciák megtartásával), és jelöld a kvantorok hatáskörét!
+
+((∀x(P(x) => Q(x))) && (!∃y(R(y) || S(y))))
+
+3. Feladat (Interpretáció és értéktábla)
+Legyen az <{P, Q}, {f, g, h}, {1, 2}> egyfajtájú struktúra szignatúrája:
+
+v1(P) = 2,   v1(Q) = 1
+
+v2(f) = 1,   v2(g) = 2,   v2(h) = 1
+
+Tekintsük a nyelv alábbi I = <U, IPr, IFn, ICnst> interpretációját, ahol U = {1, 2, 3} (most számok az univerzum elemei, a konstansokat c1 és c2 jelöli):
+
+c1 = 2,   c2 = 3
+
+P = {(1, 1), (1, 3), (2, 2), (3, 1)}
+
+Q = {(2), (3)}
+
+f(1) = 3,   f(2) = 1,   f(3) = 2
+
+g(x, y) = x (az első argumentumot adja vissza)
+
+h(x) = 2 (konstans függvény)
+
+Készítsd el az alábbi formula értéktábláját ebben az interpretációban (a szerkezeti fa felrajzolásával és a részformulák kiértékelésével)!
+
+(∀x(P(y, x) => Q(x)) && ∃x P(x, y)) || !Q(f(g(c1, h(c2))))
+
+4. Feladat (DNF és KNF)
+Hozd DNF (diszjunktív normálforma) és KNF (konjunktív normálforma) alakúra az alábbi ítéletlogikai formulát az igaz- és hamishalmaz meghatározásával!
+
+!(A => (B || !C))
+
+5. Feladat (Szemantikus fa)
+A szemantikus fára való illesztés módszerével döntsd el, hogy az alábbi klózhalmaz kielégíthetetlen-e! A fa alakját a (X, Y, Z) bázis adja, a klózokat a megadott sorrendben illeszd a fára! Ha kielégíthető, adj meg egy kielégítő interpretációt a nyitva maradt ág alapján!
+
+{ X || !Y,   !X || Z,   Y || Z,   !X || !Y || !Z }
+
+6. Feladat (Rezolúciós levezetés)
+Igazold rezolúciós levezetéssel, hogy az alábbi következtetés helyes!
+
+{ (P || Q) => R,   !P => S,   !S,   Q => !R } |= !Q

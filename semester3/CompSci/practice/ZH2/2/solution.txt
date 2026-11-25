@@ -1,0 +1,192 @@
+1. Feladat (Többfajtájú szignatúra és formulák)
+Egy többfajtájú struktúra feletti elsőrendű logikai nyelv logikán kívüli szimbólumait a következő halmaznégyes és szignatúra definiálja:
+
+<{~, -}; {P, Q}; {f, g, h}; {1, 2}>
+
+v1(P) = (~, -, ~)
+
+v1(Q) = (-, -)
+
+v2(f) = (-, ~; -)
+
+v2(g) = (~; ~)
+
+v2(h) = (-; ~)
+
+v3(1) = (-)
+
+v3(2) = (~)
+
+Legyenek a, b, c a - fajtájú, x, y, z pedig a ~ fajtájú változók.
+
+a) Határozd meg az alábbi kifejezésekről, hogy melyik kategóriába tartoznak: ~ fajtájú term, - fajtájú term, atomi formula, vagy szintaktikailag hibás (utóbbinál egy mondatban indokold a hibát)!
+
+f(h(1), g(2)) hibás, mert f(-,~)-t vár, de f(~, ~)-at kap
+
+g(h(f(a, x))) ~ term
+
+P(g(y), f(b, 2), h(1)) atomi formula
+
+Q(f(1, 2), f(a, h(b))) atomi formula
+
+b) Írj fel a fenti nyelvben:
+
+egy olyan prímformulát, amely nem atomi formula, ∀aQ(a, 1)
+
+egy olyan literálformulát, amely nem prímformula, ¬∀aQ(a, 1)
+
+egy olyan formulát, amely nem literálformula. Q(1, 1) || Q(1, 1)
+
+2. Feladat (Változók típusai és zárójelezés)
+a) Melyek a szabad, a kötött és a vegyes individuumváltozók az alábbi formulában?
+
+∀y(P(x, y, z) && !∃x(g(x) = y || ∀w(h(w) = z)))
+
+szabad: z
+kötött: y, w
+vegyes: x
+
+b) Hagyd el a lehető legtöbb zárójelet az alábbi formulából (a műveleti precedenciák megtartásával), és jelöld a kvantorok hatáskörét!
+
+((∀x(P(x) => Q(x))) && (!∃y(R(y) || S(y))))
+
+  _____________         ____________  
+∀x(P(x) => Q(x)) && !∃y(R(y) || S(y))
+
+3. Feladat (Interpretáció és értéktábla)
+Legyen az <{P, Q}, {f, g, h}, {1, 2}> egyfajtájú struktúra szignatúrája:
+
+v1(P) = 2,   v1(Q) = 1
+
+v2(f) = 1,   v2(g) = 2,   v2(h) = 1
+
+Tekintsük a nyelv alábbi I = <U, IPr, IFn, ICnst> interpretációját, ahol U = {1, 2, 3} (most számok az univerzum elemei, a konstansokat c1 és c2 jelöli):
+
+c1 = 2,   c2 = 3
+
+P = {(1, 1), (1, 3), (2, 2), (3, 1)}
+
+Q = {(2), (3)}
+
+f(1) = 3,   f(2) = 1,   f(3) = 2
+
+g(x, y) = x (az első argumentumot adja vissza)
+
+h(x) = 2 (konstans függvény)
+
+Készítsd el az alábbi formula értéktábláját ebben az interpretációban (a szerkezeti fa felrajzolásával és a részformulák kiértékelésével)!
+
+(∀x(P(y, x) => Q(x)) && ∃x P(x, y)) || !Q(f(g(c1, h(c2))))
+
+(∀x(P(y, x) => Q(x)) && ∃x P(x, y)) || !Q(f(g(c1, h(c2))))
+                                /       \
+ ∀x(P(y, x) => Q(x)) && ∃x P(x, y)     !Q(f(g(c1, h(c2))))     
+                /       \
+ ∀x(P(y, x) => Q(x))  ∃xP(x, y)
+           |             |
+    P(y, x) => Q(x)     P(x, y)
+        /       \
+    P(y, x)     Q(x)
+
+x | Q(x)
+1 | hamis
+2 | igaz
+3 | igaz
+
+x | P(y = 1, x) | P(y = 2, x) | P(y = 3, x)
+1 | igaz        | hamis       | igaz
+2 | hamis       | igaz        | hamis
+3 | igaz        | hamis       | hamis
+
+x | P(y = 1, x) => Q(x) | P(y = 2, x) => Q(x) | P(y = 3, x) => Q(x)
+1 | hamis               | igaz                | hamis
+2 | igaz                | igaz                | igaz
+3 | igaz                | igaz                | igaz
+
+y | ∀x(P(y, x) => Q(x))
+1 | hamis
+2 | igaz
+3 | hamis
+
+x | P(x, y = 1) | P(x, y = 2) | P(x, y = 3)
+1 | igaz        | hamis       | igaz
+2 | hamis       | igaz        | hamis
+3 | igaz        | hamis       | hamis
+
+y | ∃xP(x, y)
+1 | igaz
+2 | igaz
+3 | igaz
+
+y | ∀x(P(y, x) => Q(x)) && ∃x P(x, y)
+1 | hamis
+2 | igaz
+3 | hamis
+
+!Q(f(g(c1, h(c2)))) = igaz
+h(c2) = 2
+c1 = 2
+g(2, 2) = 2
+f(2) = 1
+Q(1) = hamis
+
+y | (∀x(P(y, x) => Q(x)) && ∃x P(x, y)) || !Q(f(g(c1, h(c2))))
+1 | igaz
+2 | igaz
+3 | igaz
+
+4. Feladat (DNF és KNF)
+Hozd DNF (diszjunktív normálforma) és KNF (konjunktív normálforma) alakúra az alábbi ítéletlogikai formulát az igaz- és hamishalmaz meghatározásával!
+
+!(A => (B || !C))
+
+A B C | !(A => (B || !C))
+i i i | h
+i i h | h
+i h i | i
+i h h | h
+h i i | h
+h i h | h
+h h i | h
+h h h | h
+
+i: ({i, h, i})
+h: ({i, i, i}, {i, i, h}, {i, h, h}, {h, i, i}, {h, i, h}, {h, h, i}, {h, h, h})
+
+DNF: A && !B && C
+KNF: (!A || !B || !C) && (!A || !B || C) && (!A || B || C) && (A || !B || !C) && (A || !B || C) && (A || B || !C) && (A || B || C)
+
+5. Feladat (Szemantikus fa)
+A szemantikus fára való illesztés módszerével döntsd el, hogy az alábbi klózhalmaz kielégíthetetlen-e! A fa alakját a (X, Y, Z) bázis adja, a klózokat a megadott sorrendben illeszd a fára! Ha kielégíthető, adj meg egy kielégítő interpretációt a nyitva maradt ág alapján!
+
+{ X || !Y,   !X || Z,   Y || Z,   !X || !Y || !Z }
+
+         ( )    X/\¬X   ( )
+     ( )Y/\¬Y( )     (x)Y/\¬Y( )
+    Z/\¬Z   Z/\¬Z   Z/\¬Z   Z/\¬Z
+   (x)(x)  ( )(x)  ( )( )  ( )(x)
+
+kielégíti a (X, !Y, Z) és a (!X, !Y, Z) csúcs
+
+6. Feladat (Rezolúciós levezetés)
+Igazold rezolúciós levezetéssel, hogy az alábbi következtetés helyes!
+
+{ (P || Q) => R,   !P => S,   !S,   Q => !R } |= !Q
+
+(P || Q) => R = !(P || Q) || R = (!P && !Q) || R = (!P || R) && (!Q || R)
+!P => S = P || S
+Q => !R = !Q || !R
+
+(1) {!P, R} 
+(2) {!Q, R} 
+(3) {P, S}
+(4) {!S} 
+(5) {!Q, !R}
+(6) {Q}
+
+(7) (2) és (6)
+{R}
+(8) (5) és (7)
+{!Q}
+(9) (6) és (8)
+üres klóz
