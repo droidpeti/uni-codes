@@ -1,0 +1,110 @@
+∋
+⊆
+∀
+∃
+
+1.
+
+Igazoljuk rezolúciós levezetéssel, hogy az alábbi következtetés helyes!
+
+{ x || u, x => y => !z, x => y || u, z || u } |= u
+
+{A1, A2, ..., An} |= B
+
+{A1m A2m ..., An, !B} kielégíthetetlen
+
+KNF formára kell hozni az összeset
+
+{KNFA1, KNFA2, ..., KNFAn, KNFB} kielégíthetetlen
+
+A KNF-eket felépítő klózok halmaza kielégíthetetlen
+
+bizonyítások:
+
+szemantikus fára való illesztés
+rezolúciós kalkulus
+
+x || u
+x => y => !z
+x => y || u = !x || y || u
+Z || U
+!U
+
+x y z | x => y => !z
+i i i | h
+i i h | i
+i h i | i
+i h h | i
+h i i | i
+h i h | i
+h h i | i
+h h h | i
+
+KNF = (!X || !Y || !Z)
+
+C1 = x || u
+C2 = !x || !y || !z
+C3 = !x || y || u
+C4 = z || u
+C5 = !u
+
+Ennek a klózhalmaznak kell kielégíthetetlennek lennie
+rezolúciós kalkulussal igazoljuk
+
+Egymás alá írunk a klózokat. Egy klóz akkor szerepelhet a felsorolásban, ha vagy már a kiindulási
+klózhalmazban is szerepelt, vagy két korábban felsorolt klóznak a rezolvense
+
+rezolvens:
+
+
+         A          B
+Rez(X || U, !X || Y || U) = A || B = U || Y || U = U || Y
+X és !X komplemens literálpárok
+
+A rezolúciós levezetés akkor ér véget, ha a felsorolásban megjelenik egy üres klóz,
+ami egy komplemens literálpár rezolvenseként áll elő.
+
+Rez(X, !X) = üres klóz
+
+C1 és C3
+H = {x || u, !x || y || u}
+Ha a Rez(x || u, !x || y || u) formula egy interpretációban hamis értéket vesz fel,
+akkor ez az interpretáció nem elégíti ki a H formulahalmazt
+Ha az üres klóz megjelenik a levezetésben, akkor bizonyítottuk, hogy kielégíthetetlen
+
+C1 = x || u
+C2 = !x || !y || !z
+C3 = !x || y || u
+C4 = z || u
+C5 = !u
+
+C1 és C5
+C6 = x
+C6 és C3
+C7 = y || u
+C5 és C7
+C8 = y
+C2 és C8
+C9 = !x || !z
+C6 és C9
+C10 = !z
+C4 és C10
+C11 = u
+C11 és C5
+üres klóz
+
+Feladatok:
+
+Mi az ami term, formula, milyen fajtájú term, tényleg 2 változós fv, tényleg olyan paraméterek
+
+atomi formula, pírm, literál formula, egyik kat se formula
+
+kötött, szabad, vegyes változó
+
+értéktábla
+
+KNF, DNF
+
+szemantikus fa, kielégíthetetlen
+
+rezolúciós kalkulus
